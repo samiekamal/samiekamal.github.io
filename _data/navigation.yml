@@ -1,0 +1,30 @@
+main:
+  - title: "Home"
+    url: /
+  # - title: "About"
+  #   url: /about/
+  - title: "Projects"
+    url: /projects
+  - title: "Coursework"
+    url: /coursework
+  - title: "Resume"
+    url: /Resume.pdf
+  # - title: "Posts"
+  #   url: /posts/
+  # - title: "Categories"
+  #   url: /categories/
+  - title: "All Posts"
+    url: /tags/
+  # - title: "Blog"
+  #   url: /blog/
+
+# sidebar for projects
+portfolio:
+  - title: "All Projects"
+    children:
+      - title: "• Smaglantis"
+        url: "/smaglantis/"
+      - title: "• Shiny Hunting Bot"
+        url: "/shiny-bot/"
+      - title: "• Conway's Game of Life"
+        url: "https://github.com/samikamal21/Conway-s-Game-of-Life/blob/main/GameOfLife/src/conwaygame/GameOfLife.java"
