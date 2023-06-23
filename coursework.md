@@ -1,7 +1,7 @@
 ---
 classes: wide
 header:
-  overlay_image: /images/smaglantis-images/forest4.PNG
+  overlay_image: /images/smaglantis-images/forest4.png
   permalink: /coursework/index.html
 feature_row:
 ---
