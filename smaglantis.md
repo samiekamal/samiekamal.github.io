@@ -1,7 +1,7 @@
 ---
 classes: wide
 header:
-  overlay_image: /images/smaglantis-images/clouds.PNG
+  overlay_image: /images/smaglantis-images/clouds.png
   permalink: smaglantis.html
 
 title: Smaglantis
@@ -34,4 +34,4 @@ Developed a prototype character creator menu before the game starts and plan to 
 
 A basic forest world has been designed along with bat enemies. I recently created an inventory system to change different clothing and to equip weapons. I plan to add more inventory functionality. I plan to add more weapons and introduce magic abilites to do some cool animation attacks. 
 
-![](/images/smaglantis-images/Gameplay.gif)
+![](/images/smaglantis-images/gameplay.gif)

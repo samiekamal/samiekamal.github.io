@@ -1,10 +1,10 @@
 ---
 header:
-  overlay_image: /images/smaglantis-images/forest2.PNG
+  overlay_image: /images/smaglantis-images/forest2.png
   permalink: /projects.html
 
 feature_row:
-- image_path: images/smaglantis-images/smaglantis-title.JPG
+- image_path: images/smaglantis-images/smaglantis-title.jpg
   alt: "Smaglantis"
   title: "Smaglantis: An indie open world action/rpg game"
   excerpt: "A indie video game currently being developed"
@@ -12,7 +12,7 @@ feature_row:
   btn_label: "Read More"
   btn_class: "btn--inverse"
 
-- image_path: images/shiny-bot-images/shiny-dialga.PNG
+- image_path: images/shiny-bot-images/shiny-dialga.png
   alt: "Shiny Bot"
   title: "Pokémon Shiny Hunting Bot"
   excerpt: "A bot designed to find you a shiny Pokémon in any Pokémon game."
