@@ -1,10 +1,10 @@
 ---
 header:
-  overlay_image: /images/smaglantis-images/forest2.png
+  overlay_image: /images/smaglantis-images/plains2.png
   permalink: /projects.html
 
 feature_row:
-- image_path: images/smaglantis-images/smaglantis-title.jpg
+- image_path: images/smaglantis-images/title-smaglantis.jpg
   alt: "Smaglantis"
   title: "Smaglantis: An indie open world action/rpg game"
   excerpt: "A indie video game currently being developed"

@@ -1,7 +1,7 @@
 ---
 classes: wide
 header:
-  overlay_image: /images/smaglantis-images/clouds.png
+  overlay_image: /images/smaglantis-images/cloudy.png
   permalink: smaglantis.html
 
 title: Smaglantis
@@ -28,10 +28,10 @@ Smaglantis is an open world action/rpg game currently being developed in the God
 
 Developed a prototype character creator menu before the game starts and plan to add more customization options and a female protagonist option. It was very time-consuming to create due to having to animate the player's body and then drawing every different combination of hair styles,pants, etc.
 
-![](/images/smaglantis-images/character_creator.gif)
+![](/images/smaglantis-images/characterCreator.gif)
 
 ## Gameplay
 
 A basic forest world has been designed along with bat enemies. I recently created an inventory system to change different clothing and to equip weapons. I plan to add more inventory functionality. I plan to add more weapons and introduce magic abilites to do some cool animation attacks. 
 
-![](/images/smaglantis-images/gameplay.gif)
+![](/images/smaglantis-images/smag_gameplay.gif)
