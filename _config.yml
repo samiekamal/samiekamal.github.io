@@ -349,6 +349,6 @@ collections:
 # settings for author profile
 author:
   name   : "Sami Kamal"
-  avatar : "/images/math-images/sigma.jpg"
+  avatar : "/sigma.jpg"
   bio    : "My notes on math, computer science, and cognitive science."
   github : samikamal21

@@ -1,7 +1,7 @@
 ---
 classes: wide
 header:
-  overlay_image: /images/shiny-bot-images/kanto.png
+  overlay_image: /kanto.png
 
 title: Shiny Hunting Bot
 toc: true
@@ -156,7 +156,7 @@ Now that we have all our methods ready, we actually need to set up the bot. We s
 * Move your mouse over any pixel on the Pokémon and the Python IDLE Shell will return a tuple with the RGB values of the pixel and the coordinates.
 * Then press 'ctrl c' to stop it from printing your RGB values.
 
-![](/images/shiny-bot-images/find_rgb.gif)
+![](/find_rgb.gif)
 
 Now that we have our pixel coordinates and pixel RGB values, we can finally create a script for the bot. We will call this file RenegadeShines.py since the game I'm displaying is called Pokémon Renegade Platinum (a ROM hack of Pokémon Platinum).
 
@@ -233,13 +233,13 @@ Now, the bot is complete and is ready to start shiny hunting for you. When you r
 
 ***Note, the footage is sped up.**
 
-![](/images/shiny-bot-images/shiny_false.gif)
+![](/shiny_false.gif)
 
 This bot will continue to print the output and the number of iterations in the terminal until the shiny Pokémon is found.
 
 # Finding a shiny Pokémon
 
-![](/images/shiny-bot-images/shiny_found.gif)
+![](/shiny_found.gif)
 
 The bot has successfully identified if a Pokémon is shiny or not. This bot has saved me hours building up my shiny Pokémon collection. 
 

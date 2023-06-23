@@ -1,10 +1,10 @@
 ---
 header:
-  overlay_image: /images/smaglantis-images/forest2.PNG
+  overlay_image: /forest2.PNG
   permalink: /projects/index.html
 
 feature_row:
-- image_path: images/smaglantis-images/smaglantis-title.JPG
+- image_path: smaglantis-title.JPG
   alt: "Smaglantis"
   title: "Smaglantis: An indie open world action/rpg game"
   excerpt: "A indie video game currently being developed"
@@ -12,7 +12,7 @@ feature_row:
   btn_label: "Read More"
   btn_class: "btn--inverse"
 
-- image_path: images/shiny-bot-images/shiny-dialga.PNG
+- image_path: shiny-dialga.PNG
   alt: "Shiny Bot"
   title: "Pokémon Shiny Hunting Bot"
   excerpt: "A bot designed to find you a shiny Pokémon in any Pokémon game."
@@ -20,7 +20,7 @@ feature_row:
   btn_label: "Read More"
   btn_class: "btn--inverse"
 
-- image_path: images/conway.PNG
+- image_path: conway.PNG
   alt: "Conway's Game of Life"
   title: "Conway's Game of Life"
   excerpt: "A Java program that simulates a game called Conway's Game of Life"
