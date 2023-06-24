@@ -1,4 +1,4 @@
-# [samiekamal.github.io]([https://ozaner.github.io](https://samiekamal.github.io/))
+# [samiekamal.github.io](https://samiekamal.github.io/)
 A compilation of my projects & notes.
 
 ## Built With...
