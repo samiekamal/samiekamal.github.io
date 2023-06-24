@@ -6,10 +6,7 @@ header:
 title: Shiny Hunting Bot
 toc: true
 toc_label: "Overview"
-tags:
-    - computer-science
-    - bottling
-    - projects
+
 ---
 
 <style type="text/css">

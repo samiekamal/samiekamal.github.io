@@ -13,8 +13,8 @@ main:
   #   url: /posts/
   # - title: "Categories"
   #   url: /categories/
-  - title: "All Posts"
-    url: /tags/
+  - title: "Contact Me"
+    url: /contact
   # - title: "Blog"
   #   url: /blog/
 

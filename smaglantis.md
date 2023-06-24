@@ -7,10 +7,7 @@ header:
 title: Smaglantis
 toc: true
 toc_label: "Overview"
-tags:
-    - computer-science
-    - game-development
-    - projects
+
 ---
 
 <style type="text/css">

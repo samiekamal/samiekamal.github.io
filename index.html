@@ -4,15 +4,60 @@ header:
   overlay_color: "#000"
   overlay_filter: "0"
   overlay_image: /images/smaglantis-images/plains1.png
-title: "Sami's Projects"
-excerpt: "A compilation of projects/notes on computer science, cognitive science, and math."
+title: "Sami's Projects & Notes"
+excerpt: "A compilation of notes on math, cognitive science, and computer science."
+classes: wide
+
+feature_row:
+  - image_path: images/shiny-bot-images/shiny-dialga.png
+    alt: "Shiny Bot"
+    title: "Pokémon Shiny Hunting Bot"
+    excerpt: "A indie video game currently being developed."
+    url: "/shiny-bot/"
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
+
+  - image_path: images/smaglantis-images/title-smaglantis.jpg
+    alt: "Smaglantis"
+    title: "Smaglantis"
+    excerpt: "A bot designed to find you a shiny Pokémon in any Pokémon game."
+    url: "/smaglantis/"
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
+
+  - image_path: /images/stars-images/stars2.jpg
+    alt: "Stars Simulation"
+    title: "Stars Simulation"
+    excerpt: "A simulation of Stars in space built in Java."
+    url: "/stars/"
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
 ---
 
 <style>
-    h1{font-weight: normal;}
-  </style>
+  h1 { font-weight: normal; }
+  body { font-size: 13pt; }
+  .feature-heading { text-align: center; margin-top: 1rem; }
+  .feature-row { margin-top: 4rem; }
+  .feature-item { margin-bottom: 4rem; }
+</style>
 
-<style type="text/css">
-    body{
-    font-size: 13pt;
-  }
+<center><h1 class="feature-heading">Featured Projects</h1></center>
+
+<div style="margin-bottom: 2rem;"></div>
+
+{% include feature_row %}
+
+<!-- <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% for post in posts %}
+  {% include archive-single.html %}
+{% endfor %}
+
+{% include paginator.html %} -->
