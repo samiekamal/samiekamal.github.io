@@ -4,15 +4,15 @@ header:
   permalink: /projects.html
 
 feature_row:
-- image_path: images/smaglantis-images/title-smaglantis.jpg
+- image_path: images/smaglantis-images/Smaglantis.gif
   alt: "Smaglantis"
-  title: "Smaglantis: An indie open world action/rpg game"
-  excerpt: "A indie video game currently being developed."
+  title: "Smaglantis: An indie open world action/RPG game"
+  excerpt: "An indie video game currently being developed."
   url: "/smaglantis"
   btn_label: "Read More"
   btn_class: "btn--inverse"
 
-- image_path: images/shiny-bot-images/shiny-dialga.png
+- image_path: images/shiny-bot-images/shiny-kyogre.gif
   alt: "Shiny Bot"
   title: "Pokémon Shiny Hunting Bot"
   excerpt: "A bot designed to find you a shiny Pokémon in any Pokémon game."
@@ -20,7 +20,7 @@ feature_row:
   btn_label: "Read More"
   btn_class: "btn--inverse"
 
-- image_path: /images/stars-images/stars2.jpg
+- image_path: /images/stars-images/stars_project.gif
   alt: "Stars Simulation"
   title: "Stars Simulation"
   excerpt: "A simulation of Stars in space built in Java."
@@ -68,6 +68,5 @@ feature_row:
 ---
 
 <div class="footer">
-  <p>Source Code of Website:</p>
-  <a href="https://github.com/samiekamal/samiekamal.github.io" class="footer-link">Code Here</a>
+  <a href="https://github.com/samiekamal/samiekamal.github.io" class="footer-link">Source Code of Website</a>
 </div>

@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>  Sami’s Projects &amp; Notes</title>
+<!-- begin _includes/seo.html --><title>Neural Networks &amp; Machine Learning - Sami’s Projects &amp; Notes</title>
 <meta name="description" content="A compilation of my projects &amp; notes.">
 
 
@@ -20,15 +20,15 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Sami's Projects & Notes">
-<meta property="og:title" content="">
-<meta property="og:url" content="http://localhost:4000/projects/">
+<meta property="og:title" content="Neural Networks &amp; Machine Learning">
+<meta property="og:url" content="http://localhost:4000/cog-sci-neural-networks/">
 
 
   <meta property="og:description" content="A compilation of my projects &amp; notes.">
 
 
 
-  <meta property="og:image" content="http://localhost:4000/images/smaglantis-images/plains2.png">
+  <meta property="og:image" content="http://localhost:4000/images/cog-sci-images/machine_learning.jpg">
 
 
 
@@ -43,7 +43,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/projects/">
+<link rel="canonical" href="http://localhost:4000/cog-sci-neural-networks/">
 
 
 
@@ -94,7 +94,7 @@
 
   </head>
 
-  <body class="layout--single">
+  <body class="layout--single wide">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -148,13 +148,13 @@
 
 
 <div class="page__hero--overlay"
-  style=" background-image: url('/images/smaglantis-images/plains2.png');"
+  style=" background-image: url('/images/cog-sci-images/machine_learning.jpg');"
 >
   
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          
+          Neural Networks &amp; Machine Learning
 
         
       </h1>
@@ -281,7 +281,7 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="">
+    <meta itemprop="headline" content="Neural Networks &amp; Machine Learning">
     
     
     
@@ -291,154 +291,67 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <div style="margin-bottom:1cm" align="center"><font size="55">Selected Projects</font></div>
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Overview</h4></header>
+              <ul class="toc__menu"><li><a href="#connectionism">Connectionism:</a></li><li><a href="#neural-networks">Neural Networks:</a></li><li><a href="#unsupervised-learning---hebbian">Unsupervised Learning - Hebbian:</a><ul><li><a href="#example-document-clustering">Example: Document Clustering</a></li></ul></li><li><a href="#supervised-learning---backpropagation">Supervised Learning - Backpropagation:</a><ul><li><a href="#example-handwritten-digit-recognition">Example: Handwritten Digit Recognition</a></li></ul></li></ul>
 
-<div class="feature__wrapper">
-
-  
-    <div class="feature__item--left">
-      <div class="archive__item">
+            </nav>
+          </aside>
         
-          <div class="archive__item-teaser">
-            <img src="/images/smaglantis-images/Smaglantis.gif" alt="Smaglantis" />
-            
-          </div>
-        
-
-        <div class="archive__item-body">
-          
-            <h2 class="archive__item-title">Smaglantis: An indie open world action/RPG game</h2>
-          
-
-          
-            <div class="archive__item-excerpt">
-              <p>An indie video game currently being developed.</p>
-
-            </div>
-          
-
-          
-            <p><a href="/smaglantis" class="btn btn--inverse">Read More</a></p>
-          
-        </div>
-      </div>
-    </div>
-  
-    <div class="feature__item--left">
-      <div class="archive__item">
-        
-          <div class="archive__item-teaser">
-            <img src="/images/shiny-bot-images/shiny-kyogre.gif" alt="Shiny Bot" />
-            
-          </div>
-        
-
-        <div class="archive__item-body">
-          
-            <h2 class="archive__item-title">Pokémon Shiny Hunting Bot</h2>
-          
-
-          
-            <div class="archive__item-excerpt">
-              <p>A bot designed to find you a shiny Pokémon in any Pokémon game.</p>
-
-            </div>
-          
-
-          
-            <p><a href="/shiny-bot" class="btn btn--inverse">Read More</a></p>
-          
-        </div>
-      </div>
-    </div>
-  
-    <div class="feature__item--left">
-      <div class="archive__item">
-        
-          <div class="archive__item-teaser">
-            <img src="/images/stars-images/stars_project.gif" alt="Stars Simulation" />
-            
-          </div>
-        
-
-        <div class="archive__item-body">
-          
-            <h2 class="archive__item-title">Stars Simulation</h2>
-          
-
-          
-            <div class="archive__item-excerpt">
-              <p>A simulation of Stars in space built in Java.</p>
-
-            </div>
-          
-
-          
-            <p><a href="/stars/" class="btn btn--inverse">Read More</a></p>
-          
-        </div>
-      </div>
-    </div>
-  
-    <div class="feature__item--left">
-      <div class="archive__item">
-        
-          <div class="archive__item-teaser">
-            <img src="/images/conway.PNG" alt="Conway's Game of Life" />
-            
-          </div>
-        
-
-        <div class="archive__item-body">
-          
-            <h2 class="archive__item-title">Conway's Game of Life</h2>
-          
-
-          
-            <div class="archive__item-excerpt">
-              <p>A Java program that simulates a game called Conway’s Game of Life.</p>
-
-            </div>
-          
-
-          
-            <p><a href="https://github.com/samikamal21/Conway-s-Game-of-Life/blob/main/GameOfLife/src/conwaygame/GameOfLife.java" class="btn btn--inverse">Code Here</a></p>
-          
-        </div>
-      </div>
-    </div>
-  
-
-</div>
-
-<style type="text/css">
-  body {
-    font-size: 13pt;
-  }
-
-  .footer {
-    text-align: center;
-    margin-top: 2em;
-    font-size: 14px;
-    color: #555;
-  }
-
-  .footer-link {
-    font-weight: bold;
-    text-decoration: none;
-    color: #007bff;
-  }
-
-  .footer-link:hover {
-    text-decoration: underline;
-  }
+        <style type="text/css">
+  body{
+  font-size: 13pt;
+}
 </style>
 
-<hr />
+<h2 id="connectionism">Connectionism:</h2>
 
-<div class="footer">
-  <a href="https://github.com/samiekamal/samiekamal.github.io" class="footer-link">Source Code of Website</a>
-</div>
+<p>Connectionism is a theory that posits cognitive processes can be explained through interconnected neural networks. It suggests that the mind can be modeled as a system of nodes, akin to how neural networks operate.</p>
+
+<p>In connectionism, a neural network can be trained to recognize objects in images.</p>
+
+<p>The network consists of interconnected nodes that process pixel values as inputs and produce outputs indicating the detected objects. Through training, the network learns to identify patterns and features that differentiate various objects, enabling accurate image recognition.</p>
+
+<p><img src="/images/cog-sci-images/neural_network.jpg" alt="" /></p>
+
+<h2 id="neural-networks">Neural Networks:</h2>
+
+<p>Neural networks are computational models inspired by the structure and function of the brain. They consist of interconnected nodes, including input units, output units, and hidden units, through which information flows and computations take place.</p>
+
+<p>Activation Functions: Neural networks employ activation functions to introduce non-linearity into the computations at each node. Common activation functions include sigmoid, ReLU, and tanh, which determine the output of a node based on its input.</p>
+
+<p>Deep Learning: Deep learning refers to neural networks with multiple hidden layers. It enables the learning of hierarchical representations, allowing networks to extract increasingly abstract features from the input data.</p>
+
+<p>Neural networks are used for sentiment analysis, where the goal is to determine the sentiment expressed in a piece of text, such as positive, negative, or neutral.</p>
+
+<p>A neural network model can be trained on labeled datasets, where texts are annotated with their corresponding sentiments. The network learns to extract meaningful features from the text and make predictions based on the learned patterns, achieving accurate sentiment analysis.</p>
+
+<h2 id="unsupervised-learning---hebbian">Unsupervised Learning - Hebbian:</h2>
+
+<p>Hebbian learning is a form of unsupervised learning in which connections between nodes in a neural network are strengthened based on their co-activation. The fundamental principle is “neurons that fire together wire together.”</p>
+
+<h3 id="example-document-clustering">Example: Document Clustering</h3>
+
+<p>Hebbian learning can be applied to cluster documents based on their similarity.</p>
+
+<p>In this example, a network is created where each document is represented as a vector. Through Hebbian learning, documents that frequently co-occur or share similar features will become more strongly connected. The network then forms clusters of related documents, enabling efficient organization and retrieval of textual data.</p>
+
+<p><img src="/images/cog-sci-images/unsupervised.png" alt="" /></p>
+
+<h2 id="supervised-learning---backpropagation">Supervised Learning - Backpropagation:</h2>
+
+<p>Backpropagation is a widely used algorithm for training neural networks in supervised learning settings. It involves adjusting the weights of connections in the network based on the error between the predicted outputs and the desired outputs.</p>
+
+<h3 id="example-handwritten-digit-recognition">Example: Handwritten Digit Recognition</h3>
+
+<p>Backpropagation is commonly used for training neural networks in tasks like handwritten digit recognition.</p>
+
+<p>A network is trained on a dataset of labeled images of handwritten digits, where each image corresponds to a specific digit (0-9).</p>
+
+<p>Through backpropagation, the network adjusts its weights to minimize the difference between the predicted digit and the actual digit label. Once trained, the network can accurately recognize handwritten digits based on their pixel values.</p>
+
+<p><img src="/images/cog-sci-images/handwritten.png" alt="" /></p>
 
         
       </section>

@@ -19,7 +19,7 @@ body {
 - **Email:** samikamal2828@gmail.com
 
 ## Social Media
-- **GitHub:** [Github](https://github.com/samikamal21)
+- **GitHub:** [GitHub](https://github.com/samikamal21)
 - **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/sami-kamal-818822233/)
 
 

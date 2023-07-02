@@ -121,7 +121,7 @@
             </li><li class="masthead__menu-item">
               <a href="/coursework">Coursework</a>
             </li><li class="masthead__menu-item">
-              <a href="/Resume.pdf">Resume</a>
+              <a href="/Resume.pdf">Résumé</a>
             </li><li class="masthead__menu-item">
               <a href="/contact">Contact Me</a>
             </li></ul>
@@ -186,7 +186,7 @@
   
     <div class="author__avatar">
       <a href="http://localhost:4000/">
-        <img src="/images/math-images/sigma.jpg" alt="Sami Kamal" itemprop="image" class="u-photo">
+        <img src="/images/smaglantis-images/PlayerHead.gif" alt="Sami Kamal" itemprop="image" class="u-photo">
       </a>
     </div>
   
@@ -317,7 +317,7 @@ code {
 
 <p>I’ve always been a huge Pokémon fan and still play the games to this day. However, I’ve always had trouble finding shiny Pokémon. A shiny Pokémon is a rare variant of a Pokémon that has different colors than other Pokémon of their species.</p>
 
-<p>It is a 1/4096 to get one, which means it could take days or even months if you’re really unlucky to get one. I do not have time to find the Pokémon I want and battle it, then reset the game and repeat that process until I get the shiny varient. So, I developed a bot that can do it for me.</p>
+<p>It is a 1/4096 to get one, which means it could take days or even months if you’re unlucky to get one. I do not have time to find the Pokémon I want and battle it, then reset the game and repeat that process until I get the shiny variant. So, I developed a bot that can do it for me.</p>
 
 <h2 id="libraries-needed">Libraries Needed</h2>
 
@@ -341,11 +341,11 @@ code {
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">moveWindow</span><span class="p">(</span><span class="n">windowName</span><span class="p">,</span> <span class="n">posX</span><span class="p">,</span> <span class="n">posY</span><span class="p">):</span>
     <span class="sh">"""</span><span class="s">
-    Pass name of window and the window coordinate destination
-    EX: moveWindow(</span><span class="sh">"</span><span class="s">Pokemon Insurgence</span><span class="sh">"</span><span class="s">, 0, 0) 
+    Pass the name of the window and the window coordinate destination
+    EX: moveWindow(</span><span class="sh">"</span><span class="s">Pokémon Insurgence</span><span class="sh">"</span><span class="s">, 0, 0) 
 
     Args:
-        windowName: name of window you want to move
+        windowName: name of the window you want to move
         posX: x-cord
         posY: y-cord
     </span><span class="sh">"""</span>
@@ -369,7 +369,7 @@ code {
 
     Args:
         keyboardKey: input key
-        interval: delay afer the input
+        interval: delay after the input
     </span><span class="sh">"""</span>
     <span class="n">pyautogui</span><span class="p">.</span><span class="nf">keyDown</span><span class="p">(</span><span class="n">keyboardKey</span><span class="p">)</span>
     <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
@@ -412,7 +412,7 @@ code {
     Args: 
         posX: x-coord
         posY: y-coord
-        tPokemonRGB: pixel color of normal pokemon
+        tPokemonRGB: pixel color of normal Pokémon
     </span><span class="sh">"""</span>
 
     <span class="nf">if</span><span class="p">(</span><span class="n">pyautogui</span><span class="p">.</span><span class="nf">pixel</span><span class="p">(</span><span class="n">posX</span><span class="p">,</span><span class="n">posY</span><span class="p">)</span> <span class="o">!=</span> <span class="p">(</span><span class="n">tPokemonRGB</span><span class="p">)):</span>
@@ -429,13 +429,12 @@ code {
 
 <h2 id="the-set-up">The Set Up</h2>
 
-<p>Now that we have all our methods ready, we actually need to set up the bot. We should first get the RGB value of the Pokémon we want to shiny hunt. In order to figure out the RGB value and window coordinates for the bot to check, open the idle shell in python and write the following:</p>
+<p>Now that we have all our methods ready, we actually need to set up the bot. We should first get the RGB value of the Pokémon we want to shiny hunt. In order to figure out the RGB value and window coordinates for the bot to check, open the Python *IDLE Shell and do the following steps:</p>
 
 <ul>
   <li>Open your Pokémon game and battle the Pokémon you want to shiny hunt.</li>
-  <li>Then open the Python IDLE Shell.</li>
-  <li>Type Import pyautogui</li>
-  <li>Type pyautogui.displayMousePosition()</li>
+  <li>In the Python IDLE Shell, type import pyautogui</li>
+  <li>Next, type pyautogui.displayMousePosition()</li>
   <li>Move your mouse over any pixel on the Pokémon and the Python IDLE Shell will return a tuple with the RGB values of the pixel and the coordinates.</li>
   <li>Then press ‘ctrl c’ to stop it from printing your RGB values.</li>
 </ul>
@@ -444,7 +443,7 @@ code {
 
 <p>Now that we have our pixel coordinates and pixel RGB values, we can finally create a script for the bot. We will call this file RenegadeShines.py since the game I’m displaying is called Pokémon Renegade Platinum (a ROM hack of Pokémon Platinum).</p>
 
-<p>Let’s first import libraries we need.</p>
+<p>Let’s first import the libraries we need.</p>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">pyautogui</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">import</span> <span class="n">time</span>
 <span class="kn">import</span> <span class="n">ShinyBot</span>
@@ -460,7 +459,7 @@ code {
     <span class="n">shinyFound</span> <span class="o">=</span> <span class="bp">False</span>
     <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
     
-    <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="c1"># 11 second delay, so the start up screens gets to the main menu before the bot starts pressing any buttons.
+    <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="c1"># 11-second delay, so the start-up screens gets to the main menu before the bot starts pressing any buttons.
 </span>    <span class="n">ShinyBot</span><span class="p">.</span><span class="nf">moveWindow</span><span class="p">(</span><span class="sh">"</span><span class="s">DeSmuME 0.9.14 git#91efef9 x64-JIT SSE2 | Pokémon Platinum</span><span class="sh">"</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 
 </code></pre></div></div>
@@ -472,10 +471,10 @@ code {
   <li>Tell the bot to move the name of our game window to (<code class="language-plaintext highlighter-rouge">[0,0]</code>).</li>
 </ul>
 
-<p>Let’s then create a main loop to run this bot until a shiny Pokemon is found.</p>
+<p>Let’s then create a main loop to run this bot until a shiny Pokémon is found.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
- <span class="c1"># number of times the bot will hit 'x' to start a battle with the Pokemon you are shiny hunting
+ <span class="c1"># number of times the bot will hit 'x' to start a battle with the Pokémon you are shiny hunting
 </span>    <span class="nf">while</span><span class="p">(</span><span class="ow">not</span> <span class="n">shinyFound</span><span class="p">):</span>
         <span class="n">ShinyBot</span><span class="p">.</span><span class="nf">keyPress</span><span class="p">(</span><span class="sh">'</span><span class="s">x</span><span class="sh">'</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
         <span class="n">ShinyBot</span><span class="p">.</span><span class="nf">keyPress</span><span class="p">(</span><span class="sh">'</span><span class="s">x</span><span class="sh">'</span><span class="p">,</span><span class="mf">2.5</span><span class="p">)</span> 
@@ -483,13 +482,13 @@ code {
         <span class="n">ShinyBot</span><span class="p">.</span><span class="nf">keyPress</span><span class="p">(</span><span class="sh">'</span><span class="s">x</span><span class="sh">'</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
         <span class="n">ShinyBot</span><span class="p">.</span><span class="nf">keyPress</span><span class="p">(</span><span class="sh">'</span><span class="s">x</span><span class="sh">'</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 
-        <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="c1"># 9 second delay to transition to battle once you encounter the Pokemon.
+        <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="c1"># 9-second delay to transition to battle once you encounter the Pokémon.
 </span>        <span class="n">shinyFound</span> <span class="o">=</span> <span class="n">ShinyBot</span><span class="p">.</span><span class="nf">checkShiny</span><span class="p">(</span><span class="n">posX</span><span class="p">,</span> <span class="n">posY</span><span class="p">,</span> <span class="n">pixelRGB</span><span class="p">)</span>
         
         <span class="nf">if</span><span class="p">(</span><span class="n">shinyFound</span><span class="p">):</span> 
             <span class="k">break</span> <span class="c1"># loop ends once the bot looks at the pixel coordinates if it's != pixelRGB
 </span>
-        <span class="c1"># displays number of times the bot has to go back to the main menu and repeat this whole process
+        <span class="c1"># displays the number of times the bot has to go back to the main menu and repeat this whole process
 </span>        <span class="n">count</span><span class="o">+=</span><span class="mi">1</span>
         <span class="nf">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span> 
         <span class="n">ShinyBot</span><span class="p">.</span><span class="nf">keyPressShortCut</span><span class="p">(</span><span class="sh">'</span><span class="s">ctrl</span><span class="sh">'</span><span class="p">,</span><span class="sh">'</span><span class="s">r</span><span class="sh">'</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span> 
@@ -542,11 +541,11 @@ code {
 
 <span class="k">def</span> <span class="nf">moveWindow</span><span class="p">(</span><span class="n">windowName</span><span class="p">,</span> <span class="n">posX</span><span class="p">,</span> <span class="n">posY</span><span class="p">):</span>
     <span class="sh">"""</span><span class="s">
-    Pass name of window and the window coordinate destination
-    EX: moveWindow(</span><span class="sh">"</span><span class="s">Pokemon Insurgence</span><span class="sh">"</span><span class="s">, 0, 0) 
+    Pass the name of the window and the window coordinate destination
+    EX: moveWindow(</span><span class="sh">"</span><span class="s">Pokémon Insurgence</span><span class="sh">"</span><span class="s">, 0, 0) 
 
     Args:
-        windowName: name of window you want to move
+        windowName: name of the window you want to move
         posX: x-cord
         posY: y-cord
     </span><span class="sh">"""</span>
@@ -565,7 +564,7 @@ code {
 
     Args:
         keyboardKey: input key
-        interval: delay afer the input
+        interval: delay after the input
     </span><span class="sh">"""</span>
     <span class="n">pyautogui</span><span class="p">.</span><span class="nf">keyDown</span><span class="p">(</span><span class="n">keyboardKey</span><span class="p">)</span>
     <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
@@ -598,7 +597,7 @@ code {
     Args: 
         posX: x-coord
         posY: y-coord
-        tPokemonRGB: pixel color of normal pokemon
+        tPokemonRGB: pixel color of normal Pokémon
     </span><span class="sh">"""</span>
 
     <span class="nf">if</span><span class="p">(</span><span class="n">pyautogui</span><span class="p">.</span><span class="nf">pixel</span><span class="p">(</span><span class="n">posX</span><span class="p">,</span><span class="n">posY</span><span class="p">)</span> <span class="o">!=</span> <span class="p">(</span><span class="n">tPokemonRGB</span><span class="p">)):</span>
@@ -626,7 +625,7 @@ code {
     <span class="n">shinyFound</span> <span class="o">=</span> <span class="bp">False</span>
     <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
     
-    <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="c1"># 11 second delay, so the start up screens gets to the main menu before the bot starts pressing any buttons.
+    <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="c1"># 11-second delay, so the start-up screens gets to the main menu before the bot starts pressing any buttons.
 </span>    <span class="n">ShinyBot</span><span class="p">.</span><span class="nf">moveWindow</span><span class="p">(</span><span class="sh">"</span><span class="s">DeSmuME 0.9.14 git#91efef9 x64-JIT SSE2 | Pokémon Platinum</span><span class="sh">"</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 
     <span class="c1"># number of times the bot will hit 'x' to start a battle with the Pokemon you are shiny hunting
@@ -637,13 +636,13 @@ code {
         <span class="n">ShinyBot</span><span class="p">.</span><span class="nf">keyPress</span><span class="p">(</span><span class="sh">'</span><span class="s">x</span><span class="sh">'</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
         <span class="n">ShinyBot</span><span class="p">.</span><span class="nf">keyPress</span><span class="p">(</span><span class="sh">'</span><span class="s">x</span><span class="sh">'</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 
-        <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="c1"># 9 second delay to transition to battle once you encounter the Pokemon.
+        <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="c1"># 9-second delay to transition to battle once you encounter the Pokemon.
 </span>        <span class="n">shinyFound</span> <span class="o">=</span> <span class="n">ShinyBot</span><span class="p">.</span><span class="nf">checkShiny</span><span class="p">(</span><span class="n">posX</span><span class="p">,</span> <span class="n">posY</span><span class="p">,</span> <span class="n">pixelRGB</span><span class="p">)</span>
         
         <span class="nf">if</span><span class="p">(</span><span class="n">shinyFound</span><span class="p">):</span> 
             <span class="k">break</span> <span class="c1"># loop ends once the bot looks at the pixel coordinates if it's != pixelRGB
 </span>
-        <span class="c1"># displays number of times the bot has to go back to the main menu and repeat this whole process
+        <span class="c1"># displays the number of times the bot has to go back to the main menu and repeat this whole process
 </span>        <span class="n">count</span><span class="o">+=</span><span class="mi">1</span>
         <span class="nf">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span> 
         <span class="n">ShinyBot</span><span class="p">.</span><span class="nf">keyPressShortCut</span><span class="p">(</span><span class="sh">'</span><span class="s">ctrl</span><span class="sh">'</span><span class="p">,</span><span class="sh">'</span><span class="s">r</span><span class="sh">'</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span> 

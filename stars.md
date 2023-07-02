@@ -97,22 +97,22 @@ Next, we are going to need a constructor to actually create star objects with th
 ~~~ java
 
 public NBody(double mass, int xCoordinateValue, int yCoordinateValue, double xVelocity, double yVelocity,
-		int diameter) {
-		this.mass = mass;
-		this.xCoordinate = xCoordinateValue;
-		this.yCoordinate = yCoordinateValue;
-		this.xVelocity = xVelocity;
-		this.yVelocity = yVelocity;
-		this.diameter = diameter;
+	int diameter) {
+	this.mass = mass;
+	this.xCoordinate = xCoordinateValue;
+	this.yCoordinate = yCoordinateValue;
+	this.xVelocity = xVelocity;
+	this.yVelocity = yVelocity;
+	this.diameter = diameter;
 
-		Random r = new Random();
-		color = new Color(r.nextInt(256), r.nextInt(256), r.nextInt(256), r.nextInt(256));
-	}
+	Random r = new Random();
+	color = new Color(r.nextInt(256), r.nextInt(256), r.nextInt(256), r.nextInt(256));
+}
 
-	public NBody(List<NBody> starsList, double sc) {
-		listOfStars = starsList;
-		scalingFactor = sc;
-	}
+public NBody(List<NBody> starsList, double sc) {
+	listOfStars = starsList;
+	scalingFactor = sc;
+}
 ~~~
 
 - `NBody(double mass, int xCoordinateValue, int yCoordinateValue, double xVelocity, double yVelocity, int diameter)`: Constructs an `NBody` object with the specified properties, such as mass, position, velocity, and diameter.
@@ -125,136 +125,136 @@ Now, we are going to need the following methods in order to calculate the star's
 
 ~~~ java
 public void drawCircle(Graphics g, int centerX, int centerY, int r) {
-		int diameter = 2 * r;
-		g.fillOval(centerX - r, centerY - r, diameter, diameter);
-	}
+	int diameter = 2 * r;
+	g.fillOval(centerX - r, centerY - r, diameter, diameter);
+}
 ~~~
 
 - `drawCircle(Graphics g, int centerX, int centerY, int r)`: Draws a circle on the canvas at the specified center coordinates and radius.
 
 ~~~ java
 public void paint(Graphics g) {
-		//calling super to do initialization
-		super.paint(g);
+	//calling super to do initialization
+	super.paint(g);
 
-		for (int i = 0; i < listOfStars.size(); i++) {
-			
-			//setting color of the graphics based on random color of starts
-			g.setColor(listOfStars.get(i).getColor());
-			
-			//drawing the star
-			g.fillOval(listOfStars.get(i).getxCoordinate(), listOfStars.get(i).getyCoordinate(), listOfStars.get(i).getNBodySize(),
-					listOfStars.get(i).getNBodySize());
-		}
+	for (int i = 0; i < listOfStars.size(); i++) {
+		
+		//setting the color of the graphics based on the random color of the stars
+		g.setColor(listOfStars.get(i).getColor());
+		
+		//drawing the star
+		g.fillOval(listOfStars.get(i).getxCoordinate(), listOfStars.get(i).getyCoordinate(), listOfStars.get(i).getNBodySize(),
+				listOfStars.get(i).getNBodySize());
 	}
+}
 ~~~
 
 - `paint(Graphics g)`: Overrides the `paint` method to draw the bodies on the canvas using the `Graphics` object.
 
 ~~~ java
 public void actionPerformed(ActionEvent e) {
-		//updating the stars and repainting screen
-		update();
-		repaint();
-		Toolkit.getDefaultToolkit().sync();
-	}
+	//updating the stars and repainting the screen
+	update();
+	repaint();
+	Toolkit.getDefaultToolkit().sync();
+}
 ~~~
 
 - `actionPerformed(ActionEvent e)`: Overrides the `actionPerformed` method from `ActionListener` interface to handle the update and repainting of the bodies on the canvas.
 
 ~~~ java
-// helper methods to calculate the physics for the stars
-	public void update() {
-		int numberOfStars;
-		for (numberOfStars = 0; numberOfStars < listOfStars.size() - 1; numberOfStars++) {
-			listOfStars.get(numberOfStars).force(listOfStars.get(numberOfStars + 1), scalingFactor);
-			listOfStars.get(numberOfStars).updatePos();
-			listOfStars.get(numberOfStars).resetForce();
-		}
+// helper methods to calculate the physics of the stars
+public void update() {
+	int numberOfStars;
+	for (numberOfStars = 0; numberOfStars < listOfStars.size() - 1; numberOfStars++) {
+		listOfStars.get(numberOfStars).force(listOfStars.get(numberOfStars + 1), scalingFactor);
+		listOfStars.get(numberOfStars).updatePos();
+		listOfStars.get(numberOfStars).resetForce();
 	}
+}
 ~~~
 
 - `update()`: Updates the positions and forces of the bodies based on the gravitational interactions between them.
 
 ~~~ java
 public void updatePos() {
-		// update x and y velocities
-		xVelocity += xForce / mass;
-		yVelocity += yForce / mass;
+	// update x and y velocities
+	xVelocity += xForce / mass;
+	yVelocity += yForce / mass;
 
-		// update x and y coordinates
-		xCoordinate += xVelocity;
-		yCoordinate += yVelocity;
-	}
+	// update x and y coordinates
+	xCoordinate += xVelocity;
+	yCoordinate += yVelocity;
+}
 ~~~
 
 - `updatePos()`: Updates the velocities and positions of the body based on the net forces acting on it.
 
 ~~~ java
 // calculate force
-	public void force(NBody nBody, double scale) {
-		NBody currentNBody = this;
+public void force(NBody nBody, double scale) {
+	NBody currentNBody = this;
+
+	double xCoordinate = nBody.xCoordinate - currentNBody.xCoordinate;
+	double yCoordinate = nBody.yCoordinate - currentNBody.yCoordinate;
 	
-		double xCoordinate = nBody.xCoordinate - currentNBody.xCoordinate;
-		double yCoordinate = nBody.yCoordinate - currentNBody.yCoordinate;
-		
-		double magnituede = Math.sqrt(xCoordinate * xCoordinate + yCoordinate * yCoordinate);
-		
-		// calculate graviation force between two masses
-		double force = (G * currentNBody.mass * nBody.mass / ((magnituede * magnituede) / scale));
-		
-		currentNBody.xForce += force * xCoordinate / magnituede;
-		currentNBody.yForce += force * yCoordinate / magnituede;
-	}
+	double magnitude = Math.sqrt(xCoordinate * xCoordinate + yCoordinate * yCoordinate);
+	
+	// calculate the graviation force between two masses
+	double force = (G * currentNBody.mass * nBody.mass / ((magnitude * magnitude) / scale));
+	
+	currentNBody.xForce += force * xCoordinate / magnitude;
+	currentNBody.yForce += force * yCoordinate / magnitude;
+}
 ~~~
 - `force(NBody nBody, double scale)`: Calculates the gravitational force between the current body and another body.
 
 ~~~ java
 public void resetForce() {
-		xForce = 0;
-		yForce = 0;
-	}
+	xForce = 0;
+	yForce = 0;
+}
 ~~~
 - `resetForce()`: Resets the net force components of the body.
 
 ### Getters
 
-We will now need the following getters to get access to our stars information when we need them.
+We will now need the following getters to access our star's information when necessary
 
 ~~~ java
 
 public void resetForce() {
-		xForce = 0;
-		yForce = 0;
-	}
+	xForce = 0;
+	yForce = 0;
+}
 
-	public double getMass() {
-		return mass;
-	}
+public double getMass() {
+	return mass;
+}
 
-	public int getxCoordinate() {
-		return xCoordinate;
-	}
+public int getxCoordinate() {
+	return xCoordinate;
+}
 
-	public int getyCoordinate() {
-		return yCoordinate;
-	}
+public int getyCoordinate() {
+	return yCoordinate;
+}
 
-	public double getxVelocity() {
-		return xVelocity;
-	}
+public double getxVelocity() {
+	return xVelocity;
+}
 
-	public double getyVelo() {
-		return yVelocity;
-	}
+public double getyVelo() {
+	return yVelocity;
+}
 
-	public int getNBodySize() {
-		return diameter;
-	}
-	
-	public Color getColor() {
-		return color;
-	}
+public int getNBodySize() {
+	return diameter;
+}
+
+public Color getColor() {
+	return color;
+}
 }
 
 ~~~
@@ -299,27 +299,27 @@ We need to create a method to actually generate the stars.
 
 ~~~ java
 public static void GenerateNBodiesBasedOnUsersNumber(int numberOfNBodiesToGenerate) {
-		scalingFactor = 1000.0;
-		Random r = new Random();
-		int lowDiameter = 10;
-		int highDiameter = 20;
+	scalingFactor = 1000.0;
+	Random r = new Random();
+	int lowDiameter = 10;
+	int highDiameter = 20;
 
-		int lowMass = 1800;
-		int highMass = 300000;
+	int lowMass = 1800;
+	int highMass = 300000;
 
-		int lowXcoordinate = 20;
-		int highXCoordinate = 780;
+	int lowXcoordinate = 20;
+	int highXCoordinate = 780;
 
-		int lowYCoordinate = 20;
-		int highYCoordinate = 780;
+	int lowYCoordinate = 20;
+	int highYCoordinate = 780;
 
-		for (int i = 0; i < numberOfNBodiesToGenerate; i++) {
-			tempList.add(new NBody(r.nextInt(highMass - lowMass) + lowMass,
-			r.nextInt(highXCoordinate - lowXcoordinate) + lowXcoordinate,
-			r.nextInt(highYCoordinate - lowYCoordinate) + lowYCoordinate, r.nextDouble(-0.001, 0.001), r.nextDouble(-0.001, 0.001),
-			r.nextInt(highDiameter - lowDiameter) + lowDiameter));
-		}
+	for (int i = 0; i < numberOfNBodiesToGenerate; i++) {
+		tempList.add(new NBody(r.nextInt(highMass - lowMass) + lowMass,
+		r.nextInt(highXCoordinate - lowXcoordinate) + lowXcoordinate,
+		r.nextInt(highYCoordinate - lowYCoordinate) + lowYCoordinate, r.nextDouble(-0.001, 0.001), r.nextDouble(-0.001, 0.001),
+		r.nextInt(highDiameter - lowDiameter) + lowDiameter));
 	}
+}
 ~~~
 
 This method will generate a certain number of stars based on the user input.
@@ -340,39 +340,39 @@ Finally, we need to create the `main method` to create the GUI of the stars.
 
 ~~~ java
 public static void main(String[] args) {
-		// user input
-		try {
-			n = Integer.parseInt(args[0]);
-			n=n>20?n=20:Integer.parseInt(args[0]);
-		}
-		catch (Exception e) {
-			// default num of stars to 20 if user runs it without using cmd line
-			System.out.println("You entered invalid value at command line");
-		}
-		tempList = new ArrayList<NBody>();
-		GenerateNBodiesBasedOnUsersNumber(n);
-
-		NBody nbody = new NBody(tempList, scalingFactor);
-		nbody.setBackground(Color.black);
-
-		JFrame frame = new JFrame();
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-		nbody.setBackground(Color.BLACK);
-		nbody.panelSize = 800;
-		nbody.maxVel = 10;
-		nbody.maxMass = 10;
-		nbody.dt = 0.1;
-		nbody.setPreferredSize(new Dimension(nbody.panelSize, nbody.panelSize));
-
-		frame.add(nbody);
-		frame.pack();
-
-		Timer timer = new Timer(16, nbody);
-		timer.start();
-
-		frame.setVisible(true);
+	// user input
+	try {
+		n = Integer.parseInt(args[0]);
+		n=n>20?n=20:Integer.parseInt(args[0]);
 	}
+	catch (Exception e) {
+		// default num of stars to 20 if the user runs it without using the Command Prompt Line.
+		System.out.println("You entered invalid value at command line");
+	}
+	tempList = new ArrayList<NBody>();
+	GenerateNBodiesBasedOnUsersNumber(n);
+
+	NBody nbody = new NBody(tempList, scalingFactor);
+	nbody.setBackground(Color.black);
+
+	JFrame frame = new JFrame();
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+	nbody.setBackground(Color.BLACK);
+	nbody.panelSize = 800;
+	nbody.maxVel = 10;
+	nbody.maxMass = 10;
+	nbody.dt = 0.1;
+	nbody.setPreferredSize(new Dimension(nbody.panelSize, nbody.panelSize));
+
+	frame.add(nbody);
+	frame.pack();
+
+	Timer timer = new Timer(16, nbody);
+	timer.start();
+
+	frame.setVisible(true);
+}
 }
 ~~~ 
 
@@ -466,7 +466,7 @@ public class NBody extends Canvas implements ActionListener {
 
 		for (int i = 0; i < listOfStars.size(); i++) {
 			
-			//setting color of the graphics based on random color of starts
+			//setting the color of the graphics based on the random color of the stars
 			g.setColor(listOfStars.get(i).getColor());
 			
 			//drawing the star
@@ -476,13 +476,13 @@ public class NBody extends Canvas implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		//updating the stars and repainting screen
+		//updating the stars and repainting the screen
 		update();
 		repaint();
 		Toolkit.getDefaultToolkit().sync();
 	}
 
-	// helper methods to calculate the physics for the stars
+	// helper methods to calculate the physics of the stars
 	public void update() {
 		int numberOfStars;
 		for (numberOfStars = 0; numberOfStars < listOfStars.size() - 1; numberOfStars++) {
@@ -509,13 +509,13 @@ public class NBody extends Canvas implements ActionListener {
 		double xCoordinate = nBody.xCoordinate - currentNBody.xCoordinate;
 		double yCoordinate = nBody.yCoordinate - currentNBody.yCoordinate;
 		
-		double magnituede = Math.sqrt(xCoordinate * xCoordinate + yCoordinate * yCoordinate);
+		double magnitude = Math.sqrt(xCoordinate * xCoordinate + yCoordinate * yCoordinate);
 		
-		// calculate graviation force between two masses
-		double force = (G * currentNBody.mass * nBody.mass / ((magnituede * magnituede) / scale));
+		// calculate the graviation force between two masses
+		double force = (G * currentNBody.mass * nBody.mass / ((magnitude * magnitude) / scale));
 		
-		currentNBody.xForce += force * xCoordinate / magnituede;
-		currentNBody.yForce += force * yCoordinate / magnituede;
+		currentNBody.xForce += force * xCoordinate / magnitude;
+		currentNBody.yForce += force * yCoordinate / magnitude;
 	}
 
 	public void resetForce() {
@@ -602,7 +602,7 @@ public class NBodyApp {
 			n=n>20?n=500:Integer.parseInt(args[0]);
 		}
 		catch (Exception e) {
-			// default num of stars to 20 if user runs it without using cmd line
+			// default num of stars to 20 if the user runs it without using the Command Prompt Line.
 			System.out.println("You entered invalid value at command line");
 		}
 		tempList = new ArrayList<NBody>();

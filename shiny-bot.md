@@ -27,7 +27,7 @@ code {
 
 I've always been a huge Pokémon fan and still play the games to this day. However, I've always had trouble finding shiny Pokémon. A shiny Pokémon is a rare variant of a Pokémon that has different colors than other Pokémon of their species. 
 
-It is a 1/4096 to get one, which means it could take days or even months if you're really unlucky to get one. I do not have time to find the Pokémon I want and battle it, then reset the game and repeat that process until I get the shiny varient. So, I developed a bot that can do it for me.
+It is a 1/4096 to get one, which means it could take days or even months if you're unlucky to get one. I do not have time to find the Pokémon I want and battle it, then reset the game and repeat that process until I get the shiny variant. So, I developed a bot that can do it for me.
 
 ## Libraries Needed
 
@@ -53,11 +53,11 @@ Now, with these libraries, we can create methods we need our bot to perform. We 
 ~~~ python
 def moveWindow(windowName, posX, posY):
     """
-    Pass name of window and the window coordinate destination
-    EX: moveWindow("Pokemon Insurgence", 0, 0) 
+    Pass the name of the window and the window coordinate destination
+    EX: moveWindow("Pokémon Insurgence", 0, 0) 
 
     Args:
-        windowName: name of window you want to move
+        windowName: name of the window you want to move
         posX: x-cord
         posY: y-cord
     """
@@ -82,7 +82,7 @@ def keyPress(keyboardKey, interval):
 
     Args:
         keyboardKey: input key
-        interval: delay afer the input
+        interval: delay after the input
     """
     pyautogui.keyDown(keyboardKey)
     time.sleep(0.1)
@@ -127,7 +127,7 @@ def checkShiny(posX, posY, tPokemonRGB):
     Args: 
         posX: x-coord
         posY: y-coord
-        tPokemonRGB: pixel color of normal pokemon
+        tPokemonRGB: pixel color of normal Pokémon
     """
 
     if(pyautogui.pixel(posX,posY) != (tPokemonRGB)):
@@ -144,12 +144,11 @@ We need to tell the coordinates of what pixel to look at and the normal color of
 
 ## The Set Up
 
-Now that we have all our methods ready, we actually need to set up the bot. We should first get the RGB value of the Pokémon we want to shiny hunt. In order to figure out the RGB value and window coordinates for the bot to check, open the idle shell in python and write the following:
+Now that we have all our methods ready, we actually need to set up the bot. We should first get the RGB value of the Pokémon we want to shiny hunt. In order to figure out the RGB value and window coordinates for the bot to check, open the Python *IDLE Shell and do the following steps:
 
 * Open your Pokémon game and battle the Pokémon you want to shiny hunt.
-* Then open the Python IDLE Shell.
-* Type Import pyautogui
-* Type pyautogui.displayMousePosition()
+* In the Python IDLE Shell, type import pyautogui
+* Next, type pyautogui.displayMousePosition()
 * Move your mouse over any pixel on the Pokémon and the Python IDLE Shell will return a tuple with the RGB values of the pixel and the coordinates.
 * Then press 'ctrl c' to stop it from printing your RGB values.
 
@@ -157,7 +156,7 @@ Now that we have all our methods ready, we actually need to set up the bot. We s
 
 Now that we have our pixel coordinates and pixel RGB values, we can finally create a script for the bot. We will call this file RenegadeShines.py since the game I'm displaying is called Pokémon Renegade Platinum (a ROM hack of Pokémon Platinum).
 
-Let's first import libraries we need.
+Let’s first import the libraries we need.
 ~~~ python
 from pyautogui import *
 import time
@@ -175,7 +174,7 @@ def shinyHunt(posX, posY, pixelRGB):
     shinyFound = False
     count = 0
     
-    time.sleep(11) # 11 second delay, so the start up screens gets to the main menu before the bot starts pressing any buttons.
+    time.sleep(11) # 11-second delay, so the start-up screens gets to the main menu before the bot starts pressing any buttons.
     ShinyBot.moveWindow("DeSmuME 0.9.14 git#91efef9 x64-JIT SSE2 | Pokémon Platinum",0,0)
 
 ~~~
@@ -185,11 +184,11 @@ def shinyHunt(posX, posY, pixelRGB):
 * Set a delay of 11 seconds since that's how long it takes to go to the main menu when in the game.
 * Tell the bot to move the name of our game window to (`[0,0]`).
 
-Let's then create a main loop to run this bot until a shiny Pokemon is found.
+Let's then create a main loop to run this bot until a shiny Pokémon is found.
 
 ~~~ python
 
- # number of times the bot will hit 'x' to start a battle with the Pokemon you are shiny hunting
+ # number of times the bot will hit 'x' to start a battle with the Pokémon you are shiny hunting
     while(not shinyFound):
         ShinyBot.keyPress('x', 2)
         ShinyBot.keyPress('x',2.5) 
@@ -197,13 +196,13 @@ Let's then create a main loop to run this bot until a shiny Pokemon is found.
         ShinyBot.keyPress('x',1)
         ShinyBot.keyPress('x',1)
 
-        time.sleep(9) # 9 second delay to transition to battle once you encounter the Pokemon.
+        time.sleep(9) # 9-second delay to transition to battle once you encounter the Pokémon.
         shinyFound = ShinyBot.checkShiny(posX, posY, pixelRGB)
         
         if(shinyFound): 
             break # loop ends once the bot looks at the pixel coordinates if it's != pixelRGB
 
-        # displays number of times the bot has to go back to the main menu and repeat this whole process
+        # displays the number of times the bot has to go back to the main menu and repeat this whole process
         count+=1
         print(count) 
         ShinyBot.keyPressShortCut('ctrl','r',11) 
@@ -256,11 +255,11 @@ import win32gui
 
 def moveWindow(windowName, posX, posY):
     """
-    Pass name of window and the window coordinate destination
-    EX: moveWindow("Pokemon Insurgence", 0, 0) 
+    Pass the name of the window and the window coordinate destination
+    EX: moveWindow("Pokémon Insurgence", 0, 0) 
 
     Args:
-        windowName: name of window you want to move
+        windowName: name of the window you want to move
         posX: x-cord
         posY: y-cord
     """
@@ -279,7 +278,7 @@ def keyPress(keyboardKey, interval):
 
     Args:
         keyboardKey: input key
-        interval: delay afer the input
+        interval: delay after the input
     """
     pyautogui.keyDown(keyboardKey)
     time.sleep(0.1)
@@ -312,7 +311,7 @@ def checkShiny(posX, posY, tPokemonRGB):
     Args: 
         posX: x-coord
         posY: y-coord
-        tPokemonRGB: pixel color of normal pokemon
+        tPokemonRGB: pixel color of normal Pokémon
     """
 
     if(pyautogui.pixel(posX,posY) != (tPokemonRGB)):
@@ -341,7 +340,7 @@ def shinyHunt(posX, posY, pixelRGB):
     shinyFound = False
     count = 0
     
-    time.sleep(11) # 11 second delay, so the start up screens gets to the main menu before the bot starts pressing any buttons.
+    time.sleep(11) # 11-second delay, so the start-up screens gets to the main menu before the bot starts pressing any buttons.
     ShinyBot.moveWindow("DeSmuME 0.9.14 git#91efef9 x64-JIT SSE2 | Pokémon Platinum",0,0)
 
     # number of times the bot will hit 'x' to start a battle with the Pokemon you are shiny hunting
@@ -352,13 +351,13 @@ def shinyHunt(posX, posY, pixelRGB):
         ShinyBot.keyPress('x',1)
         ShinyBot.keyPress('x',1)
 
-        time.sleep(9) # 9 second delay to transition to battle once you encounter the Pokemon.
+        time.sleep(9) # 9-second delay to transition to battle once you encounter the Pokemon.
         shinyFound = ShinyBot.checkShiny(posX, posY, pixelRGB)
         
         if(shinyFound): 
             break # loop ends once the bot looks at the pixel coordinates if it's != pixelRGB
 
-        # displays number of times the bot has to go back to the main menu and repeat this whole process
+        # displays the number of times the bot has to go back to the main menu and repeat this whole process
         count+=1
         print(count) 
         ShinyBot.keyPressShortCut('ctrl','r',11) 
