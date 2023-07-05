@@ -255,8 +255,6 @@ public int getNBodySize() {
 public Color getColor() {
 	return color;
 }
-}
-
 ~~~
 
 Now that our `NBody` class is complete, we need to create the graphical user interface (GUI) of the stars moving.
@@ -320,6 +318,7 @@ public static void GenerateNBodiesBasedOnUsersNumber(int numberOfNBodiesToGenera
 		r.nextInt(highDiameter - lowDiameter) + lowDiameter));
 	}
 }
+
 ~~~
 
 This method will generate a certain number of stars based on the user input.
@@ -373,7 +372,7 @@ public static void main(String[] args) {
 
 	frame.setVisible(true);
 }
-}
+
 ~~~ 
 
 ### The `main method` will do the following:
