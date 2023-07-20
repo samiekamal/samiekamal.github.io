@@ -27,7 +27,7 @@ code {
 
 This program simulates the motion of astronomical bodies in space under the influence of gravitational forces. It uses the laws of physics to calculate the positions and velocities of the bodies over time. The simulation is visualized using a graphical user interface (GUI) that displays the bodies' movements on a canvas.
 
-## NBodyApp.java
+## NBody.java
 
 ## Class Overview
 We will create a file by calling it `NBody.java` which defines the `NBody` class that represents an astronomical body. It contains methods for drawing the stars on a canvas and updating their positions based on physical forces.
@@ -401,6 +401,8 @@ public static void main(String[] args) {
 This method is automatically invoked when running the `NBodyApp` program. If the user provides a valid number of stars as a command line argument, it will generate a graphical simulation of the N-Body problem with the specified number of stars. 
 
 ## The Full Code
+
+This is all the code together on how it appears on my [Stars-Simulation](https://github.com/samikamal21/Stars-Simulation) repository:
 
 # NBody.java
 

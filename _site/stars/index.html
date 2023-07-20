@@ -122,8 +122,6 @@
               <a href="/coursework">Coursework</a>
             </li><li class="masthead__menu-item">
               <a href="/Resume.pdf">Résumé</a>
-            </li><li class="masthead__menu-item">
-              <a href="/contact">Contact Me</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -294,7 +292,7 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Overview</h4></header>
-              <ul class="toc__menu"><li><a href="#stars-simulation">Stars Simulation</a></li><li><a href="#nbodyappjava">NBodyApp.java</a></li><li><a href="#class-overview">Class Overview</a><ul><li><a href="#libraries-needed">Libraries needed</a></li><li><a href="#instance-variables">Instance Variables</a></li><li><a href="#constructors">Constructors</a></li><li><a href="#methods">Methods</a></li><li><a href="#getters">Getters</a></li></ul></li><li><a href="#nbodyappjava-1">NBodyApp.java</a></li><li><a href="#class-overview-1">Class Overview</a></li><li><a href="#libraries-needed-1">Libraries needed</a><ul><li><a href="#instance-variables-1">Instance Variables</a></li><li><a href="#method-required">Method Required</a></li></ul></li><li><a href="#putting-it-all-together">Putting it all together</a><ul><li><a href="#the-main-method-will-do-the-following">The main method will do the following:</a></li></ul></li><li><a href="#demonstration">Demonstration</a></li><li><a href="#the-full-code">The Full Code</a></li></ul>
+              <ul class="toc__menu"><li><a href="#stars-simulation">Stars Simulation</a></li><li><a href="#nbodyjava">NBody.java</a></li><li><a href="#class-overview">Class Overview</a><ul><li><a href="#libraries-needed">Libraries needed</a></li><li><a href="#instance-variables">Instance Variables</a></li><li><a href="#constructors">Constructors</a></li><li><a href="#methods">Methods</a></li><li><a href="#getters">Getters</a></li></ul></li><li><a href="#nbodyappjava">NBodyApp.java</a></li><li><a href="#class-overview-1">Class Overview</a></li><li><a href="#libraries-needed-1">Libraries needed</a><ul><li><a href="#instance-variables-1">Instance Variables</a></li><li><a href="#method-required">Method Required</a></li></ul></li><li><a href="#putting-it-all-together">Putting it all together</a><ul><li><a href="#the-main-method-will-do-the-following">The main method will do the following:</a></li></ul></li><li><a href="#demonstration">Demonstration</a></li><li><a href="#the-full-code">The Full Code</a></li></ul>
 
             </nav>
           </aside>
@@ -317,7 +315,7 @@ code {
 
 <p>This program simulates the motion of astronomical bodies in space under the influence of gravitational forces. It uses the laws of physics to calculate the positions and velocities of the bodies over time. The simulation is visualized using a graphical user interface (GUI) that displays the bodies’ movements on a canvas.</p>
 
-<h2 id="nbodyappjava">NBodyApp.java</h2>
+<h2 id="nbodyjava">NBody.java</h2>
 
 <h2 id="class-overview">Class Overview</h2>
 <p>We will create a file by calling it <code class="language-plaintext highlighter-rouge">NBody.java</code> which defines the <code class="language-plaintext highlighter-rouge">NBody</code> class that represents an astronomical body. It contains methods for drawing the stars on a canvas and updating their positions based on physical forces.</p>
@@ -556,7 +554,7 @@ code {
 
 <p>Now that our <code class="language-plaintext highlighter-rouge">NBody</code> class is complete, we need to create the graphical user interface (GUI) of the stars moving.</p>
 
-<h2 id="nbodyappjava-1">NBodyApp.java</h2>
+<h2 id="nbodyappjava">NBodyApp.java</h2>
 
 <h2 id="class-overview-1">Class Overview</h2>
 <p>The <code class="language-plaintext highlighter-rouge">NBodyApp</code> class sets up the graphical user interface (GUI) and manages the main logic of the stars simulation using the <code class="language-plaintext highlighter-rouge">NBody</code> class.</p>
@@ -703,7 +701,9 @@ code {
 
 <h2 id="the-full-code">The Full Code</h2>
 
-<h1 id="nbodyjava">NBody.java</h1>
+<p>This is all the code together on how it appears on my <a href="https://github.com/samikamal21/Stars-Simulation">Stars-Simulation</a> repository:</p>
+
+<h1 id="nbodyjava-1">NBody.java</h1>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.awt.Canvas</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">java.awt.Color</span><span class="o">;</span>
@@ -853,7 +853,7 @@ code {
 
 </code></pre></div></div>
 
-<h1 id="nbodyappjava-2">NBodyApp.java</h1>
+<h1 id="nbodyappjava-1">NBodyApp.java</h1>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="kn">import</span> <span class="nn">java.awt.Color</span><span class="o">;</span>

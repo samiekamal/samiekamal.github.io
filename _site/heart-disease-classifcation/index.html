@@ -1,0 +1,1278 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Heart Disease Classifcation - Sami’s Projects &amp; Notes</title>
+<meta name="description" content="A compilation of my projects &amp; notes.">
+
+
+  <meta name="author" content="Sami Kamal">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Sami's Projects & Notes">
+<meta property="og:title" content="Heart Disease Classifcation">
+<meta property="og:url" content="http://localhost:4000/heart-disease-classifcation/">
+
+
+  <meta property="og:description" content="A compilation of my projects &amp; notes.">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/images/heart-disease-project-images/heart-disease-banner.png">
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/heart-disease-classifcation/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Sami Kamal",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Sami's Projects & Notes Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Sami's Projects & Notes
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/">Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/coursework">Coursework</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Resume.pdf">Résumé</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/images/heart-disease-project-images/heart-disease-banner.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Heart Disease Classifcation
+
+        
+      </h1>
+      
+      
+
+
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/images/smaglantis-images/PlayerHead.gif" alt="Sami Kamal" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Sami Kamal</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>My notes on math, computer science, and cognitive science.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/samikamal21" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Heart Disease Classifcation">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Overview</h4></header>
+              <ul class="toc__menu"><li><a href="#predicting-heart-disease-using-machine-learning">Predicting Heart Disease Using Machine Learning</a><ul><li><a href="#1-problem-definition">1. Problem Definition</a></li><li><a href="#2-data">2. Data</a></li><li><a href="#3-evaluation">3. Evaluation</a></li><li><a href="#4-features">4. Features</a><ul><li><a href="#data-dictionary">Data Dictionary</a></li></ul></li><li><a href="#preparing-the-tools">Preparing the tools</a></li><li><a href="#load-data">Load data</a></li><li><a href="#data-exploration-exploratory-data-analysis-or-eda">Data Exploration (exploratory data analysis or EDA)</a><ul><li><a href="#heart-disease-frequency-according-to-sex">Heart Disease Frequency according to Sex</a></li><li><a href="#age-vs-max-heart-rate-for-heart-disease">Age vs. Max Heart Rate for Heart Disease</a></li><li><a href="#distribution-of-age">Distribution of Age</a></li><li><a href="#heart-disease-frequency-per-chest-pain-type">Heart Disease Frequency per Chest Pain Type</a></li><li><a href="#correlation-matrix">Correlation Matrix</a></li></ul></li><li><a href="#5-modelling">5. Modelling</a><ul><li><a href="#model-comparison">Model Comparison</a></li><li><a href="#hyperparameter-tuning-by-hand">Hyperparameter tuning (by hand)</a></li></ul></li><li><a href="#hyperparameter-tuning-with-randomizedsearchcv">Hyperparameter tuning with RandomizedSearchCV</a></li><li><a href="#hyperparameter-tuning-with-gridsearchcv">Hyperparameter Tuning with GridSearchCV</a></li><li><a href="#evaluating-our-tuned-machine-learning-classifier-beyond-accuracy">Evaluating our tuned machine learning classifier, beyond accuracy</a><ul><li><a href="#calculate-evaluation-metrics-using-cross-validation">Calculate evaluation metrics using cross-validation</a></li><li><a href="#feature-importance">Feature Importance</a></li></ul></li><li><a href="#6-conclusion">6. Conclusion</a></li><li><a href="#the-full-code">The Full Code</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <style type="text/css">
+body {
+  font-size: 13pt;
+}
+
+pre {
+  background-color: white;
+}
+
+code {
+  background-color: white;
+}
+</style>
+
+<h1 id="predicting-heart-disease-using-machine-learning">Predicting Heart Disease Using Machine Learning</h1>
+
+<p><strong>Note:</strong> This was done in a Jupyter Notebook.</p>
+
+<p>This notebook looks into using various Python-based machine learning and data science libraries in an attempt to build a machine learning model capable of predicting whether or not someone has heart disease based on their medical attributes.</p>
+
+<p>We’re going to take the following approach:</p>
+<ol>
+  <li>Problem definition</li>
+  <li>Data</li>
+  <li>Evaluation</li>
+  <li>Features</li>
+  <li>Modelling</li>
+  <li>Experimentation</li>
+</ol>
+
+<h2 id="1-problem-definition">1. Problem Definition</h2>
+
+<p>In a statement,</p>
+<blockquote>
+  <p>Given clinical parameters about a patient, can we predict whether or not they have heart disease?</p>
+</blockquote>
+
+<h2 id="2-data">2. Data</h2>
+
+<p>The original data came from the Cleaveland data from the <a href="https://archive.ics.uci.edu/dataset/45/heart+disease">UCI Machine Learning Repository.</a></p>
+
+<p>There is also a version of it available on <a href="https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset">Kaggle</a></p>
+
+<h2 id="3-evaluation">3. Evaluation</h2>
+
+<blockquote>
+  <p>If we can reach 95% accuracy in predicting whether or not a patient has heart disease during the proof of concept, we’ll pursue the project.</p>
+</blockquote>
+
+<h2 id="4-features">4. Features</h2>
+
+<h3 id="data-dictionary">Data Dictionary</h3>
+
+<p>The following are the features we’ll use to predict our target variable (heart disease or no heart disease).</p>
+
+<ol>
+  <li>
+    <p>age - age in years</p>
+  </li>
+  <li>
+    <p>sex - (1 = male; 0 = female)</p>
+  </li>
+  <li>cp - chest pain type
+    <ul>
+      <li>0: Typical angina: chest pain related decrease blood supply to the heart</li>
+      <li>1: Atypical angina: chest pain not related to heart</li>
+      <li>2: Non-anginal pain: typically esophageal spasms (non-heart related)</li>
+      <li>3: Asymptomatic: chest pain not showing signs of disease</li>
+    </ul>
+  </li>
+  <li>trestbps - resting blood pressure (in mm Hg on admission to the hospital)
+    <ul>
+      <li>anything above 130-140 is typically cause for concern</li>
+    </ul>
+  </li>
+  <li>chol - serum cholesterol in mg/dl
+    <ul>
+      <li>serum = LDL + HDL + .2 * triglycerides</li>
+      <li>above 200 is cause for concern</li>
+    </ul>
+  </li>
+  <li>fbs - (fasting blood sugar &gt; 120 mg/dl) (1 = true; 0 = false)
+    <ul>
+      <li>‘&gt;126’ mg/dL signals diabetes</li>
+    </ul>
+  </li>
+  <li>restecg - resting electrocardiographic results
+    <ul>
+      <li>0: Nothing to note</li>
+      <li>1: ST-T Wave abnormality
+        <ul>
+          <li>can range from mild symptoms to severe problems</li>
+          <li>signals non-normal heartbeat</li>
+        </ul>
+      </li>
+      <li>2: Possible or definite left ventricular hypertrophy
+        <ul>
+          <li>Enlarged heart’s main pumping chamber</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>thalach - maximum heart rate achieved</p>
+  </li>
+  <li>
+    <p>exang - exercise-induced angina (1 = yes; 0 = no)</p>
+  </li>
+  <li>oldpeak - ST depression induced by exercise relative to rest
+    <ul>
+      <li>looks at stress of heart during excercise</li>
+      <li>unhealthy heart will stress more</li>
+    </ul>
+  </li>
+  <li>slope - the slope of the peak exercise ST segment
+    <ul>
+      <li>0: Upsloping: better heart rate with excercise (uncommon)</li>
+      <li>1: Flatsloping: minimal change (typical healthy heart)</li>
+      <li>2: Downslopins: signs of unhealthy heart</li>
+    </ul>
+  </li>
+  <li>ca - number of major vessels (0-3) colored by flourosopy
+    <ul>
+      <li>colored vessel means the doctor can see the blood passing through</li>
+      <li>the more blood movement the better (no clots)</li>
+    </ul>
+  </li>
+  <li>thal - thalium stress result
+    <ul>
+      <li>1,3: normal</li>
+      <li>6: fixed defect: used to be defect but ok now</li>
+      <li>7: reversable defect: no proper blood movement when excercising</li>
+    </ul>
+  </li>
+  <li>target - have disease or not (1=yes, 0=no) (= the predicted attribute)</li>
+</ol>
+
+<p><strong>Note:</strong> No personal identifiable information (PPI) can be found in the dataset.</p>
+
+<h2 id="preparing-the-tools">Preparing the tools</h2>
+
+<p>We’re going to use pandas, matplotlib, and NumPy for data analysis and manipulation.</p>
+
+<p>We’re also going to use the following Scikit-Learn machine learning models and their metric evaluations to see how well each model performs.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Import all the tools we need
+</span>
+<span class="c1"># Regular EDA (exploratory data analysis) and plotting libraries
+</span><span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="n">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="n">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+
+<span class="c1"># We want our plots to appear inside Jupyter Notebook
+</span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span> 
+
+<span class="c1"># Models from Scikit-Learn
+</span><span class="kn">from</span> <span class="n">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="n">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="kn">from</span> <span class="n">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+
+<span class="c1"># Model Evaluations
+</span><span class="kn">from</span> <span class="n">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span><span class="p">,</span> <span class="n">cross_val_score</span>
+<span class="kn">from</span> <span class="n">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">RandomizedSearchCV</span><span class="p">,</span> <span class="n">GridSearchCV</span>
+<span class="kn">from</span> <span class="n">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">classification_report</span>
+<span class="kn">from</span> <span class="n">sklearn.metrics</span> <span class="kn">import</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">,</span> <span class="n">f1_score</span>
+<span class="kn">from</span> <span class="n">sklearn.metrics</span> <span class="kn">import</span> <span class="n">roc_curve</span>
+<span class="kn">from</span> <span class="n">sklearn.metrics</span> <span class="kn">import</span> <span class="n">RocCurveDisplay</span> 
+<span class="kn">from</span> <span class="n">sklearn.metrics</span> <span class="kn">import</span> <span class="n">auc</span>
+</code></pre></div></div>
+
+<h2 id="load-data">Load data</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">heart-disease.csv</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="data-exploration-exploratory-data-analysis-or-eda">Data Exploration (exploratory data analysis or EDA)</h2>
+
+<p>The goal here is to find out more about the data and become a subject matter expert on the dataset you’re working with.</p>
+
+<ol>
+  <li>What question(s) are you trying to solve?</li>
+  <li>What kind of data do we have and how do we treat different types?</li>
+  <li>What’s missing from the data and how do you deal with it?</li>
+  <li>Where are the outliers and why should you care about them?</li>
+  <li>How can you add, change or remove features to get more out of your data?</li>
+</ol>
+
+<p>We’ll first see what our data looks like and what features we are working with.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="p">.</span><span class="nf">head</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<p><img src="/images/heart-disease-project-images/data.png" alt="" /></p>
+
+<p>Let’s also find out how many of each classes there are for our target variable (if a person has heart disease or not).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="p">[</span><span class="sh">"</span><span class="s">target</span><span class="sh">"</span><span class="p">].</span><span class="nf">value_counts</span><span class="p">().</span><span class="nf">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="sh">"</span><span class="s">bar</span><span class="sh">"</span><span class="p">,</span>
+                                 <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">salmon</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">lightblue</span><span class="sh">"</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="sh">"</span><span class="s">Heart Disease Count</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">xlabel</span><span class="p">(</span><span class="sh">"</span><span class="s">1 = Heart Disease, 0 = No Heart Disease</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">ylabel</span><span class="p">(</span><span class="sh">"</span><span class="s">Amount</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<p><img src="/images/heart-disease-project-images/class.png" alt="" /></p>
+
+<p>This tells us that there are <code class="language-plaintext highlighter-rouge">165</code> samples with heart disease and <code class="language-plaintext highlighter-rouge">138</code> samples that do not have heart disease.</p>
+
+<p>Let’s also take a look and see what data type each feature is.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="p">.</span><span class="nf">info</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">pandas</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">DataFrame</span><span class="sh">'</span><span class="s">&gt;
+RangeIndex: 303 entries, 0 to 302
+Data columns (total 14 columns):
+ #   Column    Non-Null Count  Dtype  
+---  ------    --------------  -----  
+ 0   age       303 non-null    int64  
+ 1   sex       303 non-null    int64  
+ 2   cp        303 non-null    int64  
+ 3   trestbps  303 non-null    int64  
+ 4   chol      303 non-null    int64  
+ 5   fbs       303 non-null    int64  
+ 6   restecg   303 non-null    int64  
+ 7   thalach   303 non-null    int64  
+ 8   exang     303 non-null    int64  
+ 9   oldpeak   303 non-null    float64
+ 10  slope     303 non-null    int64  
+ 11  ca        303 non-null    int64  
+ 12  thal      303 non-null    int64  
+ 13  target    303 non-null    int64  
+dtypes: float64(1), int64(13)
+memory usage: 33.3 KB
+</span></code></pre></div></div>
+
+<p>It is important to check for any missing values in our dataset or else a machine learning model won’t be able to find patterns.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Check for any missing values
+</span><span class="n">df</span><span class="p">.</span><span class="nf">isna</span><span class="p">().</span><span class="nf">sum</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">age</span>         <span class="mi">0</span>
+<span class="n">sex</span>         <span class="mi">0</span>
+<span class="n">cp</span>          <span class="mi">0</span>
+<span class="n">trestbps</span>    <span class="mi">0</span>
+<span class="n">chol</span>        <span class="mi">0</span>
+<span class="n">fbs</span>         <span class="mi">0</span>
+<span class="n">restecg</span>     <span class="mi">0</span>
+<span class="n">thalach</span>     <span class="mi">0</span>
+<span class="n">exang</span>       <span class="mi">0</span>
+<span class="n">oldpeak</span>     <span class="mi">0</span>
+<span class="n">slope</span>       <span class="mi">0</span>
+<span class="n">ca</span>          <span class="mi">0</span>
+<span class="n">thal</span>        <span class="mi">0</span>
+<span class="n">target</span>      <span class="mi">0</span>
+<span class="n">dtype</span><span class="p">:</span> <span class="n">int64</span>
+</code></pre></div></div>
+
+<p>Luckily, there are no missing values in our dataset, so the dataset will be good for our machine learning model.</p>
+
+<p>Next, we’ll look at a couple graphs that show the relation of some features to our target variable.</p>
+
+<h3 id="heart-disease-frequency-according-to-sex">Heart Disease Frequency according to Sex</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create a plot that compares target column with sex column
+</span><span class="n">pd</span><span class="p">.</span><span class="nf">crosstab</span><span class="p">(</span><span class="n">df</span><span class="p">.</span><span class="n">target</span><span class="p">,</span> <span class="n">df</span><span class="p">.</span><span class="n">sex</span><span class="p">).</span><span class="nf">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="sh">"</span><span class="s">bar</span><span class="sh">"</span><span class="p">,</span>
+                                    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span>
+                                    <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">salmon</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">lightblue</span><span class="sh">"</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="sh">"</span><span class="s">Heart Disease Frequency for Sex</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">xlabel</span><span class="p">(</span><span class="sh">"</span><span class="s">0 = No Disease, 1 = Disease</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">ylabel</span><span class="p">(</span><span class="sh">"</span><span class="s">Amount</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">legend</span><span class="p">([</span><span class="sh">"</span><span class="s">Female</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Male</span><span class="sh">"</span><span class="p">])</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<p><img src="/images/heart-disease-project-images/sex-frequency.png" alt="" /></p>
+
+<h3 id="age-vs-max-heart-rate-for-heart-disease">Age vs. Max Heart Rate for Heart Disease</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create another figure
+</span><span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Scatter with positive examples
+</span><span class="n">plt</span><span class="p">.</span><span class="nf">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">.</span><span class="n">age</span><span class="p">[</span><span class="n">df</span><span class="p">.</span><span class="n">target</span><span class="o">==</span><span class="mi">1</span><span class="p">],</span>
+            <span class="n">df</span><span class="p">.</span><span class="n">thalach</span><span class="p">[</span><span class="n">df</span><span class="p">.</span><span class="n">target</span><span class="o">==</span><span class="mi">1</span><span class="p">],</span>
+            <span class="n">c</span><span class="o">=</span><span class="sh">"</span><span class="s">salmon</span><span class="sh">"</span><span class="p">);</span>
+
+<span class="c1"># Scatter with negative examples
+</span><span class="n">plt</span><span class="p">.</span><span class="nf">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">.</span><span class="n">age</span><span class="p">[</span><span class="n">df</span><span class="p">.</span><span class="n">target</span><span class="o">==</span><span class="mi">0</span><span class="p">],</span>
+            <span class="n">df</span><span class="p">.</span><span class="n">thalach</span><span class="p">[</span><span class="n">df</span><span class="p">.</span><span class="n">target</span><span class="o">==</span><span class="mi">0</span><span class="p">],</span>
+            <span class="n">c</span><span class="o">=</span><span class="sh">"</span><span class="s">lightblue</span><span class="sh">"</span><span class="p">);</span>
+
+<span class="c1"># Add some helpful info
+</span><span class="n">plt</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="sh">"</span><span class="s">Heart Disease in function of Age and Max Heart Rate</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">xlabel</span><span class="p">(</span><span class="sh">"</span><span class="s">Age</span><span class="sh">"</span><span class="p">);</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">ylabel</span><span class="p">(</span><span class="sh">"</span><span class="s">Maximum Heart Rate</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">legend</span><span class="p">([</span><span class="sh">"</span><span class="s">Heart Disease</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">No Heart Disease</span><span class="sh">"</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<p><img src="/images/heart-disease-project-images/heart-rate-and-age.png" alt="" /></p>
+
+<h3 id="distribution-of-age">Distribution of Age</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="p">.</span><span class="n">age</span><span class="p">.</span><span class="n">plot</span><span class="p">.</span><span class="nf">hist</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<p><img src="/images/heart-disease-project-images/age-distribution.png" alt="" /></p>
+
+<h3 id="heart-disease-frequency-per-chest-pain-type">Heart Disease Frequency per Chest Pain Type</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create a bar graph to compare chest pain level to target column
+</span><span class="n">pd</span><span class="p">.</span><span class="nf">crosstab</span><span class="p">(</span><span class="n">df</span><span class="p">.</span><span class="n">cp</span><span class="p">,</span> <span class="n">df</span><span class="p">.</span><span class="n">target</span><span class="p">).</span><span class="nf">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="sh">"</span><span class="s">bar</span><span class="sh">"</span><span class="p">,</span>
+                                   <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span>
+                                   <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">salmon</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">lightblue</span><span class="sh">"</span><span class="p">])</span>
+
+<span class="c1"># Add some communication
+</span><span class="n">plt</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="sh">"</span><span class="s">Heart Disease Frequency Per Chest Pain Type</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">xlabel</span><span class="p">(</span><span class="sh">"</span><span class="s">Chest Pain Type</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">ylabel</span><span class="p">(</span><span class="sh">"</span><span class="s">Amount</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">legend</span><span class="p">([</span><span class="sh">"</span><span class="s">No Heart Disease</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Heart Disease</span><span class="sh">"</span><span class="p">])</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<p><img src="/images/heart-disease-project-images/chest-pain.png" alt="" /></p>
+
+<p>cp - chest pain type</p>
+<ul>
+  <li>
+    <p>0: Typical angina: chest pain related decrease blood supply to the heart</p>
+  </li>
+  <li>
+    <p>1: Atypical angina: chest pain not related to heart</p>
+  </li>
+  <li>
+    <p>2: Non-anginal pain: typically esophageal spasms (non heart related)</p>
+  </li>
+  <li>
+    <p>3: Asymptomatic: chest pain not showing signs of disease</p>
+  </li>
+</ul>
+
+<h3 id="correlation-matrix">Correlation Matrix</h3>
+<p>Finally, let’s look at the correlation matrix to see how each feature affects the target variable before we start creating our machine-learning model.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create correlation matrix
+</span><span class="n">corr_matrix</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="nf">corr</span><span class="p">()</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="p">.</span><span class="nf">heatmap</span><span class="p">(</span><span class="n">corr_matrix</span><span class="p">,</span>
+                 <span class="n">annot</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                 <span class="n">linewidths</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+                 <span class="n">fmt</span><span class="o">=</span><span class="sh">"</span><span class="s">.2f</span><span class="sh">"</span><span class="p">,</span>
+                 <span class="n">cmap</span><span class="o">=</span><span class="sh">"</span><span class="s">YlGnBu</span><span class="sh">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<p><img src="/images/heart-disease-project-images/correlation-matrix.png" alt="" /></p>
+
+<h2 id="5-modelling">5. Modelling</h2>
+
+<p>We are finally ready to start creating our model. Before we do, let’s first split our data into training and testing data so we can evaluate our model properly.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Split data into X and y
+</span><span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="nf">drop</span><span class="p">(</span><span class="sh">"</span><span class="s">target</span><span class="sh">"</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="sh">"</span><span class="s">target</span><span class="sh">"</span><span class="p">]</span>
+
+<span class="c1"># Split data into train and test sets
+</span><span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Split into train and test test
+</span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="nf">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span>
+                                                    <span class="n">y</span><span class="p">,</span>
+                                                    <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Now we’ve got our data split into training and test sets, it’s time to build a machine-learning model.</p>
+
+<p>We’ll train it (find the patterns) on the training set.</p>
+
+<p>And we’ll test it (use the patterns) on the test set.</p>
+
+<p>We’re going to try 3 different machine-learning models:</p>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">Logistic Regression</code></li>
+  <li><code class="language-plaintext highlighter-rouge">K-Nearest Neighbors Classifier</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Random Forest Classifier</code></li>
+</ol>
+
+<p>We’ll create a dictionary to store all the models above and create a function to fit and score the models for us.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Put models in a dictionary
+</span><span class="n">models</span> <span class="o">=</span> <span class="p">{</span><span class="sh">"</span><span class="s">Logistic Regression</span><span class="sh">"</span><span class="p">:</span> <span class="nc">LogisticRegression</span><span class="p">(),</span>
+          <span class="sh">"</span><span class="s">KNN</span><span class="sh">"</span><span class="p">:</span> <span class="nc">KNeighborsClassifier</span><span class="p">(),</span>
+          <span class="sh">"</span><span class="s">Random Forest</span><span class="sh">"</span><span class="p">:</span> <span class="nc">RandomForestClassifier</span><span class="p">()}</span>
+
+<span class="c1"># Create a function to fit and score models
+</span><span class="k">def</span> <span class="nf">fit_and_score</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">
+    Fit and evaluate given machine learning models.
+    models: a dict of different Scikit-Learn machine learning models
+    X_train: training data (no labels)
+    X_test: testing data (no labels)
+    y_train: training labels
+    y_test: test labels
+    </span><span class="sh">"""</span>
+    <span class="c1"># Set random seed
+</span>    <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+    
+    <span class="c1"># Make a dictionary to keep model scores
+</span>    <span class="n">model_scores</span> <span class="o">=</span> <span class="p">{}</span>
+    
+    <span class="c1"># Loop through models
+</span>    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="p">.</span><span class="nf">items</span><span class="p">():</span>
+        <span class="c1"># Fit the model to the data
+</span>        <span class="n">model</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
+        <span class="c1"># Evaluate the model and append its score to model_scores
+</span>        <span class="n">model_scores</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="nf">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">model_scores</span>
+</code></pre></div></div>
+
+<h3 id="model-comparison">Model Comparison</h3>
+
+<p>Let’s see well our models performed.</p>
+
+<p><strong>Note:</strong></p>
+<ul>
+  <li>1.0 = highest score possible</li>
+  <li>0.0 = lowest score possible</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">model_scores</span> <span class="o">=</span> <span class="nf">fit_and_score</span><span class="p">(</span><span class="n">models</span><span class="o">=</span><span class="n">models</span><span class="p">,</span>
+                             <span class="n">X_train</span><span class="o">=</span><span class="n">X_train</span><span class="p">,</span>
+                             <span class="n">X_test</span><span class="o">=</span><span class="n">X_test</span><span class="p">,</span>
+                             <span class="n">y_train</span><span class="o">=</span><span class="n">y_train</span><span class="p">,</span>
+                             <span class="n">y_test</span><span class="o">=</span><span class="n">y_test</span><span class="p">)</span>
+
+<span class="n">model_compare</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">DataFrame</span><span class="p">(</span><span class="n">model_scores</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">accuracy</span><span class="sh">"</span><span class="p">])</span>
+<span class="n">model_compare</span><span class="p">.</span><span class="n">T</span><span class="p">.</span><span class="n">plot</span><span class="p">.</span><span class="nf">bar</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<p><img src="/images/heart-disease-project-images/model-comparison.png" alt="" /></p>
+
+<p>Models Score:</p>
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Logistic Regression</code> performed the best and got the highest score of <code class="language-plaintext highlighter-rouge">88.52%</code></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">RandomForestClassifier</code> scored an <code class="language-plaintext highlighter-rouge">83.61%</code></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">KNN</code> scored a <code class="language-plaintext highlighter-rouge">68.85%</code> which performed poorly the most.</p>
+  </li>
+</ul>
+
+<p>Now we’ve got a baseline model and we know a model’s first predictions aren’t always what we should base our next steps off. What should we do?</p>
+
+<p>Let’s look at the following:</p>
+<ul>
+  <li>Hyperparameter tuning</li>
+  <li>Feature importance</li>
+  <li>Confusion matrix</li>
+  <li>Cross-validation</li>
+  <li>Precision</li>
+  <li>Recall</li>
+  <li>F1 score</li>
+  <li>Classification Report</li>
+  <li>ROC curve</li>
+  <li>Area under the curve (AUC)</li>
+</ul>
+
+<h3 id="hyperparameter-tuning-by-hand">Hyperparameter tuning (by hand)</h3>
+
+<p>We can change the paremeters in the <code class="language-plaintext highlighter-rouge">K-Nearest Neighbors Classifier</code> to see if it will yield us better results.</p>
+
+<p>It’s okay to tune the <code class="language-plaintext highlighter-rouge">K-Nearest Neighbors Classifier</code> by hand since it only has one parameter.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Let's tune KNN
+</span>
+<span class="n">train_scores</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">test_scores</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Create a list of different values for n_neighbors
+</span><span class="n">neighbors</span> <span class="o">=</span> <span class="nf">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">21</span><span class="p">)</span>
+
+<span class="c1"># Setup KNN instance
+</span><span class="n">knn</span> <span class="o">=</span> <span class="nc">KNeighborsClassifier</span><span class="p">()</span>
+
+<span class="c1"># Loop through different n_neighbors
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">neighbors</span><span class="p">:</span>
+    <span class="n">knn</span><span class="p">.</span><span class="nf">set_params</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
+    
+    <span class="c1"># Fit the algorithm 
+</span>    <span class="n">knn</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    
+    <span class="c1"># Update training score list
+</span>    <span class="n">train_scores</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">knn</span><span class="p">.</span><span class="nf">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">))</span>
+    
+    <span class="c1"># Update the test scores list
+</span>    <span class="n">test_scores</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">knn</span><span class="p">.</span><span class="nf">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">neighbors</span><span class="p">,</span><span class="n">train_scores</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sh">"</span><span class="s">Train score</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">neighbors</span><span class="p">,</span> <span class="n">test_scores</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sh">"</span><span class="s">Test score</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">xticks</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">xlabel</span><span class="p">(</span><span class="sh">"</span><span class="s">Number of neighbors</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">ylabel</span><span class="p">(</span><span class="sh">"</span><span class="s">Model score</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">legend</span><span class="p">();</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Maximum KNN score on the test data: </span><span class="si">{</span><span class="nf">max</span><span class="p">(</span><span class="n">test_scores</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="p">.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s">%</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<p><code class="language-plaintext highlighter-rouge">Maximum KNN score on the test data: 75.41%</code></p>
+
+<p><img src="/images/heart-disease-project-images/knn.png" alt="" /></p>
+
+<p>After tuning the<code class="language-plaintext highlighter-rouge"> K-Nearest Neighbors Classifier</code>, its highest score was only <code class="language-plaintext highlighter-rouge">75.41%</code> which is way below our expectation, so we are going to try tuning another model.</p>
+
+<h2 id="hyperparameter-tuning-with-randomizedsearchcv">Hyperparameter tuning with RandomizedSearchCV</h2>
+
+<p>We’re going to tune:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">LogisticRegression()</code></li>
+  <li><code class="language-plaintext highlighter-rouge">RandomForestClassifier()</code></li>
+</ul>
+
+<p>… using RandomizedSearchCV which will make it much easier for us to test many different parameters for our models.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create a hyperparameter grid for LogisticRegression
+</span><span class="n">log_reg_grid</span> <span class="o">=</span> <span class="p">{</span><span class="sh">"</span><span class="s">C</span><span class="sh">"</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="nf">logspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span>
+                <span class="sh">"</span><span class="s">solver</span><span class="sh">"</span><span class="p">:</span> <span class="p">[</span><span class="sh">"</span><span class="s">liblinear</span><span class="sh">"</span><span class="p">]}</span>
+
+<span class="c1"># Create hyperparameter grid for RandomForestClassifier
+</span><span class="n">rf_grid</span> <span class="o">=</span> <span class="p">{</span><span class="sh">"</span><span class="s">n_estimators</span><span class="sh">"</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span>
+           <span class="sh">"</span><span class="s">max_depth</span><span class="sh">"</span><span class="p">:</span> <span class="p">[</span><span class="bp">None</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+           <span class="sh">"</span><span class="s">min_samples_split</span><span class="sh">"</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+           <span class="sh">"</span><span class="s">min_samples_leaf</span><span class="sh">"</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">2</span><span class="p">)}</span>
+</code></pre></div></div>
+
+<p>We’ve got hyperparameter grids setup for each of our models, let’s tune them using RandomizedSearchCV.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Tune LogisticRegression
+</span><span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Setup random hyperparameter search for LogisticRegression
+</span><span class="n">rs_log_reg</span> <span class="o">=</span> <span class="nc">RandomizedSearchCV</span><span class="p">(</span><span class="nc">LogisticRegression</span><span class="p">(),</span>
+                                <span class="n">param_distributions</span><span class="o">=</span><span class="n">log_reg_grid</span><span class="p">,</span>
+                                <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                                <span class="n">n_iter</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+                                <span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="c1"># Fit random hyperparameter search model for LogisticRegression
+</span><span class="n">rs_log_reg</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Now that the model is finished trying out different parameters, let’s see which numbers yield the best parameters.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Check for the best parameters
+</span><span class="n">rs_log_reg</span><span class="p">.</span><span class="n">best_params_</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Ouput:</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">{'solver': 'liblinear', 'C': 0.23357214690901212}</code></p>
+
+<p>Let’s see how well our model performs with our new parameters:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">rs_log_reg</span><span class="p">.</span><span class="nf">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Accuracy: 88.52%</code></p>
+
+<p>After tuning the <code class="language-plaintext highlighter-rouge">LogisticRegression()</code>, the score remained the same as before. Before we try tuning any more parameters for it, let’s try tuning the <code class="language-plaintext highlighter-rouge">RandomForestClassifier()</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Setup random seed
+</span><span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Setup random hyperparameter search for RandomForestClassifier
+</span><span class="n">rs_rf</span> <span class="o">=</span> <span class="nc">RandomizedSearchCV</span><span class="p">(</span><span class="nc">RandomForestClassifier</span><span class="p">(),</span>
+                           <span class="n">param_distributions</span><span class="o">=</span><span class="n">rf_grid</span><span class="p">,</span>
+                           <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                           <span class="n">n_iter</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+                           <span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="c1"># Fit random hyperparameter search model for RandomForestClassifier()
+</span><span class="n">rs_rf</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Check for the best parameters
+</span><span class="n">rs_rf</span><span class="p">.</span><span class="n">best_params_</span>
+
+<span class="c1"># Evaluate the randomized search RandomForestClassifier model
+</span><span class="n">rs_rf</span><span class="p">.</span><span class="nf">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Accuracy: 86.87</code></p>
+
+<p>After tuning the <code class="language-plaintext highlighter-rouge">RandomForestClassifier()</code>, the score has gone up by about <code class="language-plaintext highlighter-rouge">3%</code>.</p>
+
+<h2 id="hyperparameter-tuning-with-gridsearchcv">Hyperparameter Tuning with GridSearchCV</h2>
+
+<p>Since our <code class="language-plaintext highlighter-rouge">LogisticRegression</code> model provides the best scores so far, we’ll try and improve them again using GridSearchCV.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Different hyperparameters for our LogisticRegression model
+</span><span class="n">log_reg_grid</span> <span class="o">=</span> <span class="p">{</span><span class="sh">"</span><span class="s">C</span><span class="sh">"</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="nf">logspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span>
+               <span class="sh">"</span><span class="s">solver</span><span class="sh">"</span><span class="p">:</span> <span class="p">[</span><span class="sh">"</span><span class="s">liblinear</span><span class="sh">"</span><span class="p">]}</span>
+
+<span class="c1"># Setup grid hyperparameter search for LogisticRegression
+</span><span class="n">gs_log_reg</span> <span class="o">=</span> <span class="nc">GridSearchCV</span><span class="p">(</span><span class="nc">LogisticRegression</span><span class="p">(),</span>
+                          <span class="n">param_grid</span><span class="o">=</span><span class="n">log_reg_grid</span><span class="p">,</span>
+                          <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                          <span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="c1"># Fit grid hyperparameter search model
+</span><span class="n">gs_log_reg</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Check the best parameters
+</span><span class="n">gs_log_reg</span><span class="p">.</span><span class="n">best_params_</span>
+
+<span class="c1"># Evaluate the grid search LogisticRegression model 
+</span><span class="n">gs_log_reg</span><span class="p">.</span><span class="nf">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Accuracy: 88.52%</code></p>
+
+<p>Even after tuning the <code class="language-plaintext highlighter-rouge">LogisticRegression</code> model with GridSearchCV, our score has remained the same. However, we should evaluate the model in other metrics.</p>
+
+<h2 id="evaluating-our-tuned-machine-learning-classifier-beyond-accuracy">Evaluating our tuned machine learning classifier, beyond accuracy</h2>
+
+<ul>
+  <li>Receiver Operating Characteristic (ROC) curve</li>
+  <li>Area Under ROC Curve (AUC) score</li>
+  <li>Confusion matrix</li>
+  <li>Classification report</li>
+  <li>Precision</li>
+  <li>Recall</li>
+  <li>F1-score</li>
+</ul>
+
+<p>… and it would be great if cross-validation was used where possible.</p>
+
+<p>To make comparisons and evaluate our trained model, first, we need to make predictions.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Make predictions with tuned model
+</span><span class="n">y_preds</span> <span class="o">=</span> <span class="n">gs_log_reg</span><span class="p">.</span><span class="nf">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+       <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
+       <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">int64</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>We can now plot the ROC curve that shows how well our model can distinguish between two classes. The most ideal ROC curve will hug the top-left corner. We will also calculate the AUC score.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Calculate roc_curve and auc metric
+</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">thresholds</span> <span class="o">=</span> <span class="nf">roc_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_preds</span><span class="p">)</span>
+<span class="n">roc_auc</span> <span class="o">=</span> <span class="nf">auc</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">)</span>
+
+<span class="c1"># Display roc_curve
+</span><span class="n">display</span> <span class="o">=</span> <span class="nc">RocCurveDisplay</span><span class="p">(</span><span class="n">fpr</span><span class="o">=</span><span class="n">fpr</span><span class="p">,</span>
+                          <span class="n">tpr</span><span class="o">=</span><span class="n">tpr</span><span class="p">,</span>
+                          <span class="n">roc_auc</span><span class="o">=</span><span class="n">roc_auc</span><span class="p">,</span>
+                          <span class="n">estimator_name</span><span class="o">=</span><span class="sh">"</span><span class="s">LogisticalRegressor</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">display</span><span class="p">.</span><span class="nf">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<p><img src="/images/heart-disease-project-images/roc.png" alt="" /></p>
+
+<p>We will now look at a confusion matrix of our model.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Confusion matrix
+</span><span class="n">sns</span><span class="p">.</span><span class="nf">set</span><span class="p">(</span><span class="n">font_scale</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">plot_conf_mat</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_preds</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">
+    Plots a visual looking confusion matrix using Seaborn</span><span class="sh">'</span><span class="s">s heatmap()
+    </span><span class="sh">"""</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="p">.</span><span class="nf">heatmap</span><span class="p">(</span><span class="nf">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_preds</span><span class="p">),</span>
+                     <span class="n">annot</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                     <span class="n">cbar</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="nf">xlabel</span><span class="p">(</span><span class="sh">"</span><span class="s">Model predictions</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="nf">ylabel</span><span class="p">(</span><span class="sh">"</span><span class="s">True labels</span><span class="sh">"</span><span class="p">)</span>
+    
+<span class="nf">plot_conf_mat</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_preds</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<p><img src="/images/heart-disease-project-images/confusion_matrix.png" alt="" /></p>
+
+<p>This confusion matrix tell us the following:</p>
+
+<ul>
+  <li>True positive = model predicts <code class="language-plaintext highlighter-rouge">1</code> when truth is <code class="language-plaintext highlighter-rouge">1</code></li>
+  <li>False positive = model predicts <code class="language-plaintext highlighter-rouge">1</code> when truth is <code class="language-plaintext highlighter-rouge">0</code></li>
+  <li>True negative = model predicts <code class="language-plaintext highlighter-rouge">0</code> when truth is <code class="language-plaintext highlighter-rouge">0</code></li>
+  <li>False negative = model predicts <code class="language-plaintext highlighter-rouge">0</code> when truth is <code class="language-plaintext highlighter-rouge">1</code></li>
+</ul>
+
+<p>From this confusion matrix, our model has successfully identified <code class="language-plaintext highlighter-rouge">25</code> negative patients and <code class="language-plaintext highlighter-rouge">29</code> positive patients. However, there are <code class="language-plaintext highlighter-rouge">3</code> false negatives and <code class="language-plaintext highlighter-rouge">4</code> false positives.</p>
+
+<p>Now we’ve got a ROC curve, an AUC metric, and a confusion matrix. Let’s get a classification report as well as cross-validated precision, recall, and f1-score.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="nf">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_preds</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>              <span class="n">precision</span>    <span class="n">recall</span>  <span class="n">f1</span><span class="o">-</span><span class="n">score</span>   <span class="n">support</span>
+
+           <span class="mi">0</span>       <span class="mf">0.89</span>      <span class="mf">0.86</span>      <span class="mf">0.88</span>        <span class="mi">29</span>
+           <span class="mi">1</span>       <span class="mf">0.88</span>      <span class="mf">0.91</span>      <span class="mf">0.89</span>        <span class="mi">32</span>
+
+    <span class="n">accuracy</span>                           <span class="mf">0.89</span>        <span class="mi">61</span>
+   <span class="n">macro</span> <span class="n">avg</span>       <span class="mf">0.89</span>      <span class="mf">0.88</span>      <span class="mf">0.88</span>        <span class="mi">61</span>
+<span class="n">weighted</span> <span class="n">avg</span>       <span class="mf">0.89</span>      <span class="mf">0.89</span>      <span class="mf">0.89</span>        <span class="mi">61</span>
+</code></pre></div></div>
+
+<p>This classification report tells us the following:</p>
+
+<ul>
+  <li>
+    <p><strong>Precision</strong>: Indicates the proportion of positive identifications (model predicted class 1) which were actually correct.</p>
+  </li>
+  <li>
+    <p><strong>Recall</strong>: Indicates the proportion of actual positives which were correctly classified.</p>
+  </li>
+  <li>
+    <p><strong>F1-score</strong>: A combination of precision and recall.</p>
+  </li>
+  <li>
+    <p><strong>Support</strong>: Number of samples each metric was calculated on.</p>
+  </li>
+  <li>
+    <p><strong>Accuracy</strong>: The accuracy of the model in decimal form.</p>
+  </li>
+  <li>
+    <p><strong>Macro average</strong>: The average precision, recall, and f1-score between classes (0 and 1) however, it does not take class imbalance into account.</p>
+  </li>
+  <li>
+    <p><strong>Weighted average</strong>: The average precision, recall, and f1-score between classes (0 and 1) which is calculated with respect to how many samples there are in each class.</p>
+  </li>
+</ul>
+
+<h3 id="calculate-evaluation-metrics-using-cross-validation">Calculate evaluation metrics using cross-validation</h3>
+
+<p>We’re going to reevaluate our model using the <code class="language-plaintext highlighter-rouge">cross_val_score</code> to get a better idea of the accuracy, precision, recall, and f1-score to see how well the model can generalise over the whole dataset.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create a new classifier with best parameters
+</span><span class="n">clf</span> <span class="o">=</span> <span class="nc">LogisticRegression</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mf">0.20433597178569418</span><span class="p">,</span>
+                         <span class="n">solver</span><span class="o">=</span><span class="sh">"</span><span class="s">liblinear</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># Cross-validated accuracy
+</span><span class="n">cv_acc</span> <span class="o">=</span> <span class="nf">cross_val_score</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span>
+                         <span class="n">X</span><span class="p">,</span>
+                         <span class="n">y</span><span class="p">,</span>
+                         <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                         <span class="n">scoring</span><span class="o">=</span><span class="sh">"</span><span class="s">accuracy</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">cv_acc</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">mean</span><span class="p">(</span><span class="n">cv_acc</span><span class="p">)</span>
+
+<span class="c1"># Cross-validated precision
+</span><span class="n">cv_precision</span> <span class="o">=</span> <span class="nf">cross_val_score</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span>
+                         <span class="n">X</span><span class="p">,</span>
+                         <span class="n">y</span><span class="p">,</span>
+                         <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                         <span class="n">scoring</span><span class="o">=</span><span class="sh">"</span><span class="s">precision</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">cv_precision</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">mean</span><span class="p">(</span><span class="n">cv_precision</span><span class="p">)</span>
+
+<span class="c1"># Cross-validated recall
+</span><span class="n">cv_recall</span> <span class="o">=</span> <span class="nf">cross_val_score</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span>
+                         <span class="n">X</span><span class="p">,</span>
+                         <span class="n">y</span><span class="p">,</span>
+                         <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                         <span class="n">scoring</span><span class="o">=</span><span class="sh">"</span><span class="s">recall</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">cv_recall</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">mean</span><span class="p">(</span><span class="n">cv_recall</span><span class="p">)</span>
+
+<span class="c1"># Cross-validated f1_score
+</span><span class="n">cv_f1</span> <span class="o">=</span> <span class="nf">cross_val_score</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span>
+                         <span class="n">X</span><span class="p">,</span>
+                         <span class="n">y</span><span class="p">,</span>
+                         <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                         <span class="n">scoring</span><span class="o">=</span><span class="sh">"</span><span class="s">f1</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">cv_f1</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">mean</span><span class="p">(</span><span class="n">cv_f1</span><span class="p">)</span>
+
+<span class="c1"># Visualize cross-validated metrics
+</span><span class="n">cv_metrics</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">DataFrame</span><span class="p">({</span><span class="sh">"</span><span class="s">Accuracy</span><span class="sh">"</span><span class="p">:</span> <span class="n">cv_acc</span><span class="p">,</span>
+                           <span class="sh">"</span><span class="s">Precision</span><span class="sh">"</span><span class="p">:</span> <span class="n">cv_precision</span><span class="p">,</span>
+                           <span class="sh">"</span><span class="s">Recall</span><span class="sh">"</span><span class="p">:</span> <span class="n">cv_recall</span><span class="p">,</span>
+                           <span class="sh">"</span><span class="s">F1</span><span class="sh">"</span><span class="p">:</span> <span class="n">cv_f1</span><span class="p">},</span>
+                           <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="n">cv_metrics</span><span class="p">.</span><span class="n">T</span><span class="p">.</span><span class="n">plot</span><span class="p">.</span><span class="nf">bar</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="sh">"</span><span class="s">Cross_validated classifcation metrics</span><span class="sh">"</span><span class="p">,</span>
+                      <span class="n">legend</span><span class="o">=</span><span class="bp">False</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<p><img src="/images/heart-disease-project-images/cv_metrics.png" alt="" /></p>
+
+<p>Scores for each metric:</p>
+
+<ul>
+  <li>
+    <p><strong>Accuracy</strong>: <code class="language-plaintext highlighter-rouge">84.47%</code></p>
+  </li>
+  <li>
+    <p><strong>Precision</strong>: <code class="language-plaintext highlighter-rouge">82.08%</code></p>
+  </li>
+  <li>
+    <p><strong>Recall</strong>: <code class="language-plaintext highlighter-rouge">92.12%</code></p>
+  </li>
+  <li>
+    <p><strong>F1-score</strong>: <code class="language-plaintext highlighter-rouge">86.73%</code></p>
+  </li>
+</ul>
+
+<p>Overall, not bad scores, and this was done over cross-validation so this gives us more insight into how well our model performed on the dataset as a whole.</p>
+
+<h3 id="feature-importance">Feature Importance</h3>
+
+<p>Feature importance is another way of asking, “Which features contributed most to the outcomes of the model and how did they contribute?”</p>
+
+<p>Finding feature importance is different for each machine learning model. One way to find feature importance is to search for “(MODEL NAME) feature importance.”</p>
+
+<p>Let’s find the feature importance for our LogisticRegression model.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Fit an instance of LogisticRegression
+</span><span class="n">gs_log_reg</span><span class="p">.</span><span class="n">best_params_</span>
+
+<span class="n">clf</span> <span class="o">=</span> <span class="nc">LogisticRegression</span><span class="p">(</span><span class="n">C</span><span class="o">=</span> <span class="mf">0.20433597178569418</span><span class="p">,</span>
+                         <span class="n">solver</span><span class="o">=</span><span class="sh">"</span><span class="s">liblinear</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">clf</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Match coef's of features to columns
+</span><span class="n">feature_dict</span> <span class="o">=</span> <span class="nf">dict</span><span class="p">(</span><span class="nf">zip</span><span class="p">(</span><span class="n">df</span><span class="p">.</span><span class="n">columns</span><span class="p">,</span> <span class="nf">list</span><span class="p">(</span><span class="n">clf</span><span class="p">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
+
+<span class="c1"># Visualize feature importance
+</span><span class="n">feature_df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">DataFrame</span><span class="p">(</span><span class="n">feature_dict</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">feature_df</span><span class="p">.</span><span class="n">T</span><span class="p">.</span><span class="n">plot</span><span class="p">.</span><span class="nf">bar</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="sh">"</span><span class="s">Feature Importance</span><span class="sh">"</span><span class="p">,</span>
+                      <span class="n">legend</span><span class="o">=</span><span class="bp">False</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<p><img src="/images/heart-disease-project-images/feature_importance.png" alt="" /></p>
+
+<p>This graph shows us how each feature correlates to our target variable (if a person has heart disease or not). It seems like <code class="language-plaintext highlighter-rouge">cp</code> and <code class="language-plaintext highlighter-rouge">slope</code> had the most correlations for heart disease.</p>
+
+<h2 id="6-conclusion">6. Conclusion</h2>
+
+<p>While we weren’t able to reach our evaluation metric goal of <code class="language-plaintext highlighter-rouge">95%</code> accuracy, we managed to get <code class="language-plaintext highlighter-rouge">88%</code> which is a great start. Again we can look at the classification report to see how the model performed in different metrics:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">precision</span>    <span class="n">recall</span>  <span class="n">f1</span><span class="o">-</span><span class="n">score</span>   <span class="n">support</span>
+
+           <span class="mi">0</span>       <span class="mf">0.89</span>      <span class="mf">0.86</span>      <span class="mf">0.88</span>        <span class="mi">29</span>
+           <span class="mi">1</span>       <span class="mf">0.88</span>      <span class="mf">0.91</span>      <span class="mf">0.89</span>        <span class="mi">32</span>
+
+    <span class="n">accuracy</span>                           <span class="mf">0.89</span>        <span class="mi">61</span>
+   <span class="n">macro</span> <span class="n">avg</span>       <span class="mf">0.89</span>      <span class="mf">0.88</span>      <span class="mf">0.88</span>        <span class="mi">61</span>
+<span class="n">weighted</span> <span class="n">avg</span>       <span class="mf">0.89</span>      <span class="mf">0.89</span>      <span class="mf">0.89</span>        <span class="mi">61</span>
+</code></pre></div></div>
+
+<p>Maybe in the future, I will see if I can try another model or more hyperparameter tuning, but <code class="language-plaintext highlighter-rouge">88%</code> is still great.</p>
+
+<h2 id="the-full-code">The Full Code</h2>
+
+<p>You can check out all the code together on my <a href="https://github.com/samikamal21/Heart-Disease-Classification">Heart Disease Classifcation repository</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Sami Kamal. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

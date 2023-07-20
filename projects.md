@@ -4,6 +4,14 @@ header:
   permalink: /projects.html
 
 feature_row:
+- image_path: images/heart-disease-project-images/heart-disease-icon.jpg
+  alt: "Heart-Disease-Classification"
+  title: "Heart-Disease-Classification"
+  excerpt: "A machine-learning model capable of predicting whether or not someone has heart disease based on their medical attributes."
+  url: "/heart-disease-classifcation"
+  btn_label: "Read More"
+  btn_class: "btn--inverse"
+
 - image_path: images/smaglantis-images/Smaglantis.gif
   alt: "Smaglantis"
   title: "Smaglantis: An indie open world action/RPG game"
@@ -12,19 +20,19 @@ feature_row:
   btn_label: "Read More"
   btn_class: "btn--inverse"
 
-- image_path: images/shiny-bot-images/shiny-kyogre.gif
-  alt: "Shiny Bot"
-  title: "Pokémon Shiny Hunting Bot"
-  excerpt: "A bot designed to find you a shiny Pokémon in any Pokémon game."
-  url: "/shiny-bot"
-  btn_label: "Read More"
-  btn_class: "btn--inverse"
-
 - image_path: /images/stars-images/stars_project.gif
   alt: "Stars Simulation"
   title: "Stars Simulation"
   excerpt: "A simulation of Stars in space built in Java."
   url: "/stars/"
+  btn_label: "Read More"
+  btn_class: "btn--inverse"
+
+- image_path: images/shiny-bot-images/shiny-kyogre.gif
+  alt: "Shiny Bot"
+  title: "Pokémon Shiny Hunting Bot"
+  excerpt: "A bot designed to find you a shiny Pokémon in any Pokémon game."
+  url: "/shiny-bot"
   btn_label: "Read More"
   btn_class: "btn--inverse"
 
