@@ -863,4 +863,4 @@ Maybe in the future, I will see if I can try another model or more hyperparamete
 
 ## The Full Code
 
-You can check out all the code together on my [Heart Disease Classifcation repository](https://github.com/samikamal21/Heart-Disease-Classification)
+You can check out all the code together on my [Heart Disease Classifcation repository.](https://github.com/samikamal21/Heart-Disease-Classification)

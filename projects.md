@@ -12,6 +12,14 @@ feature_row:
   btn_label: "Read More"
   btn_class: "btn--inverse"
 
+- image_path: images/bulldozer-regression-images/bulldozer-icon.jpg
+  alt: "Bulldozer-Price-Regression"
+  title: "Bulldozer-Price-Regression"
+  excerpt: "A machine-learning model capable of predicting the sale price of a bulldozer."
+  url: "/bulldozer-regression"
+  btn_label: "Read More"
+  btn_class: "btn--inverse"
+
 - image_path: images/smaglantis-images/Smaglantis.gif
   alt: "Smaglantis"
   title: "Smaglantis: An indie open world action/RPG game"
@@ -20,7 +28,8 @@ feature_row:
   btn_label: "Read More"
   btn_class: "btn--inverse"
 
-- image_path: /images/stars-images/stars_project.gif
+feature_row2:
+- image_path: /images/stars-images/stars_icon.gif
   alt: "Stars Simulation"
   title: "Stars Simulation"
   excerpt: "A simulation of Stars in space built in Java."
@@ -43,12 +52,12 @@ feature_row:
   url: "https://github.com/samikamal21/Conway-s-Game-of-Life/blob/main/GameOfLife/src/conwaygame/GameOfLife.java"
   btn_label: "Code Here"
   btn_class: "btn--inverse"
-  
 ---
 
 <div style="margin-bottom:1cm" align="center"><font size="55">Selected Projects</font></div>
 
 {% include feature_row type="left"%}
+{% include feature_row id="feature_row2"%}
 
 <style type="text/css">
   body {

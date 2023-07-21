@@ -1,0 +1,1196 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Bulldozer Price Regression - Sami’s Projects &amp; Notes</title>
+<meta name="description" content="A compilation of my projects &amp; notes.">
+
+
+  <meta name="author" content="Sami Kamal">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Sami's Projects & Notes">
+<meta property="og:title" content="Bulldozer Price Regression">
+<meta property="og:url" content="http://localhost:4000/bulldozer-regression/">
+
+
+  <meta property="og:description" content="A compilation of my projects &amp; notes.">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/images/bulldozer-regression-images/bulldozer-banner.jpg">
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/bulldozer-regression/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Sami Kamal",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Sami's Projects & Notes Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Sami's Projects & Notes
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/">Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/coursework">Coursework</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Resume.pdf">Résumé</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/images/bulldozer-regression-images/bulldozer-banner.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Bulldozer Price Regression
+
+        
+      </h1>
+      
+      
+
+
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/images/smaglantis-images/PlayerHead.gif" alt="Sami Kamal" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Sami Kamal</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>My notes on math, computer science, and cognitive science.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/samikamal21" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Bulldozer Price Regression">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Overview</h4></header>
+              <ul class="toc__menu"><li><a href="#predicting-the-sale-price-of-bulldozers-using-machine-learning">Predicting the Sale Price of Bulldozers using Machine Learning</a><ul><li><a href="#1-problem-definition">1. Problem Definition</a></li><li><a href="#2-data">2. Data</a></li><li><a href="#3-evaluation">3. Evaluation</a></li><li><a href="#4-features">4. Features</a></li><li><a href="#importing-the-data-and-preparing-it-for-modelling">Importing the data and preparing it for modelling</a><ul><li><a href="#parsing-dates">Parsing dates</a></li><li><a href="#sort-dataframe-by-sale-date">Sort DataFrame by sale date</a></li><li><a href="#make-a-copy-of-the-original-dataframe">Make a copy of the original DataFrame</a></li><li><a href="#add-datetime-parameters-for-saledate-column">Add datetime parameters for saledate column</a></li></ul></li><li><a href="#5-turning-data-into-numbers">5. Turning Data into Numbers</a><ul><li><a href="#convert-string-to-categories">Convert string to categories</a></li><li><a href="#fill-numerical-missing-values-first">Fill numerical missing values first</a></li><li><a href="#filling-and-turning-categorical-variables-into-numbers">Filling and turning categorical variables into numbers</a></li><li><a href="#save-preprocessed-data">Save preprocessed data</a></li></ul></li><li><a href="#6-modelling">6. Modelling</a><ul><li><a href="#splitting-data-into-trainvalidation-sets">Splitting data into train/validation sets</a></li><li><a href="#building-an-evaluation-function">Building an evaluation function</a></li></ul></li><li><a href="#testing-our-model-on-a-subset-to-tune-the-hyperparameters">Testing our model on a subset (to tune the hyperparameters)</a><ul><li><a href="#hyperparameter-tuning-with-randomizedsearchcv">Hyperparameter tuning with RandomizedSearchCV</a></li><li><a href="#train-a-model-with-the-best-hyperparameters">Train a model with the best hyperparameters</a></li></ul></li><li><a href="#make-predictions-on-test-data">Make predictions on test data</a><ul><li><a href="#feature-importance">Feature Importance</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#the-full-code">The Full Code</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <style type="text/css">
+body {
+  font-size: 13pt;
+}
+
+pre {
+  background-color: white;
+}
+
+code {
+  background-color: white;
+}
+</style>
+
+<h1 id="predicting-the-sale-price-of-bulldozers-using-machine-learning">Predicting the Sale Price of Bulldozers using Machine Learning</h1>
+
+<p><strong>Note:</strong> This was done in a Jupyter Notebook.</p>
+
+<p>In this notebook, we’re going to predict the sale price of bulldozers.</p>
+
+<h2 id="1-problem-definition">1. Problem Definition</h2>
+
+<blockquote>
+  <p>How well can we predict the future sale price of a bulldozer, given its characteristics and previous examples of how much similar bulldozers have been sold for?</p>
+</blockquote>
+
+<h2 id="2-data">2. Data</h2>
+
+<p>The data is downloaded from the <a href="https://www.kaggle.com/competitions/bluebook-for-bulldozers/data">Kaggle Bluebook for Bulldozers competition.</a></p>
+
+<p>There are 3 main datasets:</p>
+
+<ul>
+  <li>
+    <p>Train.csv is the training set, which contains data through the end of 2011.</p>
+  </li>
+  <li>
+    <p>Valid.csv is the validation set, which contains data from January 1, 2012 - April 30, 2012 You make predictions on this set throughout the majority of the competition. Your score on this set is used to create the public leaderboard.</p>
+  </li>
+  <li>
+    <p>Test.csv is the test set, which won’t be released until the last week of the competition. It contains data from May 1, 2012 - November 2012. Your score on the test set determines your final rank for the competition.</p>
+  </li>
+</ul>
+
+<h2 id="3-evaluation">3. Evaluation</h2>
+
+<p>The evaluation metric is the RMSLE (root mean squared log error) between the actual and predicted auction prices.</p>
+
+<p><strong>Note:</strong> The goal for most regression evaluation metrics is to minimize the error. For example, our goal for this project will be to build a machine-learning model which minimizes RMSLE.</p>
+
+<h2 id="4-features">4. Features</h2>
+
+<p>For this dataset, Kaggle provides a data dictionary that contains information about what each attribute of the dataset means. You can download this file directly from the <a href="https://www.kaggle.com/account/login?returnUrl=%2Fcompetitions%2Fbluebook-for-bulldozers">Kaggle competition page (account required).</a></p>
+
+<p>First, we’ll import the dataset and start exploring. Since we know the evaluation metric we’re trying to minimize, our first goal will be building a baseline model and seeing how it stacks up against the competition.</p>
+
+<h2 id="importing-the-data-and-preparing-it-for-modelling">Importing the data and preparing it for modelling</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="n">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="n">sklearn</span>
+<span class="kn">from</span> <span class="n">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
+<span class="kn">from</span> <span class="n">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">RandomizedSearchCV</span>
+<span class="kn">from</span> <span class="n">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_log_error</span><span class="p">,</span> <span class="n">mean_absolute_error</span><span class="p">,</span> <span class="n">r2_score</span>
+</code></pre></div></div>
+
+<p>Now we’ve got our tools for data analysis ready, we can import the data and start to explore it.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Import training and validation sets
+</span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">data/bluebook-for-bulldozers/TrainAndValid.csv</span><span class="sh">"</span><span class="p">,</span>
+                 <span class="n">low_memory</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span> 
+
+<span class="n">df</span><span class="p">.</span><span class="nf">info</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">pandas</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">DataFrame</span><span class="sh">'</span><span class="s">&gt;
+RangeIndex: 412698 entries, 0 to 412697
+Data columns (total 53 columns):
+ #   Column                    Non-Null Count   Dtype  
+---  ------                    --------------   -----  
+ 0   SalesID                   412698 non-null  int64  
+ 1   SalePrice                 412698 non-null  float64
+ 2   MachineID                 412698 non-null  int64  
+ 3   ModelID                   412698 non-null  int64  
+ 4   datasource                412698 non-null  int64  
+ 5   auctioneerID              392562 non-null  float64
+ 6   YearMade                  412698 non-null  int64  
+ 7   MachineHoursCurrentMeter  147504 non-null  float64
+ 8   UsageBand                 73670 non-null   object 
+ 9   saledate                  412698 non-null  object 
+ 10  fiModelDesc               412698 non-null  object 
+ 11  fiBaseModel               412698 non-null  object 
+ 12  fiSecondaryDesc           271971 non-null  object 
+ 13  fiModelSeries             58667 non-null   object 
+ 14  fiModelDescriptor         74816 non-null   object 
+ 15  ProductSize               196093 non-null  object 
+ 16  fiProductClassDesc        412698 non-null  object 
+ 17  state                     412698 non-null  object 
+ 18  ProductGroup              412698 non-null  object 
+ 19  ProductGroupDesc          412698 non-null  object 
+ 20  Drive_System              107087 non-null  object 
+ 21  Enclosure                 412364 non-null  object 
+ 22  Forks                     197715 non-null  object 
+ 23  Pad_Type                  81096 non-null   object 
+ 24  Ride_Control              152728 non-null  object 
+ 25  Stick                     81096 non-null   object 
+ 26  Transmission              188007 non-null  object 
+ 27  Turbocharged              81096 non-null   object 
+ 28  Blade_Extension           25983 non-null   object 
+ 29  Blade_Width               25983 non-null   object 
+ 30  Enclosure_Type            25983 non-null   object 
+ 31  Engine_Horsepower         25983 non-null   object 
+ 32  Hydraulics                330133 non-null  object 
+ 33  Pushblock                 25983 non-null   object 
+ 34  Ripper                    106945 non-null  object 
+ 35  Scarifier                 25994 non-null   object 
+ 36  Tip_Control               25983 non-null   object 
+ 37  Tire_Size                 97638 non-null   object 
+ 38  Coupler                   220679 non-null  object 
+ 39  Coupler_System            44974 non-null   object 
+ 40  Grouser_Tracks            44875 non-null   object 
+ 41  Hydraulics_Flow           44875 non-null   object 
+ 42  Track_Type                102193 non-null  object 
+ 43  Undercarriage_Pad_Width   102916 non-null  object 
+ 44  Stick_Length              102261 non-null  object 
+ 45  Thumb                     102332 non-null  object 
+ 46  Pattern_Changer           102261 non-null  object 
+ 47  Grouser_Type              102193 non-null  object 
+ 48  Backhoe_Mounting          80712 non-null   object 
+ 49  Blade_Type                81875 non-null   object 
+ 50  Travel_Controls           81877 non-null   object 
+ 51  Differential_Type         71564 non-null   object 
+ 52  Steering_Controls         71522 non-null   object 
+dtypes: float64(3), int64(5), object(45)
+memory usage: 166.9+ MB
+</span></code></pre></div></div>
+
+<p>Already, I can see we’re going to need to transform our data in order for a machine-learning model to learn any patterns. Let’s also take a look at our target variable (<code class="language-plaintext highlighter-rouge">SalePrice</code> of a bulldozer).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="p">.</span><span class="n">SalePrice</span><span class="p">.</span><span class="n">plot</span><span class="p">.</span><span class="nf">hist</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<p><img src="/images/bulldozer-regression-images/saleprice.png" alt="" /></p>
+
+<p>We can see that most of our sale prices of bulldozers are at <code class="language-plaintext highlighter-rouge">$20,000</code>.</p>
+
+<h3 id="parsing-dates">Parsing dates</h3>
+
+<p>When we work with time series data, we want to enrich the time &amp; date component as much as possible.</p>
+
+<p>We can do that by telling <code class="language-plaintext highlighter-rouge">pandas</code> which of our columns has dates in it using the <code class="language-plaintext highlighter-rouge">parse_dates</code> parameter.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Import data again but this time parse data
+</span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">data/bluebook-for-bulldozers/TrainAndValid.csv</span><span class="sh">"</span><span class="p">,</span>
+                 <span class="n">low_memory</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                 <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">saledate</span><span class="sh">"</span><span class="p">])</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">.</span><span class="nf">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="sh">"</span><span class="s">saledate</span><span class="sh">"</span><span class="p">][:</span><span class="mi">1000</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="sh">"</span><span class="s">SalePrice</span><span class="sh">"</span><span class="p">][:</span><span class="mi">1000</span><span class="p">])</span>
+
+<span class="n">ax</span><span class="p">.</span><span class="nf">set_xlabel</span><span class="p">(</span><span class="sh">"</span><span class="s">Sale Date</span><span class="sh">"</span><span class="p">);</span>
+<span class="n">ax</span><span class="p">.</span><span class="nf">set_ylabel</span><span class="p">(</span><span class="sh">"</span><span class="s">Sale Price ($)</span><span class="sh">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<p><img src="/images/bulldozer-regression-images/saledate.png" alt="" /></p>
+
+<p>We can now examine the dates properly in our dataset for each bulldozer sold.</p>
+
+<h3 id="sort-dataframe-by-sale-date">Sort DataFrame by sale date</h3>
+
+<p>When working with time series data, it’s a good idea to sort it by date.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Sort DataFrame in date order
+</span><span class="n">df</span><span class="p">.</span><span class="nf">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">saledate</span><span class="sh">"</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">df</span><span class="p">.</span><span class="n">saledate</span><span class="p">.</span><span class="nf">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">205615</span>   <span class="mi">1989</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">17</span>
+<span class="mi">274835</span>   <span class="mi">1989</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">141296</span>   <span class="mi">1989</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">212552</span>   <span class="mi">1989</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">62755</span>    <span class="mi">1989</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">54653</span>    <span class="mi">1989</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">81383</span>    <span class="mi">1989</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">204924</span>   <span class="mi">1989</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">135376</span>   <span class="mi">1989</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">113390</span>   <span class="mi">1989</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">113394</span>   <span class="mi">1989</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">116419</span>   <span class="mi">1989</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">32138</span>    <span class="mi">1989</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">127610</span>   <span class="mi">1989</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">76171</span>    <span class="mi">1989</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">127000</span>   <span class="mi">1989</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">128130</span>   <span class="mi">1989</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">127626</span>   <span class="mi">1989</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">55455</span>    <span class="mi">1989</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">55454</span>    <span class="mi">1989</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">saledate</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">datetime64</span><span class="p">[</span><span class="n">ns</span><span class="p">]</span>
+</code></pre></div></div>
+
+<h3 id="make-a-copy-of-the-original-dataframe">Make a copy of the original DataFrame</h3>
+
+<p>We make a copy of the original data frame so when we manipulate the copy, we’ve still got our original data.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Make a copy of the original DataFrame to perform edits on
+</span><span class="n">df_tmp</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="nf">copy</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="add-datetime-parameters-for-saledate-column">Add datetime parameters for <code class="language-plaintext highlighter-rouge">saledate</code> column</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df_tmp</span><span class="p">[</span><span class="sh">"</span><span class="s">saleYear</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_tmp</span><span class="p">.</span><span class="n">saledate</span><span class="p">.</span><span class="n">dt</span><span class="p">.</span><span class="n">year</span>
+<span class="n">df_tmp</span><span class="p">[</span><span class="sh">"</span><span class="s">saleMonth</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_tmp</span><span class="p">.</span><span class="n">saledate</span><span class="p">.</span><span class="n">dt</span><span class="p">.</span><span class="n">month</span>
+<span class="n">df_tmp</span><span class="p">[</span><span class="sh">"</span><span class="s">saleDay</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_tmp</span><span class="p">.</span><span class="n">saledate</span><span class="p">.</span><span class="n">dt</span><span class="p">.</span><span class="n">day</span>
+<span class="n">df_tmp</span><span class="p">[</span><span class="sh">"</span><span class="s">saleDayOfWeek</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_tmp</span><span class="p">.</span><span class="n">saledate</span><span class="p">.</span><span class="n">dt</span><span class="p">.</span><span class="n">dayofweek</span>
+<span class="n">df_tmp</span><span class="p">[</span><span class="sh">"</span><span class="s">saleDayOfYear</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_tmp</span><span class="p">.</span><span class="n">saledate</span><span class="p">.</span><span class="n">dt</span><span class="p">.</span><span class="n">dayofyear</span>
+
+<span class="n">df_tmp</span><span class="p">.</span><span class="nf">head</span><span class="p">().</span><span class="n">T</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<p><img src="/images/bulldozer-regression-images/datetime.png" alt="" /></p>
+
+<p>We have created <code class="language-plaintext highlighter-rouge">5</code> new rows to our data set that stores all the time metrics from the sale date into their columns. We can now remove the <code class="language-plaintext highlighter-rouge">saledate</code> column since we’ve enriched our data frame with time features.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Remove 'saledate' column
+</span><span class="n">df_tmp</span><span class="p">.</span><span class="nf">drop</span><span class="p">(</span><span class="sh">"</span><span class="s">saledate</span><span class="sh">"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="5-turning-data-into-numbers">5. Turning Data into Numbers</h2>
+
+<p>In order to use a machine-learning model, we first need to convert all strings to numbers and remove <code class="language-plaintext highlighter-rouge">NA</code> values from the dataset.</p>
+
+<h3 id="convert-string-to-categories">Convert string to categories</h3>
+
+<p>One way we can turn all of our data into number is by converting them into pandas categories.</p>
+
+<p>We can check the different datatypes compatiabale with <a href="https://pandas.pydata.org/pandas-docs/version/1.4/reference/general_utility_functions.html"><code class="language-plaintext highlighter-rouge">pandas</code>.</a>:</p>
+
+<p>First, we need to convert any string data into categories, so our machine-learning model can understand the data.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># This will turn all of the strings values into category values 
+</span><span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">content</span> <span class="ow">in</span> <span class="n">df_tmp</span><span class="p">.</span><span class="nf">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">pd</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">types</span><span class="p">.</span><span class="nf">is_string_dtype</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>
+        <span class="n">df_tmp</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="n">content</span><span class="p">.</span><span class="nf">astype</span><span class="p">(</span><span class="sh">"</span><span class="s">category</span><span class="sh">"</span><span class="p">).</span><span class="n">cat</span><span class="p">.</span><span class="nf">as_ordered</span><span class="p">()</span>
+
+<span class="n">df_tmp</span><span class="p">.</span><span class="nf">info</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">pandas</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">DataFrame</span><span class="sh">'</span><span class="s">&gt;
+Int64Index: 412698 entries, 205615 to 409203
+Data columns (total 57 columns):
+ #   Column                    Non-Null Count   Dtype   
+---  ------                    --------------   -----   
+ 0   SalesID                   412698 non-null  int64   
+ 1   SalePrice                 412698 non-null  float64 
+ 2   MachineID                 412698 non-null  int64   
+ 3   ModelID                   412698 non-null  int64   
+ 4   datasource                412698 non-null  int64   
+ 5   auctioneerID              392562 non-null  float64 
+ 6   YearMade                  412698 non-null  int64   
+ 7   MachineHoursCurrentMeter  147504 non-null  float64 
+ 8   UsageBand                 73670 non-null   category
+ 9   fiModelDesc               412698 non-null  category
+ 10  fiBaseModel               412698 non-null  category
+ 11  fiSecondaryDesc           271971 non-null  category
+ 12  fiModelSeries             58667 non-null   category
+ 13  fiModelDescriptor         74816 non-null   category
+ 14  ProductSize               196093 non-null  category
+ 15  fiProductClassDesc        412698 non-null  category
+ 16  state                     412698 non-null  category
+ 17  ProductGroup              412698 non-null  category
+ 18  ProductGroupDesc          412698 non-null  category
+ 19  Drive_System              107087 non-null  category
+ 20  Enclosure                 412364 non-null  category
+ 21  Forks                     197715 non-null  category
+ 22  Pad_Type                  81096 non-null   category
+ 23  Ride_Control              152728 non-null  category
+ 24  Stick                     81096 non-null   category
+ 25  Transmission              188007 non-null  category
+ 26  Turbocharged              81096 non-null   category
+ 27  Blade_Extension           25983 non-null   category
+ 28  Blade_Width               25983 non-null   category
+ 29  Enclosure_Type            25983 non-null   category
+ 30  Engine_Horsepower         25983 non-null   category
+ 31  Hydraulics                330133 non-null  category
+ 32  Pushblock                 25983 non-null   category
+ 33  Ripper                    106945 non-null  category
+ 34  Scarifier                 25994 non-null   category
+ 35  Tip_Control               25983 non-null   category
+ 36  Tire_Size                 97638 non-null   category
+ 37  Coupler                   220679 non-null  category
+ 38  Coupler_System            44974 non-null   category
+ 39  Grouser_Tracks            44875 non-null   category
+ 40  Hydraulics_Flow           44875 non-null   category
+ 41  Track_Type                102193 non-null  category
+ 42  Undercarriage_Pad_Width   102916 non-null  category
+ 43  Stick_Length              102261 non-null  category
+ 44  Thumb                     102332 non-null  category
+ 45  Pattern_Changer           102261 non-null  category
+ 46  Grouser_Type              102193 non-null  category
+ 47  Backhoe_Mounting          80712 non-null   category
+ 48  Blade_Type                81875 non-null   category
+ 49  Travel_Controls           81877 non-null   category
+ 50  Differential_Type         71564 non-null   category
+ 51  Steering_Controls         71522 non-null   category
+ 52  saleYear                  412698 non-null  int64   
+ 53  saleMonth                 412698 non-null  int64   
+ 54  saleDay                   412698 non-null  int64   
+ 55  saleDayOfWeek             412698 non-null  int64   
+ 56  saleDayOfYear             412698 non-null  int64   
+dtypes: category(44), float64(3), int64(10)
+memory usage: 63.2 MB
+</span></code></pre></div></div>
+
+<p>Now our data set no longer contains strings and to show that our model can access these features, categories have a code attribute meaning we now have a way to access all our data in the form of numbers.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df_tmp</span><span class="p">.</span><span class="n">state</span><span class="p">.</span><span class="n">cat</span><span class="p">.</span><span class="n">codes</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">205615</span>    <span class="mi">43</span>
+<span class="mi">274835</span>     <span class="mi">8</span>
+<span class="mi">141296</span>     <span class="mi">8</span>
+<span class="mi">212552</span>     <span class="mi">8</span>
+<span class="mi">62755</span>      <span class="mi">8</span>
+          <span class="p">..</span>
+<span class="mi">410879</span>     <span class="mi">4</span>
+<span class="mi">412476</span>     <span class="mi">4</span>
+<span class="mi">411927</span>     <span class="mi">4</span>
+<span class="mi">407124</span>     <span class="mi">4</span>
+<span class="mi">409203</span>     <span class="mi">4</span>
+<span class="n">Length</span><span class="p">:</span> <span class="mi">412698</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">int8</span>
+</code></pre></div></div>
+
+<p>Thanks to categories, all our data is in the form of numbers however, we still have a bunch of missing data we need to deal with.</p>
+
+<h3 id="fill-numerical-missing-values-first">Fill numerical missing values first</h3>
+
+<p>We’ll first see which numeric columns have missing values and null values.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Check for which numeric columns have missing values
+</span><span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">content</span> <span class="ow">in</span> <span class="n">df_tmp</span><span class="p">.</span><span class="nf">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">pd</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">types</span><span class="p">.</span><span class="nf">is_numeric_dtype</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+
+<span class="c1"># Check for which numeric columns have null values
+</span><span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">content</span> <span class="ow">in</span> <span class="n">df_tmp</span><span class="p">.</span><span class="nf">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">pd</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">types</span><span class="p">.</span><span class="nf">is_numeric_dtype</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">pd</span><span class="p">.</span><span class="nf">isnull</span><span class="p">(</span><span class="n">content</span><span class="p">).</span><span class="nf">sum</span><span class="p">():</span>
+            <span class="nf">print</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<p>Columns with missing values:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">SalesID</code></li>
+  <li><code class="language-plaintext highlighter-rouge">SalePrice</code></li>
+  <li><code class="language-plaintext highlighter-rouge">MachineID</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ModelID</code></li>
+  <li><code class="language-plaintext highlighter-rouge">datasource</code></li>
+  <li><code class="language-plaintext highlighter-rouge">auctioneerID</code></li>
+  <li><code class="language-plaintext highlighter-rouge">YearMade</code></li>
+  <li><code class="language-plaintext highlighter-rouge">MachineHoursCurrentMeter</code></li>
+  <li><code class="language-plaintext highlighter-rouge">saleYear</code></li>
+  <li><code class="language-plaintext highlighter-rouge">saleMonth</code></li>
+  <li><code class="language-plaintext highlighter-rouge">saleDay</code></li>
+  <li><code class="language-plaintext highlighter-rouge">saleDayOfWeek</code></li>
+  <li><code class="language-plaintext highlighter-rouge">saleDayOfYear</code></li>
+</ul>
+
+<p>Columns with null values:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">auctioneerID</code></li>
+  <li><code class="language-plaintext highlighter-rouge">MachineHoursCurrentMeter</code></li>
+</ul>
+
+<p>To deal with the missing values, we’ll just fill in any missing row with the median.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Fill numeric rows with the median
+</span><span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">content</span> <span class="ow">in</span> <span class="n">df_tmp</span><span class="p">.</span><span class="nf">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">pd</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">types</span><span class="p">.</span><span class="nf">is_numeric_dtype</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">pd</span><span class="p">.</span><span class="nf">isnull</span><span class="p">(</span><span class="n">content</span><span class="p">).</span><span class="nf">sum</span><span class="p">():</span>
+            <span class="c1"># Add a binary column which tells us if the data was missing or not
+</span>            <span class="n">df_tmp</span><span class="p">[</span><span class="n">label</span><span class="o">+</span><span class="sh">"</span><span class="s">_is_missing</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">isnull</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+            <span class="c1"># Fill missing numeric values with median
+</span>            <span class="n">df_tmp</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="n">content</span><span class="p">.</span><span class="nf">fillna</span><span class="p">(</span><span class="n">content</span><span class="p">.</span><span class="nf">median</span><span class="p">())</span>
+</code></pre></div></div>
+
+<h3 id="filling-and-turning-categorical-variables-into-numbers">Filling and turning categorical variables into numbers</h3>
+
+<p>We’ll now turn out categories into nodes and make new columns that tell us which features were missing.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Turn categorical variables into numbers and fill missing
+</span><span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">content</span> <span class="ow">in</span> <span class="n">df_tmp</span><span class="p">.</span><span class="nf">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">types</span><span class="p">.</span><span class="nf">is_numeric_dtype</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>
+        <span class="c1"># Add binary column to indicate whether sample had missing value
+</span>        <span class="n">df_tmp</span><span class="p">[</span><span class="n">label</span><span class="o">+</span><span class="sh">"</span><span class="s">_is_missing</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">isnull</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+        <span class="c1"># Turn categories into numbers and add +1 to make all our numbers positive in our data frame
+</span>        <span class="n">df_tmp</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">Categorical</span><span class="p">(</span><span class="n">content</span><span class="p">).</span><span class="n">codes</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div></div>
+
+<p>Now let’s see if there are any missing values in our data set.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df_tmp</span><span class="p">.</span><span class="nf">isna</span><span class="p">().</span><span class="nf">sum</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">SalesID</span>                         <span class="mi">0</span>
+<span class="n">SalePrice</span>                       <span class="mi">0</span>
+<span class="n">MachineID</span>                       <span class="mi">0</span>
+<span class="n">ModelID</span>                         <span class="mi">0</span>
+<span class="n">datasource</span>                      <span class="mi">0</span>
+                               <span class="p">..</span>
+<span class="n">Backhoe_Mounting_is_missing</span>     <span class="mi">0</span>
+<span class="n">Blade_Type_is_missing</span>           <span class="mi">0</span>
+<span class="n">Travel_Controls_is_missing</span>      <span class="mi">0</span>
+<span class="n">Differential_Type_is_missing</span>    <span class="mi">0</span>
+<span class="n">Steering_Controls_is_missing</span>    <span class="mi">0</span>
+<span class="n">Length</span><span class="p">:</span> <span class="mi">103</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">int64</span>
+</code></pre></div></div>
+
+<h3 id="save-preprocessed-data">Save preprocessed data</h3>
+
+<p>A good idea is to save our processed data so if you were to open this Jupyter Notebook, you wouldn’t have to run all the code above.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Export current tmp dataframe
+</span><span class="n">df_tmp</span><span class="p">.</span><span class="nf">to_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">data/bluebook-for-bulldozers/train_tmp_processed.csv</span><span class="sh">"</span><span class="p">,</span>
+              <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+<span class="c1"># Import preprocessed data
+</span><span class="n">df_tmp</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">data/bluebook-for-bulldozers/train_tmp_processed.csv</span><span class="sh">"</span><span class="p">,</span>
+                     <span class="n">low_memory</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Now, we are ready to create a machine-learning model after pre-processing our data.</p>
+
+<h2 id="6-modelling">6. Modelling</h2>
+
+<p>We’ve done enough exploratory data analysis (EDA) but let’s start to do some model-driven EDA.</p>
+
+<h3 id="splitting-data-into-trainvalidation-sets">Splitting data into train/validation sets</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Split data into training and validation
+</span><span class="n">df_val</span> <span class="o">=</span> <span class="n">df_tmp</span><span class="p">[</span><span class="n">df_tmp</span><span class="p">.</span><span class="n">saleYear</span> <span class="o">==</span> <span class="mi">2012</span><span class="p">]</span>
+<span class="n">df_train</span> <span class="o">=</span> <span class="n">df_tmp</span><span class="p">[</span><span class="n">df_tmp</span><span class="p">.</span><span class="n">saleYear</span> <span class="o">!=</span> <span class="mi">2012</span><span class="p">]</span>
+
+<span class="c1"># Split data into X &amp; y
+</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">.</span><span class="nf">drop</span><span class="p">(</span><span class="sh">"</span><span class="s">SalePrice</span><span class="sh">"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">df_train</span><span class="p">[</span><span class="sh">"</span><span class="s">SalePrice</span><span class="sh">"</span><span class="p">]</span>
+<span class="n">X_valid</span><span class="p">,</span> <span class="n">y_valid</span> <span class="o">=</span> <span class="n">df_val</span><span class="p">.</span><span class="nf">drop</span><span class="p">(</span><span class="sh">"</span><span class="s">SalePrice</span><span class="sh">"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">df_val</span><span class="p">[</span><span class="sh">"</span><span class="s">SalePrice</span><span class="sh">"</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>Now that we have split our data, we can finally start evaluating our model on the data set.</p>
+
+<h3 id="building-an-evaluation-function">Building an evaluation function</h3>
+
+<p>Now we’ll build a function to test our machine-learning model on different metrics.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create evaluation function for RMSLE (root-mean-squared-log-error)
+</span><span class="k">def</span> <span class="nf">rmsle</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_preds</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">
+    Calculates root-mean-squared-log-error between predictions and true labels.
+    </span><span class="sh">"""</span>
+    <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="nf">sqrt</span><span class="p">(</span><span class="nf">mean_squared_log_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_preds</span><span class="p">))</span>
+
+<span class="c1"># Create function to evaluate model on a few different metrics
+</span><span class="k">def</span> <span class="nf">show_scores</span><span class="p">(</span><span class="n">model</span><span class="p">):</span>
+    <span class="n">train_preds</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="nf">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+    <span class="n">val_preds</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="nf">predict</span><span class="p">(</span><span class="n">X_valid</span><span class="p">)</span>
+    <span class="n">scores</span> <span class="o">=</span> <span class="p">{</span><span class="sh">"</span><span class="s">Train MAE</span><span class="sh">"</span><span class="p">:</span> <span class="nf">mean_absolute_error</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">train_preds</span><span class="p">),</span>
+              <span class="sh">"</span><span class="s">Valid MAE</span><span class="sh">"</span><span class="p">:</span> <span class="nf">mean_absolute_error</span><span class="p">(</span><span class="n">y_valid</span><span class="p">,</span> <span class="n">val_preds</span><span class="p">),</span>
+              <span class="sh">"</span><span class="s">Training RMSLE</span><span class="sh">"</span><span class="p">:</span> <span class="nf">rmsle</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">train_preds</span><span class="p">),</span>
+              <span class="sh">"</span><span class="s">Valid RMSLE</span><span class="sh">"</span><span class="p">:</span> <span class="nf">rmsle</span><span class="p">(</span><span class="n">y_valid</span><span class="p">,</span> <span class="n">val_preds</span><span class="p">),</span>
+              <span class="sh">"</span><span class="s">Training R^2</span><span class="sh">"</span><span class="p">:</span> <span class="nf">r2_score</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">train_preds</span><span class="p">),</span>
+              <span class="sh">"</span><span class="s">Valid R^2</span><span class="sh">"</span><span class="p">:</span> <span class="nf">r2_score</span><span class="p">(</span><span class="n">y_valid</span><span class="p">,</span> <span class="n">val_preds</span><span class="p">)}</span>
+
+    <span class="k">return</span> <span class="n">scores</span>
+</code></pre></div></div>
+
+<h2 id="testing-our-model-on-a-subset-to-tune-the-hyperparameters">Testing our model on a subset (to tune the hyperparameters)</h2>
+
+<p>We’ll be using the <code class="language-plaintext highlighter-rouge">RandomForestRegressor</code> model and will train it on a subset of the data so experimentation does not take as long since there are over <code class="language-plaintext highlighter-rouge">400,000</code> samples.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Change max_samples value
+</span><span class="n">model</span> <span class="o">=</span> <span class="nc">RandomForestRegressor</span><span class="p">(</span><span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+                              <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span>
+                              <span class="n">max_samples</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+
+<span class="o">%%</span><span class="n">time</span>
+<span class="c1"># Cutting down on the max number of samples each estimator can see improves training time
+</span><span class="n">model</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">CPU times: total: 36.8 s</code>
+<code class="language-plaintext highlighter-rouge">Wall time: 7.41 s</code>
+<code class="language-plaintext highlighter-rouge">RandomForestRegressor(max_samples=10000, n_jobs=-1, random_state=42)</code></p>
+
+<p>Since we trained it on a subset, it only took <code class="language-plaintext highlighter-rouge">7.41</code> seconds.</p>
+
+<p>Now let’s see how our model performed on the following metrics below:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">MAE</code>: A way to measure how far apart predictions are from the actual values in a set of data.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">RMSLE</code>: A way to measure the accuracy of predictions when the values being predicted can vary greatly in magnitude.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">R^2</code>: A score that tells you how well your model fits the data.</p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">show_scores</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Train MAE: 5561.2988092240585</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Valid MAE: 7177.26365505919</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Training RMSLE: 0.257745378256977</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Valid RMSLE: 0.29362638671089003</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Training R^2: 0.8606658995199189</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Valid R^2: 0.8320374995090507</code></li>
+</ul>
+
+<p>So for our <code class="language-plaintext highlighter-rouge">Valid MAE</code>, our model was about <code class="language-plaintext highlighter-rouge">$7177.26</code> off from the actual price and for our <code class="language-plaintext highlighter-rouge">RMSLE</code>, the model’s predictions differ from the actual prices by a factor of <code class="language-plaintext highlighter-rouge">exp(0.29) ≈ 1.336</code>. And finally, the <code class="language-plaintext highlighter-rouge">Valid R^2</code> score was about <code class="language-plaintext highlighter-rouge">83.23%</code> accuracy.</p>
+
+<p>Our valid scores are lower than the training data so we did not overfit the data. Since we did only limit the training to <code class="language-plaintext highlighter-rouge">10,000</code> samples the scores are going to be worse, but overall not bad. However before we try training on the full dataset, let’s see if we can tune this model to get better results.</p>
+
+<h3 id="hyperparameter-tuning-with-randomizedsearchcv">Hyperparameter tuning with RandomizedSearchCV</h3>
+
+<p>We will now tune our model with different parameters.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%%</span><span class="n">time</span>
+
+<span class="c1"># Different RandomForestRegressor hyperparameters
+</span><span class="n">rf_grid</span> <span class="o">=</span> <span class="p">{</span><span class="sh">"</span><span class="s">n_estimators</span><span class="sh">"</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+           <span class="sh">"</span><span class="s">max_depth</span><span class="sh">"</span><span class="p">:</span> <span class="p">[</span><span class="bp">None</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+           <span class="sh">"</span><span class="s">min_samples_split</span><span class="sh">"</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+           <span class="sh">"</span><span class="s">min_samples_leaf</span><span class="sh">"</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+           <span class="sh">"</span><span class="s">max_features</span><span class="sh">"</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">"</span><span class="s">sqrt</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">auto</span><span class="sh">"</span><span class="p">],</span>
+           <span class="sh">"</span><span class="s">max_samples</span><span class="sh">"</span><span class="p">:</span> <span class="p">[</span><span class="mi">10000</span><span class="p">]}</span>
+
+<span class="c1"># Instantiate RandomizedSearchCV model
+</span><span class="n">rs_model</span> <span class="o">=</span> <span class="nc">RandomizedSearchCV</span><span class="p">(</span><span class="nc">RandomForestRegressor</span><span class="p">(</span><span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+                                                    <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span>
+                             <span class="n">param_distributions</span><span class="o">=</span><span class="n">rf_grid</span><span class="p">,</span>
+                             <span class="n">n_iter</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                             <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                             <span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                             <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Fit the RandomizedSearchCV model
+</span><span class="n">rs_model</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">Fitting 5 folds for each of 5 candidates, totalling 25 fits</code>
+<code class="language-plaintext highlighter-rouge">CPU times: total: 20.7 s</code>
+<code class="language-plaintext highlighter-rouge">Wall time: 38.1 s</code></p>
+
+<p>After fitting the <code class="language-plaintext highlighter-rouge">RandomizedSearchCV</code> model, let’s see which parameters were the best.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">rs_model</span><span class="p">.</span><span class="n">best_params_</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="sh">'</span><span class="s">n_estimators</span><span class="sh">'</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+ <span class="sh">'</span><span class="s">min_samples_split</span><span class="sh">'</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+ <span class="sh">'</span><span class="s">min_samples_leaf</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+ <span class="sh">'</span><span class="s">max_samples</span><span class="sh">'</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+ <span class="sh">'</span><span class="s">max_features</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+ <span class="sh">'</span><span class="s">max_depth</span><span class="sh">'</span><span class="p">:</span> <span class="bp">None</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>Now we’ll evalute the model with our current parameters and show the before and after scores.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Evaluate the RandomizedSearch model
+</span><span class="nf">show_scores</span><span class="p">(</span><span class="n">rs_model</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Before:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Train MAE: 5561.2988092240585</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Valid MAE: 7177.26365505919</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Training RMSLE: 0.257745378256977</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Valid RMSLE: 0.29362638671089003</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Training R^2: 0.8606658995199189</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Valid R^2: 0.8320374995090507</code></li>
+</ul>
+
+<p>After:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Train MAE: 8891.655193695899</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Valid MAE: 11313.549827603978</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Training RMSLE: 0.39237058829152377</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Valid RMSLE: 0.4484052255971633</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Training R^2: 0.6825547447927643</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Valid R^2: 0.6361784117343763</code></li>
+</ul>
+
+<p>Our scores have actually gone down after tuning, but that just means we may need to try more iterations of finding better parameters.</p>
+
+<h3 id="train-a-model-with-the-best-hyperparameters">Train a model with the best hyperparameters</h3>
+
+<p><strong>Note:</strong> These were found after <code class="language-plaintext highlighter-rouge">100</code> iterations of <code class="language-plaintext highlighter-rouge">RandomizedSearchCV</code>. We’ll also show the scores from the previous experiment with our best parameters.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%%</span><span class="n">time</span>
+
+<span class="c1"># Most ideal hyperparameters
+</span><span class="n">ideal_model</span> <span class="o">=</span> <span class="nc">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
+                                    <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                                    <span class="n">min_samples_split</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span>
+                                    <span class="n">max_features</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+                                    <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+                                    <span class="n">max_samples</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                                    <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Fit the ideal model
+</span><span class="n">ideal_model</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Scores for the ideal model on all the data
+</span><span class="nf">show_scores</span><span class="p">(</span><span class="n">ideal_model</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Baseline Scores:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Train MAE: 5561.2988092240585</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Valid MAE: 7177.26365505919</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Training RMSLE: 0.257745378256977</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Valid RMSLE: 0.29362638671089003</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Training R^2: 0.8606658995199189</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Valid R^2: 0.8320374995090507</code></li>
+</ul>
+
+<p>Previous Experiment:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Train MAE: 8891.655193695899</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Valid MAE: 11313.549827603978</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Training RMSLE: 0.39237058829152377</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Valid RMSLE: 0.4484052255971633</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Training R^2: 0.6825547447927643</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Valid R^2: 0.6361784117343763</code></li>
+</ul>
+
+<p>Best Hyperparameters:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Train MAE: 2953.8161137163484</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Valid MAE: 5951.247761444453</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Training RMSLE: 0.14469006962371858</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Valid RMSLE: 0.24524163989538328</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Training R^2: 0.9588145522577225</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Valid R^2: 0.8818019502450094</code></li>
+</ul>
+
+<p>The model has scored much higher than the previous last <code class="language-plaintext highlighter-rouge">2</code> experiments in all metrics.</p>
+
+<h2 id="make-predictions-on-test-data">Make predictions on test data</h2>
+
+<p>We’ll first need to import our test data.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Import test data
+</span><span class="n">df_test</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">data/bluebook-for-bulldozers/Test.csv</span><span class="sh">"</span><span class="p">,</span>
+                      <span class="n">low_memory</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                      <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">saledate</span><span class="sh">"</span><span class="p">])</span>
+
+<span class="n">df_test</span><span class="p">.</span><span class="nf">head</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Before we can make predictions on the test data, we need to preprocess it first just like our training and validation datasets.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">preprocess_data</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">
+    Performs transformations on df and returns transformed df.
+    </span><span class="sh">"""</span>
+
+    <span class="c1"># Add datetime parameters for saledate column
+</span>    <span class="n">df</span><span class="p">[</span><span class="sh">"</span><span class="s">saleYear</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">saledate</span><span class="p">.</span><span class="n">dt</span><span class="p">.</span><span class="n">year</span>
+    <span class="n">df</span><span class="p">[</span><span class="sh">"</span><span class="s">saleMonth</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">saledate</span><span class="p">.</span><span class="n">dt</span><span class="p">.</span><span class="n">month</span>
+    <span class="n">df</span><span class="p">[</span><span class="sh">"</span><span class="s">saleDay</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">saledate</span><span class="p">.</span><span class="n">dt</span><span class="p">.</span><span class="n">day</span>
+    <span class="n">df</span><span class="p">[</span><span class="sh">"</span><span class="s">saleDayOfWeek</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">saledate</span><span class="p">.</span><span class="n">dt</span><span class="p">.</span><span class="n">dayofweek</span>
+    <span class="n">df</span><span class="p">[</span><span class="sh">"</span><span class="s">saleDayOfYear</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">saledate</span><span class="p">.</span><span class="n">dt</span><span class="p">.</span><span class="n">dayofyear</span>
+    
+    <span class="c1"># Drop saledate column
+</span>    <span class="n">df</span><span class="p">.</span><span class="nf">drop</span><span class="p">(</span><span class="sh">"</span><span class="s">saledate</span><span class="sh">"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">content</span> <span class="ow">in</span> <span class="n">df</span><span class="p">.</span><span class="nf">items</span><span class="p">():</span>
+        <span class="c1"># Find the columns which contain strings and turn them into categories
+</span>        <span class="k">if</span> <span class="n">pd</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">types</span><span class="p">.</span><span class="nf">is_string_dtype</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>
+            <span class="n">df</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="n">content</span><span class="p">.</span><span class="nf">astype</span><span class="p">(</span><span class="sh">"</span><span class="s">category</span><span class="sh">"</span><span class="p">).</span><span class="n">cat</span><span class="p">.</span><span class="nf">as_ordered</span><span class="p">()</span>
+            
+        <span class="c1"># Fill numeric rows with the median
+</span>        <span class="k">if</span> <span class="n">pd</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">types</span><span class="p">.</span><span class="nf">is_numeric_dtype</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">pd</span><span class="p">.</span><span class="nf">isnull</span><span class="p">(</span><span class="n">content</span><span class="p">).</span><span class="nf">sum</span><span class="p">():</span>
+                <span class="c1"># Add a binary column which tells us if the data was missing or not
+</span>                <span class="n">df</span><span class="p">[</span><span class="n">label</span><span class="o">+</span><span class="sh">"</span><span class="s">_is_missing</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">isnull</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+                <span class="c1"># Fill missing numeric values with median
+</span>                <span class="n">df</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="n">content</span><span class="p">.</span><span class="nf">fillna</span><span class="p">(</span><span class="n">content</span><span class="p">.</span><span class="nf">median</span><span class="p">())</span>
+        
+        <span class="c1"># Turn categorical variables into numbers and fill missing
+</span>        <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">types</span><span class="p">.</span><span class="nf">is_numeric_dtype</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>
+            <span class="c1"># Add binary column to indicate whether sample had missing value
+</span>            <span class="n">df</span><span class="p">[</span><span class="n">label</span><span class="o">+</span><span class="sh">"</span><span class="s">_is_missing</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">isnull</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+            <span class="c1"># Turn categories into numbers and add +1 to make all our numbers positive in our data frame
+</span>            <span class="n">df</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">Categorical</span><span class="p">(</span><span class="n">content</span><span class="p">).</span><span class="n">codes</span> <span class="o">+</span> <span class="mi">1</span>
+        
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="c1"># Process the test data
+</span><span class="n">df_test</span> <span class="o">=</span> <span class="nf">preprocess_data</span><span class="p">(</span><span class="n">df_test</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>There is still a problem. The test data is slightly different than the training data so we need to see which columns are different.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># We can find how the columns differ using sets
+</span><span class="nf">set</span><span class="p">(</span><span class="n">X_train</span><span class="p">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">-</span> <span class="nf">set</span><span class="p">(</span><span class="n">df_test</span><span class="p">.</span><span class="n">columns</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: set(auctioneerID_is_missing)</code></p>
+
+<p>This tells us that we need to add the <code class="language-plaintext highlighter-rouge">auctioneerID_is_missing</code> column to our test data. We’ll fix this by adding the <code class="language-plaintext highlighter-rouge">X_train</code> columns to the test data.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Manually adjust df_test to have auctioneerID_is_missing column
+</span><span class="n">df_test</span> <span class="o">=</span> <span class="n">df_test</span><span class="p">[</span><span class="n">X_train</span><span class="p">.</span><span class="n">columns</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>Finally, our test data frame has the same features as our training data frame, we can make predictions. Then we’ll create a <code class="language-plaintext highlighter-rouge">DataFrame</code> to show the predictions.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Make predictions on the test data
+</span><span class="n">test_preds</span> <span class="o">=</span> <span class="n">ideal_model</span><span class="p">.</span><span class="nf">predict</span><span class="p">(</span><span class="n">df_test</span><span class="p">)</span>
+
+<span class="c1"># Format predictions
+</span><span class="n">df_preds</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">DataFrame</span><span class="p">()</span>
+<span class="n">df_preds</span><span class="p">[</span><span class="sh">"</span><span class="s">SaleID</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_test</span><span class="p">[</span><span class="sh">"</span><span class="s">SalesID</span><span class="sh">"</span><span class="p">]</span>
+<span class="n">df_preds</span><span class="p">[</span><span class="sh">"</span><span class="s">SalePrice</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">test_preds</span>
+<span class="n">df_preds</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<p><img src="/images/bulldozer-regression-images/predictions.png" alt="" /></p>
+
+<p>Finally, let’s wrap up this project by looking at the important features.</p>
+
+<h3 id="feature-importance">Feature Importance</h3>
+
+<p>Feature importance seeks to figure out which different attributes of the data were most importance when it comes to predicting the <strong>target variable</strong> <code class="language-plaintext highlighter-rouge">(SalePrice)</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Helper function for plotting feature importance
+</span><span class="k">def</span> <span class="nf">plot_features</span><span class="p">(</span><span class="n">columns</span><span class="p">,</span> <span class="n">importances</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="p">(</span><span class="n">pd</span><span class="p">.</span><span class="nc">DataFrame</span><span class="p">({</span><span class="sh">"</span><span class="s">features</span><span class="sh">"</span><span class="p">:</span> <span class="n">columns</span><span class="p">,</span>
+                        <span class="sh">"</span><span class="s">feature_importances</span><span class="sh">"</span><span class="p">:</span> <span class="n">importances</span><span class="p">})</span>
+         <span class="p">.</span><span class="nf">sort_values</span><span class="p">(</span><span class="sh">"</span><span class="s">feature_importances</span><span class="sh">"</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+         <span class="p">.</span><span class="nf">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">))</span>
+    
+    <span class="c1"># Plot the dataframe
+</span>    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">subplots</span><span class="p">()</span>
+    <span class="n">ax</span><span class="p">.</span><span class="nf">barh</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="sh">"</span><span class="s">features</span><span class="sh">"</span><span class="p">][:</span><span class="n">n</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="sh">"</span><span class="s">feature_importances</span><span class="sh">"</span><span class="p">][:</span><span class="n">n</span><span class="p">])</span>
+    <span class="n">ax</span><span class="p">.</span><span class="nf">set_ylabel</span><span class="p">(</span><span class="sh">"</span><span class="s">Features</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">.</span><span class="nf">set_xlabel</span><span class="p">(</span><span class="sh">"</span><span class="s">Feature importance</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">.</span><span class="nf">invert_yaxis</span><span class="p">()</span>
+
+<span class="nf">plot_features</span><span class="p">(</span><span class="n">X_train</span><span class="p">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">ideal_model</span><span class="p">.</span><span class="n">feature_importances_</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<p><img src="/images/bulldozer-regression-images/features.png" alt="" /></p>
+
+<p>From the graph, <code class="language-plaintext highlighter-rouge">YearMade</code> and <code class="language-plaintext highlighter-rouge">ProductSize</code> seem to have the most correlation with the <code class="language-plaintext highlighter-rouge">SalePrice</code> which is our target variable.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Overall, our model was able to perform well in all the metrics we evaluated. We’ll look over the scores one last time:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Train MAE: 2953.8161137163484</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Valid MAE: 5951.247761444453</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Training RMSLE: 0.14469006962371858</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Valid RMSLE: 0.24524163989538328</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Training R^2: 0.9588145522577225</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Valid R^2: 0.8818019502450094</code></li>
+</ul>
+
+<p>In the future, I may try more tuning or use another machine learning model but nevertheless, I am satisfied with these results.</p>
+
+<h2 id="the-full-code">The Full Code</h2>
+
+<p>You can check out all the code together on my <a href="https://github.com/samikamal21/Bulldozer-Price-Regression">Bulldozer Price Regression repository.</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Sami Kamal. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
