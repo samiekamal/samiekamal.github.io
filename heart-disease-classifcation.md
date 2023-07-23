@@ -13,14 +13,6 @@ toc_label: "Overview"
 body {
   font-size: 13pt;
 }
-
-pre {
-  background-color: white;
-}
-
-code {
-  background-color: white;
-}
 </style>
 
 # Predicting Heart Disease Using Machine Learning

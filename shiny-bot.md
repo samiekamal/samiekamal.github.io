@@ -14,13 +14,13 @@ body {
   font-size: 13pt;
 }
 
-pre {
+/* pre {
   background-color: white;
 }
 
 code {
   background-color: white;
-}
+} */
 </style>
 
 ## Background
