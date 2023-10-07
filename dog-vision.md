@@ -1198,3 +1198,7 @@ for i, image in enumerate(custom_images):
 ![](/images/dog-vision-images/custom_predictions.png)
 
 Our model was able to get all 3 images above correct it has never been seen before which is great. That concludes this project for now, maybe in the future I may try using another model from TensorFlow Hub, but as of now, I am happy with these results.
+
+## The Full Code
+
+You can check out all the code together on my [Multi-class Dog Breed Classification repository.](https://github.com/samikamal21/Multi-class-Dog-Breed-Classification)
