@@ -16,7 +16,9 @@ feature_row:
 Here you'll find homework, papers, and rough notes on topics from the classes I have taken. 
 
 ## Math
-**Discrete Structures:** [HW1](\discreteMath\Discrete_I_HW_1.pdf),[HW2](\discreteMath\Discrete_I_HW_2.pdf),[HW3](\discreteMath\Discrete_I_HW_3.pdf),[HW4](\discreteMath\Discrete_I_HW_4.pdf).
+**Discrete Structures:** [HW0](\discreteMath\Discrete_I_HW_0.pdf),[HW1](\discreteMath\Discrete_I_HW_1.pdf),[HW2](\discreteMath\Discrete_I_HW_2.pdf),[HW3](\discreteMath\Discrete_I_HW_3.pdf).
+
+**Linear Algebra:** [HW0](\linearAlgebra\linear_algebra_hw0.pdf), [HW1](\linearAlgebra\linear_algebra_hw1.pdf), [HW2](\linearAlgebra\linear_algebra_hw2.pdf).
 
 ## Cognitive Science
 **Intro to Cognitive Science:** 

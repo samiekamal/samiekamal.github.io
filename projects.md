@@ -4,6 +4,14 @@ header:
   permalink: /projects.html
 
 feature_row:
+- image_path: images/dog-vision-images/dog-vision-icon.png
+  alt: "Heart-Disease-Classification"
+  title: "Multi-class Dog Breed Classifcation"
+  excerpt: "A neural network capable of identifiyng the breed of a dog given an image of a dog."
+  url: "/dog-vision"
+  btn_label: "Read More"
+  btn_class: "btn--inverse"
+
 - image_path: images/heart-disease-project-images/heart-disease-icon.jpg
   alt: "Heart-Disease-Classification"
   title: "Heart-Disease-Classification"
@@ -20,6 +28,7 @@ feature_row:
   btn_label: "Read More"
   btn_class: "btn--inverse"
 
+feature_row2:
 - image_path: images/smaglantis-images/Smaglantis.gif
   alt: "Smaglantis"
   title: "Smaglantis: An indie open world action/RPG game"
@@ -28,7 +37,6 @@ feature_row:
   btn_label: "Read More"
   btn_class: "btn--inverse"
 
-feature_row2:
 - image_path: /images/stars-images/stars_icon.gif
   alt: "Stars Simulation"
   title: "Stars Simulation"
@@ -43,14 +51,6 @@ feature_row2:
   excerpt: "A bot designed to find you a shiny Pokémon in any Pokémon game."
   url: "/shiny-bot"
   btn_label: "Read More"
-  btn_class: "btn--inverse"
-
-- image_path: images/conway.PNG
-  alt: "Conway's Game of Life"
-  title: "Conway's Game of Life"
-  excerpt: "A Java program that simulates a game called Conway's Game of Life."
-  url: "https://github.com/samikamal21/Conway-s-Game-of-Life/blob/main/GameOfLife/src/conwaygame/GameOfLife.java"
-  btn_label: "Code Here"
   btn_class: "btn--inverse"
 ---
 

@@ -1,0 +1,1531 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Multi-class Dog Breed Classification - Sami’s Projects &amp; Notes</title>
+<meta name="description" content="A compilation of my projects &amp; notes.">
+
+
+  <meta name="author" content="Sami Kamal">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Sami's Projects & Notes">
+<meta property="og:title" content="Multi-class Dog Breed Classification">
+<meta property="og:url" content="http://localhost:4000/dog-vision/">
+
+
+  <meta property="og:description" content="A compilation of my projects &amp; notes.">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/images/dog-vision-images/dog-banner.png">
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/dog-vision/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Sami Kamal",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Sami's Projects & Notes Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Sami's Projects & Notes
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/">Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/coursework">Coursework</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Resume.pdf">Résumé</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/images/dog-vision-images/dog-banner.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Multi-class Dog Breed Classification
+
+        
+      </h1>
+      
+      
+
+
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/images/smaglantis-images/PlayerHead.gif" alt="Sami Kamal" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Sami Kamal</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>My notes on math, computer science, and cognitive science.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/samikamal21" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Multi-class Dog Breed Classification">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Overview</h4></header>
+              <ul class="toc__menu"><li><a href="#classifying-images-of-different-dog-breeds-with-neural-networks">Classifying images of different dog breeds with neural networks.</a><ul><li><a href="#1-problem">1. Problem</a></li><li><a href="#2-data">2. Data</a></li><li><a href="#3-evaluation">3. Evaluation</a></li><li><a href="#4-features">4. Features</a><ul><li><a href="#get-our-workspace-ready">Get our workspace ready</a></li></ul></li><li><a href="#getting-our-data-ready-turning-it-into-tensors">Getting our data ready (turning it into Tensors)</a><ul><li><a href="#getting-images-and-their-labels">Getting images and their labels</a></li><li><a href="#creating-our-own-validation-set">Creating our own validation set</a></li></ul></li><li><a href="#preprocessing-images-turning-images-into-tensors">Preprocessing Images (turning images into Tensors)</a></li><li><a href="#turning-our-data-into-batches">Turning our data into batches</a></li><li><a href="#visualizing-data-batches">Visualizing Data Batches</a></li><li><a href="#building-a-model">Building a model</a></li><li><a href="#creating-callbacks">Creating callbacks</a><ul><li><a href="#tensorboard-callback">TensorBoard Callback</a></li><li><a href="#early-stopping-callback">Early Stopping Callback</a></li></ul></li><li><a href="#training-a-model-on-a-subset-of-data">Training a model (on a subset of data)</a></li><li><a href="#making-and-evaluating-predictions-using-a-trained-model">Making and evaluating predictions using a trained model</a></li><li><a href="#saving-and-reloading-a-trained-model">Saving and reloading a trained model</a></li><li><a href="#training-our-model-on-the-full-dataset">Training our model on the full dataset</a></li><li><a href="#making-predictions-on-the-test-dataset">Making predictions on the test dataset</a></li><li><a href="#preparing-test-dataset-predictions-for-kaggle">Preparing test dataset predictions for Kaggle</a></li><li><a href="#making-predictions-on-custom-images">Making predictions on custom images</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <style type="text/css">
+body {
+  font-size: 13pt;
+}
+</style>
+
+<h1 id="classifying-images-of-different-dog-breeds-with-neural-networks">Classifying images of different dog breeds with neural networks.</h1>
+
+<p>This notebook builds a multi-class image classifier using a neural network with TensorFlow and TensorFlow Hub.</p>
+
+<h2 id="1-problem">1. Problem</h2>
+
+<p>Identifying the breed of a dog gives an image of a dog.</p>
+
+<h2 id="2-data">2. Data</h2>
+
+<p>The data being used is from <a href="https://www.kaggle.com/competitions/dog-breed-identification">Kaggle’s</a> dog breed identification competition.</p>
+
+<h2 id="3-evaluation">3. Evaluation</h2>
+
+<p>The <a href="https://www.kaggle.com/competitions/dog-breed-identification/overview/evaluation">evaluation</a> is a file with prediction probabilities for each dog breed of each test image.</p>
+
+<h2 id="4-features">4. Features</h2>
+
+<p>Some information about the data:</p>
+<ul>
+  <li>We’re dealing with images (unstructured data) so it’s best to use deep learning/transfer learning.</li>
+  <li>There are 120 breeds of dog.</li>
+  <li>There are approximately 10,000+ images in the training set (these images have labels).</li>
+  <li>There are approximately 10,000+ images in the test set (these images have no labels since we need to predict them).</li>
+</ul>
+
+<h3 id="get-our-workspace-ready">Get our workspace ready</h3>
+
+<ul>
+  <li>Import TensorFlow</li>
+  <li>Import TensorFlow Hub</li>
+  <li>Make sure we’re using a GPU</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">!</span><span class="n">unzip</span> <span class="sh">"</span><span class="s">drive/MyDrive/Dog Vision/dog-breed-identification.zip</span><span class="sh">"</span> <span class="o">-</span><span class="n">d</span> <span class="sh">"</span><span class="s">drive/MyDrive/Dog Vision/</span><span class="sh">"</span>
+
+<span class="c1"># Import necessary tools
+</span><span class="kn">import</span> <span class="n">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+<span class="kn">import</span> <span class="n">tensorflow_hub</span> <span class="k">as</span> <span class="n">hub</span>
+<span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="n">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="n">os</span>
+<span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span> <span class="n">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+<span class="kn">from</span> <span class="n">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">imread</span>
+<span class="kn">from</span> <span class="n">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="n">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
+</code></pre></div></div>
+
+<h2 id="getting-our-data-ready-turning-it-into-tensors">Getting our data ready (turning it into Tensors)</h2>
+
+<p>With all machine-learning models, our data has to be in numerical format. So we’ll turn our images into Tensors (numerical representation).</p>
+
+<p>Let’s start by accessing our data and checking out the labels.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">labels_csv</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">drive/MyDrive/Dog Vision/labels.csv</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">labels_csv</span><span class="p">.</span><span class="nf">describe</span><span class="p">()</span>
+<span class="n">label_csv</span><span class="p">.</span><span class="nf">head</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<p><img src="/images/dog-vision-images/label1.png" alt="" /></p>
+
+<p><br /></p>
+
+<p><img src="/images/dog-vision-images/label2.png" alt="" /></p>
+
+<p>Let’s also see how many images are there for each breed.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">labels_csv</span><span class="p">[</span><span class="sh">"</span><span class="s">breed</span><span class="sh">"</span><span class="p">].</span><span class="nf">value_counts</span><span class="p">().</span><span class="n">plot</span><span class="p">.</span><span class="nf">bar</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">));</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<p><img src="/images/dog-vision-images/breed-count.png" alt="" /></p>
+
+<p>And finally, let’s just look at one image.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="nc">Image</span><span class="p">(</span><span class="sh">"</span><span class="s">drive/MyDrive/Dog Vision/train/0021f9ceb3235effd7fcde7f7538ed62.jpg</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<p><img src="/images/dog-vision-images/dog.png" alt="" /></p>
+
+<h3 id="getting-images-and-their-labels">Getting images and their labels</h3>
+
+<p>Let’s get a list of all our image file pathnames.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create pathnames from image ID's
+</span><span class="n">filenames</span> <span class="o">=</span> <span class="p">[</span><span class="sh">"</span><span class="s">drive/MyDrive/Dog Vision/train/</span><span class="sh">"</span><span class="o">+</span> <span class="n">fname</span> <span class="o">+</span> <span class="sh">"</span><span class="s">.jpg</span><span class="sh">"</span> <span class="k">for</span> <span class="n">fname</span> <span class="ow">in</span> <span class="n">labels_csv</span><span class="p">[</span><span class="sh">"</span><span class="s">id</span><span class="sh">"</span><span class="p">]]</span>
+
+<span class="c1"># Check whether number of filenames matches number of actual image files
+</span><span class="k">if</span> <span class="nf">len</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="nf">listdir</span><span class="p">(</span><span class="sh">"</span><span class="s">drive/MyDrive/Dog Vision/train/</span><span class="sh">"</span><span class="p">))</span> <span class="o">==</span> <span class="nf">len</span><span class="p">(</span><span class="n">filenames</span><span class="p">):</span>
+  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Filenames match actual amount of files. Proceed.</span><span class="sh">"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Filenames do not match actual amount of files.</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: Filenames match actual amounts of files. Proceed.</code></p>
+
+<p>Since we’ve now got our training image filepaths in a list, let’s prepare out labels.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">labels</span> <span class="o">=</span> <span class="n">labels_csv</span><span class="p">[</span><span class="sh">"</span><span class="s">breed</span><span class="sh">"</span><span class="p">].</span><span class="nf">to_numpy</span><span class="p">()</span>
+<span class="n">labels</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>array(['affenpinscher', 'afghan_hound', 'african_hunting_dog', 'airedale',
+       'american_staffordshire_terrier', 'appenzeller',
+       'australian_terrier', 'basenji', 'basset', 'beagle',
+       'bedlington_terrier', 'bernese_mountain_dog',
+       'black-and-tan_coonhound', 'blenheim_spaniel', 'bloodhound',
+       'bluetick', 'border_collie', 'border_terrier', 'borzoi',
+       'boston_bull', 'bouvier_des_flandres', 'boxer',
+       'brabancon_griffon', 'briard', 'brittany_spaniel', 'bull_mastiff',
+       'cairn', 'cardigan', 'chesapeake_bay_retriever', 'chihuahua',
+       'chow', 'clumber', 'cocker_spaniel', 'collie',
+       'curly-coated_retriever', 'dandie_dinmont', 'dhole', 'dingo',
+       'doberman', 'english_foxhound', 'english_setter',
+       'english_springer', 'entlebucher', 'eskimo_dog',
+       'flat-coated_retriever', 'french_bulldog', 'german_shepherd',
+       'german_short-haired_pointer', 'giant_schnauzer',
+       'golden_retriever', 'gordon_setter', 'great_dane',
+       'great_pyrenees', 'greater_swiss_mountain_dog', 'groenendael',
+       'ibizan_hound', 'irish_setter', 'irish_terrier',
+       'irish_water_spaniel', 'irish_wolfhound', 'italian_greyhound',
+       'japanese_spaniel', 'keeshond', 'kelpie', 'kerry_blue_terrier',
+       'komondor', 'kuvasz', 'labrador_retriever', 'lakeland_terrier',
+       'leonberg', 'lhasa', 'malamute', 'malinois', 'maltese_dog',
+       'mexican_hairless', 'miniature_pinscher', 'miniature_poodle',
+       'miniature_schnauzer', 'newfoundland', 'norfolk_terrier',
+       'norwegian_elkhound', 'norwich_terrier', 'old_english_sheepdog',
+       'otterhound', 'papillon', 'pekinese', 'pembroke', 'pomeranian',
+       'pug', 'redbone', 'rhodesian_ridgeback', 'rottweiler',
+       'saint_bernard', 'saluki', 'samoyed', 'schipperke',
+       'scotch_terrier', 'scottish_deerhound', 'sealyham_terrier',
+       'shetland_sheepdog', 'shih-tzu', 'siberian_husky', 'silky_terrier',
+       'soft-coated_wheaten_terrier', 'staffordshire_bullterrier',
+       'standard_poodle', 'standard_schnauzer', 'sussex_spaniel',
+       'tibetan_mastiff', 'tibetan_terrier', 'toy_poodle', 'toy_terrier',
+       'vizsla', 'walker_hound', 'weimaraner', 'welsh_springer_spaniel',
+       'west_highland_white_terrier', 'whippet',
+       'wire-haired_fox_terrier', 'yorkshire_terrier'], dtype=object)
+</code></pre></div></div>
+
+<p>We’ll now turn every label into a boolean array</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">boolean_labels</span> <span class="o">=</span> <span class="p">[</span><span class="n">label</span> <span class="o">==</span> <span class="n">unique_breeds</span> <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">labels</span><span class="p">]</span>
+</code></pre></div></div>
+
+<h3 id="creating-our-own-validation-set">Creating our own validation set</h3>
+<p>Since the dataset from Kaggle does not come with a validation set, we’re going to have to make one ourselves.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1"># Setup X &amp; y variables
+</span><span class="n">X</span> <span class="o">=</span> <span class="n">filenames</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">boolean_labels</span>
+
+<span class="c1"># Set number of images to use for experimenting (start with 1000 for now)
+</span><span class="n">NUM_IMAGES</span> <span class="o">=</span> <span class="mi">1000</span> 
+
+<span class="c1"># Let's split our data into train and validation sets
+</span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_val</span> <span class="o">=</span> <span class="nf">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">[:</span><span class="n">NUM_IMAGES</span><span class="p">],</span>
+                                                  <span class="n">y</span><span class="p">[:</span><span class="n">NUM_IMAGES</span><span class="p">],</span>
+                                                  <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+                                                  <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Make sure our data are the same shapes for the training and validation sets
+</span><span class="nf">len</span><span class="p">(</span><span class="n">X_train</span><span class="p">),</span> <span class="nf">len</span><span class="p">(</span><span class="n">y_train</span><span class="p">),</span> <span class="nf">len</span><span class="p">(</span><span class="n">X_val</span><span class="p">),</span> <span class="nf">len</span><span class="p">(</span><span class="n">y_val</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: (800, 800, 200, 200)</code></p>
+
+<p>The shapes match which means we were able to split our training and validation data properly.</p>
+
+<h2 id="preprocessing-images-turning-images-into-tensors">Preprocessing Images (turning images into Tensors)</h2>
+
+<p>To preprocess our images into Tensors, we’re going to write a function which does a few things:</p>
+<ol>
+  <li>Take an image filepath as input</li>
+  <li>Use TensorFlow to read the file and save it to a variable, <code class="language-plaintext highlighter-rouge">image</code></li>
+  <li>Turn our <code class="language-plaintext highlighter-rouge">image</code> (a jpg) into Tensors</li>
+  <li>Normalize our image (convert color channel values from 0-255 to 0-1).</li>
+  <li>Resize the <code class="language-plaintext highlighter-rouge">image</code> to be a shape of (224,224)</li>
+  <li>Return the modified <code class="language-plaintext highlighter-rouge">image</code></li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Define image size
+</span><span class="n">IMG_SIZE</span> <span class="o">=</span> <span class="mi">224</span>
+
+<span class="k">def</span> <span class="nf">process_image</span><span class="p">(</span><span class="n">image_path</span><span class="p">):</span>
+  <span class="sh">"""</span><span class="s">
+  Takes an image file path and turns it into a Tensor.
+  </span><span class="sh">"""</span>
+  <span class="c1"># Read in image file
+</span>  <span class="n">image</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="nf">read_file</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
+
+  <span class="c1"># Turn the jpeg image into numerical Tensor with 3 color channels (Red, Green, Blue)
+</span>  <span class="n">image</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">image</span><span class="p">.</span><span class="nf">decode_jpeg</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">channels</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># channels=3 for RGB
+</span>
+  <span class="c1"># Convert the color channel values from 0-225 values to 0-1 values
+</span>  <span class="n">image</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">image</span><span class="p">.</span><span class="nf">convert_image_dtype</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">tf</span><span class="p">.</span><span class="n">float32</span><span class="p">)</span>
+
+  <span class="c1"># Resize the image to our desired size (224, 244)
+</span>  <span class="n">image</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">image</span><span class="p">.</span><span class="nf">resize</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">[</span><span class="n">IMG_SIZE</span><span class="p">,</span> <span class="n">IMG_SIZE</span><span class="p">])</span>
+  <span class="k">return</span> <span class="n">image</span>
+
+</code></pre></div></div>
+
+<h2 id="turning-our-data-into-batches">Turning our data into batches</h2>
+
+<p>Why turn our data into batches?</p>
+
+<p>Let’s say you’re trying to process 10,000+ images in one go, they all might not fit into memory.</p>
+
+<p>So that’s why we do about 32 (batch size) images at a time.</p>
+
+<p>In order to use TensorFlow effectively, we need our data in the form of Tensor tuples which look like this:
+<code class="language-plaintext highlighter-rouge">(image, label)</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create a simple function to return a tuple (image, label)
+</span><span class="k">def</span> <span class="nf">get_image_label</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+  <span class="sh">"""</span><span class="s">
+  Takes an image file path name and associated label,
+  process the image and returns a tuple of (image, label).
+  </span><span class="sh">"""</span>
+  <span class="n">image</span> <span class="o">=</span> <span class="nf">process_image</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">image</span><span class="p">,</span> <span class="n">label</span>
+</code></pre></div></div>
+
+<p>Now we’ve got a way to turn our data into tuples of Tensors in the form: <code class="language-plaintext highlighter-rouge">(image, label)</code>, let’s make a function to turn all of our data (<code class="language-plaintext highlighter-rouge">X</code> &amp; <code class="language-plaintext highlighter-rouge">y</code>) into batches.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Define the batch size
+</span><span class="n">BATCH_SIZE</span> <span class="o">=</span> <span class="mi">32</span>
+
+<span class="c1"># Create a function to turn data into baches
+</span><span class="k">def</span> <span class="nf">create_data_batches</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">BATCH_SIZE</span><span class="p">,</span> <span class="n">valid_data</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">test_data</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+  <span class="sh">"""</span><span class="s">
+  Create batches of data our of image (X) and label (y) pairs.
+  Shuffles the data if it</span><span class="sh">'</span><span class="s">s training data but doesn</span><span class="sh">'</span><span class="s">t shuffle if it</span><span class="sh">'</span><span class="s">s validation data.
+  Also accepts test data as input (no labels).
+  </span><span class="sh">"""</span>
+  <span class="c1"># If the data is a test dataset, we probably don't have labels
+</span>  <span class="k">if</span> <span class="n">test_data</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Creating test data batches...</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">Dataset</span><span class="p">.</span><span class="nf">from_tensor_slices</span><span class="p">((</span><span class="n">tf</span><span class="p">.</span><span class="nf">constant</span><span class="p">(</span><span class="n">X</span><span class="p">)))</span> <span class="c1"># only filepaths (no labels)
+</span>    <span class="n">data_batch</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="n">process_image</span><span class="p">).</span><span class="nf">batch</span><span class="p">(</span><span class="n">BATCH_SIZE</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">data_batch</span>
+
+  <span class="c1"># If the data is a valid dataset, we don't need to shuffle it
+</span>  <span class="k">elif</span> <span class="n">valid_data</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Creating validation data batches...</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">Dataset</span><span class="p">.</span><span class="nf">from_tensor_slices</span><span class="p">((</span><span class="n">tf</span><span class="p">.</span><span class="nf">constant</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="c1"># filepaths
+</span>                                               <span class="n">tf</span><span class="p">.</span><span class="nf">constant</span><span class="p">(</span><span class="n">y</span><span class="p">)))</span> <span class="c1"># labels
+</span>
+    <span class="n">data_batch</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="n">get_image_label</span><span class="p">).</span><span class="nf">batch</span><span class="p">(</span><span class="n">BATCH_SIZE</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">data_batch</span>
+
+  <span class="k">else</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Creating training data batches...</span><span class="sh">"</span><span class="p">)</span>
+    <span class="c1"># Turn filepaths and labels into Tensors
+</span>    <span class="n">data</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">Dataset</span><span class="p">.</span><span class="nf">from_tensor_slices</span><span class="p">((</span><span class="n">tf</span><span class="p">.</span><span class="nf">constant</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="c1"># filepaths
+</span>                                               <span class="n">tf</span><span class="p">.</span><span class="nf">constant</span><span class="p">(</span><span class="n">y</span><span class="p">)))</span> <span class="c1"># labels
+</span>
+    <span class="c1"># Shuffling pathnames and labels before mapping image processor function is faster than shuffling images
+</span>    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">shuffle</span><span class="p">(</span><span class="n">buffer_size</span><span class="o">=</span><span class="nf">len</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
+
+    <span class="c1"># Create (image, label) tuples (this also turns the image path into a preprocessed image)
+</span>    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="n">get_image_label</span><span class="p">)</span>
+
+    <span class="c1"># Turn the training data into batches
+</span>    <span class="n">data_batch</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">batch</span><span class="p">(</span><span class="n">BATCH_SIZE</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">data_batch</span>
+
+
+<span class="c1"># Create training and validation data batches
+</span><span class="n">train_data</span> <span class="o">=</span> <span class="nf">create_data_batches</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">val_data</span> <span class="o">=</span> <span class="nf">create_data_batches</span><span class="p">(</span><span class="n">X_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">,</span> <span class="n">valid_data</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Creating training data batches...
+Creating validation data batches...
+</code></pre></div></div>
+
+<h2 id="visualizing-data-batches">Visualizing Data Batches</h2>
+
+<p>Our data is now in batches, however, these can be a little hard to understand/comprehend. Let’s visualize them.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create a function for viewing images in a data batch
+</span><span class="k">def</span> <span class="nf">show_25_images</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+  <span class="sh">"""</span><span class="s">
+  Displays a plot of 25 images and their labels from a data batch.
+  </span><span class="sh">"""</span>
+  <span class="c1"># Setup the figure
+</span>  <span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+  <span class="c1"># Loop through 25 (for displaying 25 images)
+</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">25</span><span class="p">):</span>
+    <span class="c1"># Create subplots (5 rows, 5 columns)
+</span>    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">subplot</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># row, col, index
+</span>
+    <span class="c1"># Display an image
+</span>    <span class="n">plt</span><span class="p">.</span><span class="nf">imshow</span><span class="p">(</span><span class="n">images</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+    <span class="c1"># Add the image label as the title
+</span>    <span class="n">plt</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="n">unique_breeds</span><span class="p">[</span><span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="nf">argmax</span><span class="p">()])</span>
+
+    <span class="c1"># Turn the grid lines off
+</span>    <span class="n">plt</span><span class="p">.</span><span class="nf">axis</span><span class="p">(</span><span class="sh">"</span><span class="s">off</span><span class="sh">"</span><span class="p">)</span>
+
+
+<span class="c1"># Convert the dataset into an iterator that produces batches of data in the form of NumPy arrays to visualize
+</span><span class="n">train_images</span><span class="p">,</span> <span class="n">train_labels</span> <span class="o">=</span> <span class="nf">next</span><span class="p">(</span><span class="n">train_data</span><span class="p">.</span><span class="nf">as_numpy_iterator</span><span class="p">())</span>
+
+
+<span class="c1"># Now let's visualize the data in a training batch
+</span><span class="nf">show_25_images</span><span class="p">(</span><span class="n">train_images</span><span class="p">,</span> <span class="n">train_labels</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<p><img src="/images/dog-vision-images/show_images.png" alt="" /></p>
+
+<h2 id="building-a-model">Building a model</h2>
+
+<p>Before we build a model, there are a few things we need to define:</p>
+<ul>
+  <li>The input shape (our image shape, in the form of Tensors) to our model.</li>
+  <li>The output shape (image labels, in the form of Tensors) of our model.</li>
+  <li>The URL of the model we want to use from <a href="https://tfhub.dev/google/imagenet/mobilenet_v2_130_224/classification/5">TensorFlow Hub.</a></li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Setup input shape to the model
+</span><span class="n">INPUT_SHAPE</span> <span class="o">=</span> <span class="p">[</span><span class="bp">None</span><span class="p">,</span> <span class="n">IMG_SIZE</span><span class="p">,</span> <span class="n">IMG_SIZE</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="c1"># batch, height, width, color channels
+</span>
+<span class="c1"># Setup output shape of our model
+</span><span class="n">OUTPUT_SHAPE</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="n">unique_breeds</span><span class="p">)</span>
+
+<span class="c1"># Setup model URL from TensorFlow Hub
+</span><span class="n">MODEL_URL</span> <span class="o">=</span> <span class="sh">"</span><span class="s">https://tfhub.dev/google/imagenet/mobilenet_v2_130_224/classification/5</span><span class="sh">"</span>
+</code></pre></div></div>
+
+<p>Now we’ve got our inputs, outputs, and model ready to go. Let’s put them together into a Keras deep learning model.</p>
+
+<p>Knowing this, let’s create a function which:</p>
+<ul>
+  <li>Takes the input shape, output shape, and the model we’ve chosen as parameters.</li>
+  <li>Define the layers in a Keras model in a sequential fashion.</li>
+  <li>Compiles the model (says it should be evaluated and improved).</li>
+  <li>Build the model (tell the model the input shape it’ll be getting).</li>
+  <li>Return the model.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create a function which builds a Keras model
+</span><span class="k">def</span> <span class="nf">create_model</span><span class="p">(</span><span class="n">input_shape</span><span class="o">=</span><span class="n">INPUT_SHAPE</span><span class="p">,</span> <span class="n">output_shape</span><span class="o">=</span><span class="n">OUTPUT_SHAPE</span><span class="p">,</span> <span class="n">model_url</span><span class="o">=</span><span class="n">MODEL_URL</span><span class="p">):</span>
+  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Building model with:</span><span class="sh">"</span><span class="p">,</span> <span class="n">MODEL_URL</span><span class="p">)</span>
+
+  <span class="c1"># Setup the model layers
+</span>  <span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="nc">Sequential</span><span class="p">([</span>
+    <span class="n">hub</span><span class="p">.</span><span class="nc">KerasLayer</span><span class="p">(</span><span class="n">MODEL_URL</span><span class="p">),</span> <span class="c1"># Layer 1 (input layer)
+</span>    <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="nc">Dense</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="n">OUTPUT_SHAPE</span><span class="p">,</span>
+                          <span class="n">activation</span><span class="o">=</span><span class="sh">"</span><span class="s">softmax</span><span class="sh">"</span><span class="p">)</span> <span class="c1"># Layer 2 (output layer)
+</span>  <span class="p">])</span>
+
+  <span class="c1"># Compile the model
+</span>  <span class="n">model</span><span class="p">.</span><span class="nf">compile</span><span class="p">(</span>
+      <span class="n">loss</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">losses</span><span class="p">.</span><span class="nc">CategoricalCrossentropy</span><span class="p">(),</span>
+      <span class="n">optimizer</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">optimizers</span><span class="p">.</span><span class="nc">Adam</span><span class="p">(),</span>
+      <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">accuracy</span><span class="sh">"</span><span class="p">]</span>
+  <span class="p">)</span>
+
+  <span class="c1"># Build the model
+</span>  <span class="n">model</span><span class="p">.</span><span class="nf">build</span><span class="p">(</span><span class="n">INPUT_SHAPE</span><span class="p">)</span> <span class="c1"># Let the model know what kind of inputs it'll be getting
+</span>
+  <span class="k">return</span> <span class="n">model</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="nf">create_model</span><span class="p">()</span>
+<span class="n">model</span><span class="p">.</span><span class="nf">summary</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Building model with: https://tfhub.dev/google/imagenet/mobilenet_v2_130_224/classification/5
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ keras_layer (KerasLayer)    (None, 1001)              5432713   
+                                                                 
+ dense (Dense)               (None, 120)               120240    
+                                                                 
+=================================================================
+Total params: 5,552,953
+Trainable params: 120,240
+Non-trainable params: 5,432,713
+____________________________________
+</code></pre></div></div>
+
+<h2 id="creating-callbacks">Creating callbacks</h2>
+
+<p>Callbacks are helper functions a model can use during training to save its progress, check its progress, or stop training early if a model stops improving.</p>
+
+<p>We’ll create two callbacks, one for TensorBoard which helps track our model’s progress, and another for early stopping which prevents our model from training for too long.</p>
+
+<h3 id="tensorboard-callback">TensorBoard Callback</h3>
+
+<p>To set up a TensorBoard callback, we need to do 3 things:</p>
+<ol>
+  <li>Load the TensorBoard notebook extension</li>
+  <li>Create a TensorBoard callback that is able to save logs to a directory and pass it to our model’s <code class="language-plaintext highlighter-rouge">fit()</code> function.</li>
+  <li>Visualize our model’s training logs with the <code class="language-plaintext highlighter-rouge">%tensorboard</code> magic function.</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Load TensorBoard notebook exention
+</span><span class="o">%</span><span class="n">load_ext</span> <span class="n">tensorboard</span>
+
+<span class="c1"># Create a function to build a TensorBoard callback
+</span><span class="k">def</span> <span class="nf">create_tensorboard_callback</span><span class="p">():</span>
+  <span class="c1"># Create a log directory for storing TensorBoard logs
+</span>  <span class="n">logdir</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="sh">"</span><span class="s">drive/MyDrive/Dog Vision/logs</span><span class="sh">"</span><span class="p">,</span>
+                        <span class="c1"># Make it so the logs get tracked whenever we run an experiment
+</span>                        <span class="n">datetime</span><span class="p">.</span><span class="n">datetime</span><span class="p">.</span><span class="nf">now</span><span class="p">().</span><span class="nf">strftime</span><span class="p">(</span><span class="sh">"</span><span class="s">%Y%m%d-%H%M%S</span><span class="sh">"</span><span class="p">))</span>
+
+  <span class="k">return</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">callbacks</span><span class="p">.</span><span class="nc">TensorBoard</span><span class="p">(</span><span class="n">logdir</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="early-stopping-callback">Early Stopping Callback</h3>
+<p>Early stopping helps stop our model from overfitting by stopping training if a certain evaluation metric stops improving.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create early stopping (once our model stops improving, stop training)
+</span><span class="n">early_stopping</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">callbacks</span><span class="p">.</span><span class="nc">EarlyStopping</span><span class="p">(</span><span class="n">monitor</span><span class="o">=</span><span class="sh">"</span><span class="s">val_accuracy</span><span class="sh">"</span><span class="p">,</span>
+                                                  <span class="n">patience</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># stops after 3 rounds of no improvements
+</span></code></pre></div></div>
+
+<h2 id="training-a-model-on-a-subset-of-data">Training a model (on a subset of data)</h2>
+
+<p>Our first model is only going to train on 1000 images, to make sure everything is working.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># How many times our model can look at the training set
+</span><span class="n">NUM_EPOCHS</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># @param {type: "slider", min:10, max:100, step:10}
+</span></code></pre></div></div>
+
+<p>Let’s create a function that trains a model.</p>
+
+<ul>
+  <li>Create a model using <code class="language-plaintext highlighter-rouge">create_model()</code>,</li>
+  <li>Setup a TensorBoard callback using <code class="language-plaintext highlighter-rouge">create_tensorboard_callback()</code>,</li>
+  <li>Call the <code class="language-plaintext highlighter-rouge">fit()</code> function on our model passing it the training data, validation data, number of epochs to train for (<code class="language-plaintext highlighter-rouge">NUM_EPOCHS</code>), and the callbacks we’d like to use.</li>
+  <li>Return the model.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Build a function to train and return a trained model
+</span><span class="k">def</span> <span class="nf">train_model</span><span class="p">():</span>
+  <span class="sh">"""</span><span class="s">
+  Trains a given model and returns the trained version.
+  </span><span class="sh">"""</span>
+  <span class="c1"># Create a model
+</span>  <span class="n">model</span> <span class="o">=</span> <span class="nf">create_model</span><span class="p">()</span>
+
+  <span class="c1"># Create new TensorBoard session everytime we train a model
+</span>  <span class="n">tensorboard</span> <span class="o">=</span> <span class="nf">create_tensorboard_callback</span><span class="p">()</span>
+
+  <span class="c1"># Fit the model to the data passing it the callbacks we created
+</span>  <span class="n">model</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">train_data</span><span class="p">,</span>
+            <span class="n">epochs</span><span class="o">=</span><span class="n">NUM_EPOCHS</span><span class="p">,</span>
+            <span class="n">validation_data</span><span class="o">=</span><span class="n">val_data</span><span class="p">,</span>
+            <span class="n">validation_freq</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="c1"># check validation metrics every epoch
+</span>            <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">tensorboard</span><span class="p">,</span> <span class="n">early_stopping</span><span class="p">])</span>
+
+  <span class="k">return</span> <span class="n">model</span>
+
+  <span class="c1"># Fit the model to the data
+</span>  <span class="n">model</span> <span class="o">=</span> <span class="nf">train_model</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Building model with: https://tfhub.dev/google/imagenet/mobilenet_v2_130_224/classification/5
+Epoch 1/100
+25/25 [==============================] - 143s 5s/step - loss: 4.5879 - accuracy: 0.0962 - val_loss: 3.3732 - val_accuracy: 0.2650
+Epoch 2/100
+25/25 [==============================] - 3s 106ms/step - loss: 1.6351 - accuracy: 0.6750 - val_loss: 2.1527 - val_accuracy: 0.5300
+Epoch 3/100
+25/25 [==============================] - 4s 158ms/step - loss: 0.5676 - accuracy: 0.9488 - val_loss: 1.6787 - val_accuracy: 0.6050
+Epoch 4/100
+25/25 [==============================] - 3s 107ms/step - loss: 0.2510 - accuracy: 0.9837 - val_loss: 1.5095 - val_accuracy: 0.6350
+Epoch 5/100
+25/25 [==============================] - 3s 103ms/step - loss: 0.1457 - accuracy: 0.9975 - val_loss: 1.4490 - val_accuracy: 0.6350
+Epoch 6/100
+25/25 [==============================] - 4s 141ms/step - loss: 0.1002 - accuracy: 1.0000 - val_loss: 1.4031 - val_accuracy: 0.6450
+Epoch 7/100
+25/25 [==============================] - 3s 115ms/step - loss: 0.0759 - accuracy: 1.0000 - val_loss: 1.3787 - val_accuracy: 0.6500
+Epoch 8/100
+25/25 [==============================] - 3s 104ms/step - loss: 0.0605 - accuracy: 1.0000 - val_loss: 1.3591 - val_accuracy: 0.6450
+Epoch 9/100
+25/25 [==============================] - 3s 105ms/step - loss: 0.0496 - accuracy: 1.0000 - val_loss: 1.3414 - val_accuracy: 0.6600
+Epoch 10/100
+25/25 [==============================] - 4s 165ms/step - loss: 0.0417 - accuracy: 1.0000 - val_loss: 1.3281 - val_accuracy: 0.6550
+Epoch 11/100
+25/25 [==============================] - 3s 103ms/step - loss: 0.0359 - accuracy: 1.0000 - val_loss: 1.3222 - val_accuracy: 0.6700
+Epoch 12/100
+25/25 [==============================] - 3s 108ms/step - loss: 0.0312 - accuracy: 1.0000 - val_loss: 1.3081 - val_accuracy: 0.6650
+Epoch 13/100
+25/25 [==============================] - 4s 147ms/step - loss: 0.0277 - accuracy: 1.0000 - val_loss: 1.3035 - val_accuracy: 0.6600
+Epoch 14/100
+25/25 [==============================] - 3s 128ms/step - loss: 0.0247 - accuracy: 1.0000 - val_loss: 1.2971 - val_accuracy: 0.6650
+</code></pre></div></div>
+
+<p>It looks like our model is overfitting because it is performing far better on the training data than the validation set.</p>
+
+<h2 id="making-and-evaluating-predictions-using-a-trained-model">Making and evaluating predictions using a trained model</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Make predictions on the validation data (not used to train on)
+</span><span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="nf">predict</span><span class="p">(</span><span class="n">val_data</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">predictions</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>7/7 [==============================] - 1s 83ms/step
+array([[1.0742119e-03, 5.3001073e-05, 2.7964653e-03, ..., 9.2564755e-05,
+        2.8308166e-05, 7.4782274e-03],
+       [2.0100032e-03, 6.3873292e-04, 1.0315703e-02, ..., 1.1290499e-04,
+        1.5883133e-04, 7.1618277e-05],
+       [1.0622761e-05, 1.4907350e-04, 2.3077746e-06, ..., 1.9274937e-04,
+        3.2322983e-05, 1.1352644e-03],
+       ...,
+       [5.9678991e-06, 2.7850127e-05, 5.8151440e-06, ..., 8.5601805e-06,
+        1.1502720e-04, 4.0248971e-05],
+       [1.4818087e-03, 8.5902735e-05, 6.3567451e-05, ..., 6.8183544e-05,
+        2.5096340e-05, 3.8669745e-03],
+       [2.6289123e-04, 4.3002219e-05, 2.3600887e-04, ..., 1.7456324e-03,
+        1.1971445e-03, 1.3646347e-04]], dtype=float32)
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># First prediction
+</span><span class="n">index</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Max Value (probability of prediction): </span><span class="si">{</span><span class="n">np</span><span class="p">.</span><span class="nf">max</span><span class="p">(</span><span class="n">predictions</span><span class="p">[</span><span class="n">index</span><span class="p">])</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Sum: </span><span class="si">{</span><span class="n">np</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="n">predictions</span><span class="p">[</span><span class="n">index</span><span class="p">])</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Max Index: </span><span class="si">{</span><span class="n">np</span><span class="p">.</span><span class="nf">argmax</span><span class="p">(</span><span class="n">predictions</span><span class="p">[</span><span class="n">index</span><span class="p">])</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Predicted label: </span><span class="si">{</span><span class="n">unique_breeds</span><span class="p">[</span><span class="n">np</span><span class="p">.</span><span class="nf">argmax</span><span class="p">(</span><span class="n">predictions</span><span class="p">[</span><span class="n">index</span><span class="p">])]</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Max Value (probability of prediction): 0.5851872563362122
+Sum: 1.0
+Max Index: 113
+Predicted label: walker_hound
+</code></pre></div></div>
+
+<p>Having the above functionality is great but we want to be able to do it at scale. And it would be even better if we could see the image the prediction is being made on.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Turn prediction probabilities into their respective label (easier to understand)
+</span><span class="k">def</span> <span class="nf">get_pred_label</span><span class="p">(</span><span class="n">prediction_probabilities</span><span class="p">):</span>
+  <span class="sh">"""</span><span class="s">
+  Turns an array of prediction probabilities into a label.
+  </span><span class="sh">"""</span>
+  <span class="k">return</span> <span class="n">unique_breeds</span><span class="p">[</span><span class="n">np</span><span class="p">.</span><span class="nf">argmax</span><span class="p">(</span><span class="n">prediction_probabilities</span><span class="p">)]</span>
+
+<span class="c1"># Get a predicted label based on an array of prediction probabilities
+</span><span class="n">pred_label</span> <span class="o">=</span> <span class="nf">get_pred_label</span><span class="p">(</span><span class="n">predictions</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: border_terrier</code></p>
+
+<p>Now since our validation data is still in a batch dataset. we’ll have to unbatch it to make predictions on the validation images and then compare those predictions to the validation labels (truth labels).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create a function to unbatch a batched dataset
+</span><span class="k">def</span> <span class="nf">unbatchify</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+  <span class="sh">"""</span><span class="s">
+  Takes a batched dataset of (image, label) Tensors and returns separate arrays
+  of images and labels.
+  </span><span class="sh">"""</span>
+  <span class="n">images</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="n">labels</span> <span class="o">=</span> <span class="p">[]</span>
+
+  <span class="c1"># Loop through unbatched data
+</span>  <span class="k">for</span> <span class="n">image</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">data</span><span class="p">.</span><span class="nf">unbatch</span><span class="p">().</span><span class="nf">as_numpy_iterator</span><span class="p">():</span>
+    <span class="n">images</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+    <span class="n">labels</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">unique_breeds</span><span class="p">[</span><span class="n">np</span><span class="p">.</span><span class="nf">argmax</span><span class="p">(</span><span class="n">label</span><span class="p">)])</span>
+
+  <span class="k">return</span> <span class="n">images</span><span class="p">,</span> <span class="n">labels</span>
+
+<span class="c1"># Unbatchify the validation data
+</span><span class="n">val_images</span><span class="p">,</span> <span class="n">val_labels</span> <span class="o">=</span> <span class="nf">unbatchify</span><span class="p">(</span><span class="n">val_data</span><span class="p">)</span>
+<span class="n">val_images</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">val_labels</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(array([[[0.29599646, 0.43284872, 0.3056691 ],
+         [0.26635826, 0.32996926, 0.22846507],
+         [0.31428418, 0.27701408, 0.22934894],
+         ...,
+         [0.77614343, 0.82320225, 0.8101595 ],
+         [0.81291157, 0.8285351 , 0.8406944 ],
+         [0.8209297 , 0.8263737 , 0.8423668 ]],
+ 
+        [[0.2344871 , 0.31603682, 0.19543913],
+         [0.3414841 , 0.36560842, 0.27241898],
+         [0.45016077, 0.40117094, 0.33964607],
+         ...,
+         [0.7663987 , 0.8134138 , 0.81350833],
+         [0.7304248 , 0.75012016, 0.76590735],
+         [0.74518913, 0.76002574, 0.7830809 ]],
+ 
+        [[0.30157745, 0.3082587 , 0.21018331],
+         [0.2905954 , 0.27066195, 0.18401104],
+         [0.4138316 , 0.36170745, 0.2964005 ],
+         ...,
+         [0.79871625, 0.8418535 , 0.8606443 ],
+         [0.7957738 , 0.82859945, 0.8605655 ],
+         [0.75181633, 0.77904975, 0.8155256 ]],
+ 
+        ...,
+ 
+        [[0.9746779 , 0.9878955 , 0.9342279 ],
+         [0.99153054, 0.99772066, 0.9427856 ],
+         [0.98925114, 0.9792082 , 0.9137934 ],
+         ...,
+         [0.0987601 , 0.0987601 , 0.0987601 ],
+         [0.05703771, 0.05703771, 0.05703771],
+         [0.03600177, 0.03600177, 0.03600177]],
+ 
+        [[0.98197854, 0.9820659 , 0.9379411 ],
+         [0.9811992 , 0.97015417, 0.9125648 ],
+         [0.9722316 , 0.93666023, 0.8697186 ],
+         ...,
+         [0.09682598, 0.09682598, 0.09682598],
+         [0.07196062, 0.07196062, 0.07196062],
+         [0.0361607 , 0.0361607 , 0.0361607 ]],
+ 
+        [[0.97279435, 0.9545954 , 0.92389745],
+         [0.963602  , 0.93199134, 0.88407487],
+         [0.9627158 , 0.91253304, 0.8460338 ],
+         ...,
+         [0.08394483, 0.08394483, 0.08394483],
+         [0.0886985 , 0.0886985 , 0.0886985 ],
+         [0.04514172, 0.04514172, 0.04514172]]], dtype=float32),
+ 'cairn')
+</code></pre></div></div>
+
+<p>Now we’ve got ways to get:</p>
+<ul>
+  <li>Prediction labels</li>
+  <li>Validation labels (truth labels)</li>
+  <li>Validation images</li>
+</ul>
+
+<p>Let’s make some functions to visualize all these features.</p>
+
+<p>We’ll create a function that:</p>
+<ul>
+  <li>Takes an array of prediction probabilities, an array of truth labels, an array of images, and an integer.</li>
+  <li>Convert the prediction probabilities to a predicted label.</li>
+  <li>Plot the predicted label, its predicted probability, the truth label, and the target image on a single plot.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">plot_pred</span><span class="p">(</span><span class="n">prediction_probabilities</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">images</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+  <span class="sh">"""</span><span class="s">
+  View the prediction, ground truth label and image for sample n.
+  </span><span class="sh">"""</span>
+  <span class="n">pred_prob</span><span class="p">,</span> <span class="n">true_label</span><span class="p">,</span> <span class="n">image</span> <span class="o">=</span> <span class="n">prediction_probabilities</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">labels</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">images</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+
+  <span class="c1"># Get the pred label
+</span>  <span class="n">pred_label</span> <span class="o">=</span> <span class="nf">get_pred_label</span><span class="p">(</span><span class="n">pred_prob</span><span class="p">)</span>
+
+  <span class="c1"># Plot image &amp; remove ticks
+</span>  <span class="n">plt</span><span class="p">.</span><span class="nf">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+  <span class="n">plt</span><span class="p">.</span><span class="nf">xticks</span><span class="p">([])</span>
+  <span class="n">plt</span><span class="p">.</span><span class="nf">yticks</span><span class="p">([])</span>
+
+  <span class="c1"># Change the color of the title depending on if the prediction is right or wrong
+</span>  <span class="k">if</span> <span class="n">pred_label</span> <span class="o">==</span> <span class="n">true_label</span><span class="p">:</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="sh">"</span><span class="s">green</span><span class="sh">"</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="sh">"</span><span class="s">red</span><span class="sh">"</span>
+
+  <span class="n">plt</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="sh">"</span><span class="s">{} {:2.0f}% ({})</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">pred_label</span><span class="p">,</span>
+                                      <span class="n">np</span><span class="p">.</span><span class="nf">max</span><span class="p">(</span><span class="n">pred_prob</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span>
+                                      <span class="n">true_label</span><span class="p">),</span>
+                                      <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+
+<span class="c1"># View an example prediction, original image and truth label
+# Prediction wrong example
+</span><span class="nf">plot_pred</span><span class="p">(</span><span class="n">prediction_probabilities</span><span class="o">=</span><span class="n">predictions</span><span class="p">,</span>
+          <span class="n">labels</span><span class="o">=</span><span class="n">val_labels</span><span class="p">,</span>
+          <span class="n">images</span><span class="o">=</span><span class="n">val_images</span><span class="p">,</span>
+          <span class="n">n</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/images/dog-vision-images/prediction_1.png" alt="" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Prediction correct example
+</span><span class="nf">plot_pred</span><span class="p">(</span><span class="n">prediction_probabilities</span><span class="o">=</span><span class="n">predictions</span><span class="p">,</span>
+          <span class="n">labels</span><span class="o">=</span><span class="n">val_labels</span><span class="p">,</span>
+          <span class="n">images</span><span class="o">=</span><span class="n">val_images</span><span class="p">,</span>
+          <span class="n">n</span><span class="o">=</span><span class="mi">77</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<p><img src="/images/dog-vision-images/prediction_2.png" alt="" /></p>
+
+<p>Now we’ve got one function to visualize our model’s top prediction, let’s make another function to view our model’s top 10 predictions.</p>
+
+<p>This function will:</p>
+<ul>
+  <li>Take an input of prediction probabilities array, ground truth array, and an integer.</li>
+  <li>Find the prediction label using <code class="language-plaintext highlighter-rouge">get_pred_label()</code>.</li>
+  <li>Find the top 10:
+    <ul>
+      <li>Prediction probabilities indexes</li>
+      <li>Prediction probability values</li>
+      <li>Prediction labels</li>
+    </ul>
+  </li>
+  <li>Plot the top 10 prediction probability values and labels, coloring the true label green.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">plot_pred_conf</span><span class="p">(</span><span class="n">prediction_probabilities</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+  <span class="sh">"""</span><span class="s">
+  Plot the top 10 highest predictions confidences along with the truth label for sample n.
+  </span><span class="sh">"""</span>
+
+  <span class="n">pred_prob</span><span class="p">,</span> <span class="n">true_label</span> <span class="o">=</span> <span class="n">prediction_probabilities</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">labels</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+
+  <span class="c1"># Get the predicted label
+</span>  <span class="n">pred_label</span> <span class="o">=</span> <span class="nf">get_pred_label</span><span class="p">(</span><span class="n">pred_prob</span><span class="p">)</span>
+
+  <span class="c1"># Find the top 10 prediction confidence indexes
+</span>  <span class="n">top_10_pred_indexes</span> <span class="o">=</span> <span class="n">pred_prob</span><span class="p">.</span><span class="nf">argsort</span><span class="p">()[</span><span class="o">-</span><span class="mi">10</span><span class="p">:][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># [::-1] Puts it in descending order
+</span>
+  <span class="c1"># Find the top 10 prediction confidence values
+</span>  <span class="n">top_10_pred_values</span> <span class="o">=</span> <span class="n">pred_prob</span><span class="p">[</span><span class="n">top_10_pred_indexes</span><span class="p">]</span>
+
+  <span class="c1"># Find the top 10 prediction labels
+</span>  <span class="n">top_10_pred_labels</span> <span class="o">=</span> <span class="n">unique_breeds</span><span class="p">[</span><span class="n">top_10_pred_indexes</span><span class="p">]</span>
+
+  <span class="c1"># Setup plot
+</span>  <span class="n">top_plot</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">bar</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">top_10_pred_labels</span><span class="p">)),</span>
+                     <span class="n">top_10_pred_values</span><span class="p">,</span> <span class="c1"># Prediction probabilities
+</span>                     <span class="n">color</span><span class="o">=</span><span class="sh">"</span><span class="s">gray</span><span class="sh">"</span><span class="p">)</span>
+
+  <span class="c1"># Show names of breeds on x-axis
+</span>  <span class="n">plt</span><span class="p">.</span><span class="nf">xticks</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">top_10_pred_labels</span><span class="p">)),</span>
+             <span class="n">labels</span><span class="o">=</span><span class="n">top_10_pred_labels</span><span class="p">,</span>
+             <span class="n">rotation</span><span class="o">=</span><span class="sh">"</span><span class="s">vertical</span><span class="sh">"</span><span class="p">)</span>
+
+  <span class="c1"># Change color of true label
+</span>  <span class="k">if</span> <span class="n">np</span><span class="p">.</span><span class="nf">isin</span><span class="p">(</span><span class="n">true_label</span><span class="p">,</span> <span class="n">top_10_pred_labels</span><span class="p">):</span>
+    <span class="n">top_plot</span><span class="p">[</span><span class="n">np</span><span class="p">.</span><span class="nf">argmax</span><span class="p">(</span><span class="n">top_10_pred_labels</span> <span class="o">==</span> <span class="n">true_label</span><span class="p">)].</span><span class="nf">set_color</span><span class="p">(</span><span class="sh">"</span><span class="s">green</span><span class="sh">"</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="nf">plot_pred_conf</span><span class="p">(</span><span class="n">prediction_probabilities</span><span class="o">=</span><span class="n">predictions</span><span class="p">,</span>
+               <span class="n">labels</span><span class="o">=</span><span class="n">val_labels</span><span class="p">,</span>
+               <span class="n">n</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<p><img src="/images/dog-vision-images/prediction_graph.png" alt="" /></p>
+
+<p>Now we’ve got some functions to help visualize our model’s predictions and evaluate our model. But to go a step further in visualizing our predictions, let’s use our <code class="language-plaintext highlighter-rouge">plot_pred</code> method and <code class="language-plaintext highlighter-rouge">plot_pred_conf</code> side-by-side for multiple predictions.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Let's check out a few predictions and their different values
+</span><span class="n">i_multiplier</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">num_rows</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">num_cols</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">num_images</span> <span class="o">=</span> <span class="n">num_rows</span> <span class="o">*</span> <span class="n">num_cols</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">num_cols</span><span class="p">,</span> <span class="mi">5</span><span class="o">*</span><span class="n">num_rows</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">num_images</span><span class="p">):</span>
+  <span class="n">plt</span><span class="p">.</span><span class="nf">subplot</span><span class="p">(</span><span class="n">num_rows</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">num_cols</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+  <span class="nf">plot_pred</span><span class="p">(</span><span class="n">prediction_probabilities</span><span class="o">=</span><span class="n">predictions</span><span class="p">,</span>
+            <span class="n">labels</span><span class="o">=</span><span class="n">val_labels</span><span class="p">,</span>
+            <span class="n">images</span><span class="o">=</span><span class="n">val_images</span><span class="p">,</span>
+            <span class="n">n</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="n">i_multiplier</span><span class="p">)</span>
+  <span class="n">plt</span><span class="p">.</span><span class="nf">subplot</span><span class="p">(</span><span class="n">num_rows</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">num_cols</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
+  <span class="nf">plot_pred_conf</span><span class="p">(</span><span class="n">prediction_probabilities</span><span class="o">=</span><span class="n">predictions</span><span class="p">,</span>
+                 <span class="n">labels</span><span class="o">=</span><span class="n">val_labels</span><span class="p">,</span>
+                 <span class="n">n</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="n">i_multiplier</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">tight_layout</span><span class="p">(</span><span class="n">h_pad</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span> <span class="c1"># Give space between images and graphs
+</span><span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<p><img src="/images/dog-vision-images/multiple_predictions.png" alt="" /></p>
+
+<p>Before we save our model, let’s look at a confusion matrix to see where our model has trouble in classifying the labels to the true labels.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create confusion matrix
+</span>
+<span class="c1"># Get predicted labels
+</span><span class="n">y_preds</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="nf">get_pred_label</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">predictions</span><span class="p">])</span>
+
+<span class="n">conf_matrix</span> <span class="o">=</span> <span class="nf">confusion_matrix</span><span class="p">(</span><span class="n">val_labels</span><span class="p">,</span> <span class="n">y_preds</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">41</span><span class="p">))</span>
+<span class="n">sns</span><span class="p">.</span><span class="nf">heatmap</span><span class="p">(</span><span class="n">conf_matrix</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="sh">"</span><span class="s">coolwarm</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">ylabel</span><span class="p">(</span><span class="sh">"</span><span class="s">Predicted Labels</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">xlabel</span><span class="p">(</span><span class="sh">"</span><span class="s">True labels</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">xticks</span><span class="p">(</span><span class="n">ticks</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="mi">120</span><span class="p">),</span> <span class="n">labels</span><span class="o">=</span><span class="n">unique_breeds</span><span class="p">)</span>  <span class="c1"># plot the breed name on axix
+</span><span class="n">plt</span><span class="p">.</span><span class="nf">yticks</span><span class="p">(</span><span class="n">ticks</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="mi">120</span><span class="p">),</span> <span class="n">labels</span><span class="o">=</span><span class="n">unique_breeds</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="sh">'</span><span class="s">horizontal</span><span class="sh">'</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="sh">"</span><span class="s">Confusion Matrix for Dog Vision</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<p><img src="/images/dog-vision-images/conf_matrix.png" alt="" /></p>
+
+<p>It is hard to read here, but you can open it in another tab and examine it closely by zooming in.</p>
+
+<h2 id="saving-and-reloading-a-trained-model">Saving and reloading a trained model</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create a function to save a model
+</span><span class="k">def</span> <span class="nf">save_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+  <span class="sh">"""</span><span class="s">
+  Saves a given model in a model</span><span class="sh">'</span><span class="s">s directory and appends a suffix (stirng).
+  </span><span class="sh">"""</span>
+
+  <span class="c1"># Create a model directory path name with current time
+</span>  <span class="n">modeldir</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="sh">"</span><span class="s">drive/MyDrive/Dog Vision/models</span><span class="sh">"</span><span class="p">,</span>
+                          <span class="n">datetime</span><span class="p">.</span><span class="n">datetime</span><span class="p">.</span><span class="nf">now</span><span class="p">().</span><span class="nf">strftime</span><span class="p">(</span><span class="sh">"</span><span class="s">%Y%m%d-%H%M%s</span><span class="sh">"</span><span class="p">))</span>
+  <span class="n">model_path</span> <span class="o">=</span> <span class="n">modeldir</span> <span class="o">+</span> <span class="sh">"</span><span class="s">-</span><span class="sh">"</span> <span class="o">+</span> <span class="n">suffix</span> <span class="o">+</span> <span class="sh">"</span><span class="s">.h5</span><span class="sh">"</span> <span class="c1"># Save format of model
+</span>  <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Saving model to: </span><span class="si">{</span><span class="n">model_path</span><span class="si">}</span><span class="s">...</span><span class="sh">"</span><span class="p">)</span>
+  <span class="n">model</span><span class="p">.</span><span class="nf">save</span><span class="p">(</span><span class="n">model_path</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">model_path</span>
+
+<span class="c1"># Create a function to load a model
+</span><span class="k">def</span> <span class="nf">load_model</span><span class="p">(</span><span class="n">model_path</span><span class="p">):</span>
+  <span class="sh">"""</span><span class="s">
+  Loads a saved model from a specified path.
+  </span><span class="sh">"""</span>
+
+  <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Loading saved model from: </span><span class="si">{</span><span class="n">model_path</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+  <span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">models</span><span class="p">.</span><span class="nf">load_model</span><span class="p">(</span><span class="n">model_path</span><span class="p">,</span>
+                                    <span class="n">custom_objects</span><span class="o">=</span><span class="p">{</span><span class="sh">"</span><span class="s">KerasLayer</span><span class="sh">"</span><span class="p">:</span><span class="n">hub</span><span class="p">.</span><span class="n">KerasLayer</span><span class="p">})</span>
+  <span class="k">return</span> <span class="n">model</span>
+</code></pre></div></div>
+
+<p>Now we’ve got functions to save and load a trained model, let’s make sure they work.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Save our model trained on 1000 images
+</span><span class="nf">save_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="sh">"</span><span class="s">1000-images-mobilenetv2-Adam</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Saving model to: drive/MyDrive/Dog Vision/models/20230803-03431691034214-1000-images-mobilenetv2-Adam.h5...
+drive/MyDrive/Dog Vision/models/20230803-03431691034214-1000-images-mobilenetv2-Adam.h5
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Load a trained model
+</span><span class="n">loaded_1000_image_model</span> <span class="o">=</span> <span class="nf">load_model</span><span class="p">(</span><span class="sh">'</span><span class="s">drive/MyDrive/Dog Vision/models/20230803-03431691034214-1000-images-mobilenetv2-Adam.h5</span><span class="sh">'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Loading saved model from: drive/MyDrive/Dog Vision/models/20230803-03431691034214-1000-images-mobilenetv2-Adam.h5
+</code></pre></div></div>
+
+<h2 id="training-our-model-on-the-full-dataset">Training our model on the full dataset</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create a data batch with the full dataset
+</span><span class="n">full_data</span> <span class="o">=</span> <span class="nf">create_data_batches</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Create a model for full model
+</span><span class="n">full_model</span> <span class="o">=</span> <span class="nf">create_model</span><span class="p">()</span>
+
+<span class="c1"># Create full model callbacks
+</span><span class="n">full_model_tensorboard</span> <span class="o">=</span> <span class="nf">create_tensorboard_callback</span><span class="p">()</span>
+
+<span class="c1"># No validation set when training on all data, so we can't monitor validation accuracy
+</span><span class="n">full_model_early_stopping</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">callbacks</span><span class="p">.</span><span class="nc">EarlyStopping</span><span class="p">(</span><span class="n">monitor</span><span class="o">=</span><span class="sh">"</span><span class="s">accuracy</span><span class="sh">"</span><span class="p">,</span>
+                                                             <span class="n">patience</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># Fit the full model to the full data (This will take a while to run depending on how powerful your computer hardware is)
+</span><span class="n">full_model</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">full_data</span><span class="p">,</span>
+               <span class="n">epochs</span><span class="o">=</span><span class="n">NUM_EPOCHS</span><span class="p">,</span>
+               <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">full_model_tensorboard</span><span class="p">,</span> <span class="n">full_model_early_stopping</span><span class="p">])</span>                                                          
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Epoch 1/100
+320/320 [==============================] - 1111s 3s/step - loss: 1.3383 - accuracy: 0.6681
+Epoch 2/100
+320/320 [==============================] - 37s 117ms/step - loss: 0.4015 - accuracy: 0.8818
+Epoch 3/100
+320/320 [==============================] - 39s 120ms/step - loss: 0.2368 - accuracy: 0.9373
+Epoch 4/100
+320/320 [==============================] - 38s 118ms/step - loss: 0.1551 - accuracy: 0.9651
+Epoch 5/100
+320/320 [==============================] - 39s 123ms/step - loss: 0.1067 - accuracy: 0.9801
+Epoch 6/100
+320/320 [==============================] - 40s 125ms/step - loss: 0.0755 - accuracy: 0.9877
+Epoch 7/100
+320/320 [==============================] - 40s 126ms/step - loss: 0.0588 - accuracy: 0.9910
+Epoch 8/100
+320/320 [==============================] - 39s 121ms/step - loss: 0.0462 - accuracy: 0.9944
+Epoch 9/100
+320/320 [==============================] - 44s 138ms/step - loss: 0.0372 - accuracy: 0.9956
+Epoch 10/100
+320/320 [==============================] - 40s 125ms/step - loss: 0.0309 - accuracy: 0.9969
+Epoch 11/100
+320/320 [==============================] - 39s 121ms/step - loss: 0.0263 - accuracy: 0.9972
+Epoch 12/100
+320/320 [==============================] - 39s 121ms/step - loss: 0.0223 - accuracy: 0.9985
+Epoch 13/100
+320/320 [==============================] - 44s 136ms/step - loss: 0.0211 - accuracy: 0.9981
+Epoch 14/100
+320/320 [==============================] - 40s 126ms/step - loss: 0.0180 - accuracy: 0.9984
+Epoch 15/100
+320/320 [==============================] - 39s 121ms/step - loss: 0.0152 - accuracy: 0.9986
+Epoch 16/100
+320/320 [==============================] - 44s 138ms/step - loss: 0.0139 - accuracy: 0.9990
+Epoch 17/100
+320/320 [==============================] - 40s 126ms/step - loss: 0.0134 - accuracy: 0.9987
+Epoch 18/100
+320/320 [==============================] - 38s 119ms/step - loss: 0.0122 - accuracy: 0.9988
+Epoch 19/100
+320/320 [==============================] - 39s 123ms/step - loss: 0.0122 - accuracy: 0.9986
+&lt;keras.callbacks.History at 0x7e3f002bdd80&gt;
+</code></pre></div></div>
+
+<p>Now let’s save the model so we don’t have to train it again.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">save_model</span><span class="p">(</span><span class="n">full_model</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="sh">"</span><span class="s">full-image-set-mobilenetv2-Adam</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Saving model to: drive/MyDrive/Dog Vision/models/20230809-00531691542388-full-image-set-mobilenetv2-Adam.h5...
+drive/MyDrive/Dog Vision/models/20230809-00531691542388-full-image-set-mobilenetv2-Adam.h5
+</code></pre></div></div>
+
+<p>Now let’s load it in.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Load the full model
+</span><span class="n">loaded_full_model</span> <span class="o">=</span> <span class="nf">load_model</span><span class="p">(</span><span class="sh">"</span><span class="s">drive/MyDrive/Dog Vision/models/20230809-00531691542388-full-image-set-mobilenetv2-Adam.h5</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Loading saved model from: drive/MyDrive/Dog Vision/models/20230809-00531691542388-full-image-set-mobilenetv2-Adam.h5
+</code></pre></div></div>
+
+<h2 id="making-predictions-on-the-test-dataset">Making predictions on the test dataset</h2>
+
+<p>Since our model has been trained on images in the form of Tensor Batches, to make predictions on the test data, we’ll have to get it into the same format.</p>
+
+<p>Luckily we created <code class="language-plaintext highlighter-rouge">create_data_batches()</code> earlier which can take a list of filenames as input and convert them into Tensor batches.</p>
+
+<p>To make predictions on the test data, we’ll:</p>
+<ul>
+  <li>Get the test image filenames</li>
+  <li>Convert the filenames into test data batches using <code class="language-plaintext highlighter-rouge">create_data_batches()</code> and setting the <code class="language-plaintext highlighter-rouge">test_data</code> parameter to <code class="language-plaintext highlighter-rouge">True</code> (test data has no labels).</li>
+  <li>Make predictions array by passing the test batches to the <code class="language-plaintext highlighter-rouge">predict()</code> method called on our model.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Load test image filenames
+</span><span class="n">test_path</span> <span class="o">=</span> <span class="sh">"</span><span class="s">drive/MyDrive/Dog Vision/test/</span><span class="sh">"</span>
+<span class="n">test_filenames</span> <span class="o">=</span> <span class="p">[</span><span class="n">test_path</span> <span class="o">+</span> <span class="n">fname</span> <span class="k">for</span> <span class="n">fname</span> <span class="ow">in</span> <span class="n">os</span><span class="p">.</span><span class="nf">listdir</span><span class="p">(</span><span class="n">test_path</span><span class="p">)]</span>
+<span class="n">test_filenames</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['drive/MyDrive/Dog Vision/test/e24b98741c9c780d7c5203def153f00c.jpg',
+ 'drive/MyDrive/Dog Vision/test/e73d52671c56e1507fed58c4c287d5f1.jpg',
+ 'drive/MyDrive/Dog Vision/test/e7b4b0e7d7d76f8dbd64920f34443b25.jpg',
+ 'drive/MyDrive/Dog Vision/test/e7b357150635c250757363718e4dae86.jpg',
+ 'drive/MyDrive/Dog Vision/test/e298c484aa05012775db02f3596e1d18.jpg',
+ 'drive/MyDrive/Dog Vision/test/e1f7ec4bd372612f53411026aaabf233.jpg',
+ 'drive/MyDrive/Dog Vision/test/dcae38083c0e6a8afe15b6f0703bdefa.jpg',
+ 'drive/MyDrive/Dog Vision/test/dcab2d03a686ab3f31d1bc3e5700f6d1.jpg',
+ 'drive/MyDrive/Dog Vision/test/e00a1b26edd5cb7323e3b75ce37b36f6.jpg',
+ 'drive/MyDrive/Dog Vision/test/df2b5cee4b3d8a3cb893b668df16d572.jpg']
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create test data batch
+</span><span class="n">test_data</span> <span class="o">=</span> <span class="nf">create_data_batches</span><span class="p">(</span><span class="n">test_filenames</span><span class="p">,</span> <span class="n">test_data</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="c1"># Make predictions on test data batch using the loaded full model (This will take 20 minutes to run)
+</span><span class="n">test_predictions</span> <span class="o">=</span> <span class="n">loaded_full_model</span><span class="p">.</span><span class="nf">predict</span><span class="p">(</span><span class="n">test_data</span><span class="p">,</span>
+                                             <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>324/324 [==============================] - 1228s 4s/step
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Save predictions
+</span><span class="n">np</span><span class="p">.</span><span class="nf">savetxt</span><span class="p">(</span><span class="sh">"</span><span class="s">drive/MyDrive/Dog Vision/preds_array.csv</span><span class="sh">"</span><span class="p">,</span><span class="n">test_predictions</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="sh">"</span><span class="s">,</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># Load predictions
+</span><span class="n">test_predictions</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">loadtxt</span><span class="p">(</span><span class="sh">"</span><span class="s">drive/MyDrive/Dog Vision/preds_array.csv</span><span class="sh">"</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="sh">"</span><span class="s">,</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># View predictions
+</span><span class="n">test_predictions</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>array([[7.40710531e-12, 1.98654856e-10, 1.10516006e-10, ...,
+        5.15933542e-13, 1.68865333e-09, 1.18622917e-10],
+       [8.71119288e-10, 3.38789500e-12, 8.09828316e-11, ...,
+        4.74127959e-11, 1.17915085e-12, 2.68190834e-11],
+       [1.50781732e-09, 1.60874022e-10, 1.23528743e-08, ...,
+        3.48102702e-07, 2.70013652e-06, 1.60368376e-08],
+       ...,
+       [2.41679777e-13, 3.69535985e-10, 6.94282210e-14, ...,
+        1.61301636e-14, 6.17618902e-15, 5.02759401e-13],
+       [1.60195452e-13, 1.53866218e-08, 5.35750819e-11, ...,
+        2.31355518e-10, 4.37683923e-07, 8.77467787e-09],
+       [1.46220627e-08, 1.34229259e-08, 2.49555671e-11, ...,
+        9.12076636e-10, 1.83378579e-09, 8.80117739e-08]])
+</code></pre></div></div>
+
+<h2 id="preparing-test-dataset-predictions-for-kaggle">Preparing test dataset predictions for Kaggle</h2>
+
+<p>Looking at The <a href="https://www.kaggle.com/competitions/dog-breed-identification/data?select=sample_submission.csv">Kaggle sample submission</a>, we find that it wants our models prediction probability outputs in a DataFrame with an ID and a column for each different dog breed.</p>
+
+<p>To get the data in this format, we’ll:</p>
+<ul>
+  <li>Create a pandas DataFrame with an ID column as well as a column for each dog breed.</li>
+  <li>Add data to the ID column by extracting the test image ID’s from their filepaths.</li>
+  <li>Add data (the prediction probabilities) to each of the dog breed columns.</li>
+  <li>Export the DataFrame as a CSV.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create a pandas DataFrame with empty columns
+</span><span class="n">preds_df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">id</span><span class="sh">"</span><span class="p">]</span> <span class="o">+</span> <span class="nf">list</span><span class="p">(</span><span class="n">unique_breeds</span><span class="p">))</span>
+
+<span class="c1"># Append test image ID's to predictions DataFrame
+</span><span class="n">test_ids</span> <span class="o">=</span> <span class="p">[</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">splitext</span><span class="p">(</span><span class="n">path</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">os</span><span class="p">.</span><span class="nf">listdir</span><span class="p">(</span><span class="n">test_path</span><span class="p">)]</span> <span class="c1"># We put [0] so it won't show .jpg
+</span><span class="n">preds_df</span><span class="p">[</span><span class="sh">"</span><span class="s">id</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">test_ids</span>
+
+<span class="c1"># Add the prediction probabilities to each dog breed column
+</span><span class="n">preds_df</span><span class="p">[</span><span class="nf">list</span><span class="p">(</span><span class="n">unique_breeds</span><span class="p">)]</span> <span class="o">=</span> <span class="n">test_predictions</span>
+<span class="n">preds_df</span><span class="p">.</span><span class="nf">head</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output: </code></p>
+
+<p><img src="/images/dog-vision-images/breed_predictions.png" alt="" /></p>
+
+<p><strong>Note</strong>: The image is cut off since we have 121 columns since we are working with so many breeds.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Save our predictions dataframe to CSV
+</span><span class="n">preds_df</span><span class="p">.</span><span class="nf">to_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">drive/MyDrive/Dog Vision/full_model_predictions_submission_1_mobilenetV2.csv</span><span class="sh">"</span><span class="p">,</span>
+                <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="making-predictions-on-custom-images">Making predictions on custom images</h2>
+
+<p>To make predictions on custom images, we’ll:</p>
+<ul>
+  <li>Get the file paths of our own images.</li>
+  <li>Turn the file paths into data batches using <code class="language-plaintext highlighter-rouge">create_data_batches()</code>. And since our custom images won’t have labels, we set the <code class="language-plaintext highlighter-rouge">test_data</code> parameter to <code class="language-plaintext highlighter-rouge">True</code>.</li>
+  <li>Pass the custom image data batch to our model’s <code class="language-plaintext highlighter-rouge">predict()</code> method.</li>
+  <li>Convert the prediction output probabilities to prediction labels.</li>
+  <li>Compare the predicted labels to the custom images.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Get custom image filepaths
+</span><span class="n">custom_path</span> <span class="o">=</span> <span class="sh">"</span><span class="s">drive/MyDrive/Dog Vision/custom-images/</span><span class="sh">"</span>
+<span class="n">custom_image_paths</span> <span class="o">=</span> <span class="p">[</span><span class="n">custom_path</span> <span class="o">+</span> <span class="n">fname</span> <span class="k">for</span> <span class="n">fname</span> <span class="ow">in</span> <span class="n">os</span><span class="p">.</span><span class="nf">listdir</span><span class="p">(</span><span class="n">custom_path</span><span class="p">)]</span>
+
+<span class="n">custom_image_paths</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['drive/MyDrive/Dog Vision/custom-images/golden-retriever.jpg',
+ 'drive/MyDrive/Dog Vision/custom-images/husky.jpg',
+ 'drive/MyDrive/Dog Vision/custom-images/poodle.jpg']
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Turn custom images into batch datasets
+</span><span class="n">custom_data</span> <span class="o">=</span> <span class="nf">create_data_batches</span><span class="p">(</span><span class="n">custom_image_paths</span><span class="p">,</span> <span class="n">test_data</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="c1"># Make predictions on the custom data
+</span><span class="n">custom_preds</span> <span class="o">=</span> <span class="n">loaded_full_model</span><span class="p">.</span><span class="nf">predict</span><span class="p">(</span><span class="n">custom_data</span><span class="p">)</span>
+
+<span class="c1"># Get custom image prediction labels
+</span><span class="n">custom_pred_labels</span> <span class="o">=</span> <span class="p">[</span><span class="nf">get_pred_label</span><span class="p">(</span><span class="n">custom_preds</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">custom_preds</span><span class="p">))]</span>
+
+<span class="n">custom_pred_labels</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Ouput: </code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['golden_retriever', 'siberian_husky', 'miniature_poodle']
+</code></pre></div></div>
+
+<p>Let’s visualize these predictions.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Get custom images (our unbatchify() function won't work since there aren't labels)
+</span><span class="n">custom_images</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Loop through unbatched data
+</span><span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">custom_data</span><span class="p">.</span><span class="nf">unbatch</span><span class="p">().</span><span class="nf">as_numpy_iterator</span><span class="p">():</span>
+  <span class="n">custom_images</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+
+<span class="n">true_labels</span> <span class="o">=</span> <span class="p">[</span><span class="sh">"</span><span class="s">golden_retriever</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">siberian_husky</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">miniature_poodle</span><span class="sh">"</span><span class="p">]</span>
+
+<span class="c1"># Check custom image predictions
+</span><span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">image</span> <span class="ow">in</span> <span class="nf">enumerate</span><span class="p">(</span><span class="n">custom_images</span><span class="p">):</span>
+  <span class="n">plt</span><span class="p">.</span><span class="nf">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+  <span class="n">plt</span><span class="p">.</span><span class="nf">xticks</span><span class="p">([])</span>
+  <span class="n">plt</span><span class="p">.</span><span class="nf">yticks</span><span class="p">([])</span>
+
+  <span class="c1"># Change the color of the title depending on if the prediction is right or wrong
+</span>  <span class="k">if</span> <span class="n">custom_pred_labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">true_labels</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="sh">"</span><span class="s">green</span><span class="sh">"</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="sh">"</span><span class="s">red</span><span class="sh">"</span>
+
+  <span class="n">plt</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="n">custom_pred_labels</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+            <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+  <span class="n">plt</span><span class="p">.</span><span class="nf">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Output:</code></p>
+
+<p><img src="/images/dog-vision-images/custom_predictions.png" alt="" /></p>
+
+<p>Our model was able to get all 3 images above correct it has never been seen before which is great. That concludes this project for now, maybe in the future I may try using another model from TensorFlow Hub, but as of now, I am happy with these results.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Sami Kamal. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
