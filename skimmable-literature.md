@@ -1850,3 +1850,8 @@ So, we can clearly see that `model_5_pos_char_token_embedding` performed the bes
 ## Conclusion
 
 After a few experiments, I am satisfied with the results of `model_5_pos_char_token_embedding`. Maybe in the future, I can try further improve the metrics, but as of right now, I am satisfied with these results. 
+
+
+## The Full Code
+
+You can check out all the code together on my [Skimmable-Literature repository.](https://github.com/samikamal21/skimmable-literature)
