@@ -1943,7 +1943,7 @@ plot_model(model_7)
 
 ![](/images/bitcoin-images/n-beats-architecture.png)
 
-**Note:** To properly view this image, openthe image in a new tab and zoom in to inspect it because this is a huge model.
+**Note:** To properly view this image, open the image in a new tab and zoom in to inspect it because this is a huge model.
 
 This just shows that even if with an advanced model, it is not always the solution to our problems.
 
