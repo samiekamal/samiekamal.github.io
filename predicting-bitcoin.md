@@ -1947,7 +1947,7 @@ plot_model(model_7)
 
 This just shows that even if with an advanced model, it is not always the solution to our problems.
 
-```pyhton
+```python
 plot_model(model_1)
 ```
 
