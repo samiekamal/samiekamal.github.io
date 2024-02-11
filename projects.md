@@ -28,6 +28,22 @@ feature_row:
   btn_label: "Read More"
   btn_class: "btn--inverse"
 
+- image_path: images/bitcoin-images/bitcoin-icon.png
+  alt: "Predicting Bitcoin"
+  title: "Predicting Bitcoin: Time Series Forecast"
+  excerpt: "A neural-network capable of predicting future prices of Bitcoin."
+  url: "/predicting-bitcoin"
+  btn_label: "Read More"
+  btn_class: "btn--inverse"
+
+- image_path: images/skimmable-literature-images/skimmable-literature-icon.png
+  alt: "Skimmable-Literature"
+  title: "Skimmable-Literature"
+  excerpt: "A NLP neural-network to make reading medical abstracts easier."
+  url: "/skimmable-literature"
+  btn_label: "Read More"
+  btn_class: "btn--inverse"
+
 - image_path: images/heart-disease-project-images/heart-disease-icon.jpg
   alt: "Heart-Disease-Classification"
   title: "Heart-Disease-Classification"
