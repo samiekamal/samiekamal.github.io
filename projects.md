@@ -4,10 +4,26 @@ header:
   permalink: /projects.html
 
 feature_row:
+- image_path: images/skimmable-literature-images/skimmable-literature-icon.png
+  alt: "Skimmable-Literature"
+  title: "Skimmable-Literature"
+  excerpt: "A NLP neural-network to make reading medical abstracts easier."
+  url: "/skimmable-literature"
+  btn_label: "Read More"
+  btn_class: "btn--inverse"
+
+- image_path: images/bitcoin-images/bitcoin-icon.png
+  alt: "Predicting Bitcoin"
+  title: "Predicting Bitcoin: Time Series Forecast"
+  excerpt: "A neural-network capable of predicting future prices of Bitcoin."
+  url: "/predicting-bitcoin"
+  btn_label: "Read More"
+  btn_class: "btn--inverse"
+
 - image_path: images/dog-vision-images/dog-vision-icon.png
   alt: "Heart-Disease-Classification"
   title: "Multi-class Dog Breed Classifcation"
-  excerpt: "A neural network capable of identifiyng the breed of a dog given an image of a dog."
+  excerpt: "A neural-network capable of identifiyng the breed of a dog given an image of a dog."
   url: "/dog-vision"
   btn_label: "Read More"
   btn_class: "btn--inverse"
